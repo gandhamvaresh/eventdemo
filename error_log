@@ -1,0 +1,1 @@
+[09-Nov-2013 11:18:07 America/Chicago] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 20736 bytes) in /home/eventpro/public_html/eventdemo/thumbgenerator/GdThumb.inc.php on line 111

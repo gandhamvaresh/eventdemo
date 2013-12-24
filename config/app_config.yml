@@ -1,0 +1,17 @@
+development: &local
+    site_name: Eventbrite Clone
+    site_url: http://localhost:3000/
+    app_url: http://localhost:3000/assets/
+    js_url: http://localhost:3000/assets/
+    css_url: http://localhost:3000/assets/
+    upload_url: /
+    folder: eventdemo
+    
+production:
+  <<: *local
+
+staging:
+  <<: *local
+
+test:
+  <<: *local

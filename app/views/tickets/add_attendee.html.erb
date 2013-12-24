@@ -1,0 +1,1121 @@
+<%
+	@country = Country.find_all_country()
+	
+	free_tickets = Ticket.get_free_ticket(@event[:id])
+	paid_tickets = Ticket.get_paid_ticket(@event[:id])
+	donation_tickets = Ticket.get_donation_ticket(@event[:id])
+	
+	@order = OrderForm.find(:first, :conditions => ['event_id=?', @event[:id]])
+	if @order
+	else
+		@order = OrderForm.new
+	end
+			
+	@user_address = UserAddress.user_address(@user[:id])
+	if @user_address
+	else
+		@user_address = UserAddress.new
+	end
+	
+%>  
+	
+<% sy = Time.now.year - 100
+   ey = Time.now.year %>
+<script>
+	 $(document).ready(function() {
+		var myDate = new Date();
+		var nowDate = new Date(myDate.getTime() - 1*24*60*60*1000);
+	
+		$('.date_only').datepicker({
+				ampm: false,dateFormat:'yy-mm-dd',minDate: 0
+		  });
+		$('#ui-datepicker-div').hide();
+	});
+	
+ 
+</script>  										
+		<script>
+			function submit_check_form(){
+				var chk = false;
+				$('#orderInfo').text("");
+				//$('#place_orderform').submit();
+				
+					
+					 var first_name = document.getElementsByName('first_name[]'); 
+					 var chk = 0;
+					 
+					 for (var i = 0; i < first_name.length; i++)
+			         {
+			         	 if(first_name[i].value==''){
+			         	 	//chk=true;
+			         	 	$('#orderInfo').text("<%= I18n.t 'add_attendee.fnm_fields_required'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			         	 }
+			         }
+				
+					 var last_name = document.getElementsByName('last_name[]'); 
+					 var chk = 0;
+					 
+					 for (var i = 0; i < last_name.length; i++)
+			         {
+			         	 if(last_name[i].value==''){
+			         	 	//chk=true;
+			         	 	$('#orderInfo').text("<%= I18n.t 'add_attendee.lnm_fields_required'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			         	 }
+			         }
+				
+					 var email = document.getElementsByName('email[]'); 
+					 var chk = 0;
+					 
+					 for (var i = 0; i < email.length; i++)
+			         {
+			         	 if(email[i].value==''){
+			         	 	//chk=true;
+			         	 	$('#orderInfo').text("<%= I18n.t 'add_attendee.email_fields_required'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			         	 }
+			         }
+				
+				 ///////////  home_adrress //////////
+				 
+				 <% if @event_attendee[:city_home]==1 %>
+				 
+			         var home_city = document.getElementsByName('home_city[]'); 
+					 var chk = 0;
+					 
+					 for (var i = 0; i < home_city.length; i++)
+			         {
+			         	 if(home_city[i].value==''){
+			         	 	//chk=true;
+			         	 	$('#orderInfo').text("<%= I18n.t 'add_attendee.home_city_field_required'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			         	 }
+			         }
+			     <% end %>  
+			     <% if @event_attendee[:state_home]==1 %>
+			       
+			         var home_state = document.getElementsByName('home_state[]'); 
+					 var chk = 0;
+					 
+					 for (var i = 0; i < home_state.length; i++)
+			         {
+			         	 if(home_state[i].value==''){
+			         	 	//chk=true;
+			         	 	$('#orderInfo').text("<%= I18n.t 'add_attendee.home_state_field_required'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			         	 }
+			         }
+			         
+			        <% end %>
+				  
+					<% if @event_attendee[:city_work]==1 %>
+					
+			         var work_city = document.getElementsByName('work_city[]'); 
+					 var chk = 0;
+					 
+					 for (var i = 0; i < work_city.length; i++)
+			         {
+			         	 if(work_city[i].value==''){
+			         	 	//chk=true;
+			         	 	$('#orderInfo').text("<%= I18n.t 'add_attendee.work_city_field_required'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			         	 }
+			         }
+			         
+			         <% end %>
+			         <% if @event_attendee[:state_work]==1 %>
+			         
+			         var work_state = document.getElementsByName('work_state[]'); 
+					 var chk = 0;
+					 
+					 for (var i = 0; i < work_state.length; i++)
+			         {
+			         	 if(work_state[i].value==''){
+			         	 	//chk=true;
+			         	 	$('#orderInfo').text("<%= I18n.t 'add_attendee.work_state_field_required'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			         	 }
+			         }
+			         <% end %>
+			        <% if @event_attendee[:job_title]==1 %>
+			        
+					 var work_job_title = document.getElementsByName('work_job_title[]'); 
+					 var chk = 0;
+					 
+					 for (var i = 0; i < work_job_title.length; i++)
+			         {
+			         	 if(work_job_title[i].value==''){
+			         	 	//chk=true;
+			         	 	$('#orderInfo').text("<%= I18n.t 'add_attendee.job_title_field_required'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			         	 }
+			         }
+				    <% end %>
+				    <% if @event_attendee[:company]==1 %>
+				    
+					 var company = document.getElementsByName('work_company[]'); 
+					 var chk = 0;
+					 
+					 for (var i = 0; i < company.length; i++)
+			         {
+			         	 if(company[i].value==''){
+			         	 	//chk=true;
+			         	 	$('#orderInfo').text("<%= I18n.t 'add_attendee.company_field_required'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			         	 }
+			         }
+				 <% end %>
+				 <% if @event_attendee[:blog]==1 %>
+				
+					 var bolg = document.getElementsByName('work_bolg[]'); 
+					 var chk = 0;
+					 
+					 for (var i = 0; i < bolg.length; i++)
+			         {
+			         	 if(bolg[i].value==''){
+			         	 	//chk=true;
+			         	 	$('#orderInfo').text("<%= I18n.t 'add_attendee.blog_field_required'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			         	 }
+			         }
+					
+				 <% end %>
+				 <% if @event_attendee[:website]==1 %>	
+				 
+					 var website = document.getElementsByName('work_website[]'); 
+					 var chk = 0;
+					 
+					 for (var i = 0; i < website.length; i++)
+			         {
+			         	 if(website[i].value==''){
+			         	 	//chk=true;
+			         	 	$('#orderInfo').text("<%= I18n.t 'add_attendee.website_field_required'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			         	 }
+			         }
+				
+			     <% end %>  	 
+			     
+			     <%
+			     i=0
+			     if  @questions.count > 0
+	              				@ticks = params[:ticket_qty] 
+	              				for q in @questions
+	              					@ask = 1
+	              					if (q[:rules]=='11' && q[:show_attendee]==1) 
+	              						
+	              						if q[:spec_ticket]==1
+		              						@ask = 0
+		              						@que_ticks = q[:tickets].split(',')
+		              						@que_ticks.each do |ticks|
+		              							if(@ticks.include?(ticks))
+		              								 @ask = 1
+		              							end	
+		              						end	
+	              						end	
+	              						
+	              					if(@ask==1) 
+	              						 if q[:que_type]=='text' || q[:que_type]=='para' || q[:que_type]=='select' 
+	              						 	%>
+		              						 	 var ques = document.getElementsByName('que[<%= q[:id] %>][]'); 
+												 var chk = 0;
+												 
+												 for (var i = 0; i < ques.length; i++)
+										         {
+										         	 if(ques[i].value==''){
+										         	 	//chk=true;
+										         	 	$('#orderInfo').text("<%= I18n.t 'validation.ticket_purchase.starf'%>");
+														$('#orderInfo').addClass("errors");
+														$('html, body').animate({ scrollTop: 0 }, 'slow');
+														return false;
+										         	 }
+										         }
+	              						 	
+	              						 	<%
+	              						 else
+	              						 	%>
+		              						 	 var ques = document.getElementsByName('que[<%= q[:id] %>][]'); 
+												 var chk = 1;
+												 
+												 for (var i = 0; i < ques.length; i++)
+										         {
+										         	 if(ques[i].checked==true){
+										         	 	//chk=true;
+										         	 	chk = 0;
+										         	 }
+										         }
+										         
+										         if(chk==1){
+										         	$('#orderInfo').text("<%= I18n.t 'validation.ticket_purchase.starf'%>");
+													$('#orderInfo').addClass("errors");
+													$('html, body').animate({ scrollTop: 0 }, 'slow');
+													return false;
+										         }
+	              						 	<%
+	              						
+	                  					 end 
+	              					end
+	              				end
+	              			end
+	              		end	
+	              		
+	              		
+	              		 if @waivers.count > 0 
+	              				@ticks = params[:ticket_qty] 
+	              				for q in @waivers
+	              					@ask = 1
+	              					if (q[:rules]=='11' && q[:show_attendee]==1) 
+	              						
+	              						if q[:spec_ticket]==1
+		              						@ask = 0
+		              						@que_ticks = q[:tickets].split(',')
+		              						@que_ticks.each do |ticks|
+		              							if(@ticks.include?(ticks))
+		              								 @ask = 1
+		              							end	
+		              						end	
+	              						end	
+	              							
+	              					if(@ask==1) 
+	              						%>
+		              						 	 var ques = document.getElementsByName('que[<%= q[:id] %>][]'); 
+												 var chk = 0;
+												 
+												 for (var i = 0; i < ques.length; i++)
+										         {
+										         	 if(ques[i].checked==false){
+										         	 	chk=1
+										         	 }
+										         	 	
+										         }
+										         
+										         if(chk==1){
+										         	$('#orderInfo').text("<%= I18n.t 'validation.ticket_purchase.starw'%>");
+													$('#orderInfo').addClass("errors");
+													$('html, body').animate({ scrollTop: 0 }, 'slow');
+													return false;
+										         }
+	              						 	<%
+	              					
+	              						end
+	              					end
+	              				end 
+	              			 end
+			     %>
+			     	if(chk){
+			       	 		$('#orderInfo').text("<%= I18n.t 'validation.ticket_purchase.starall'%>");
+							$('#orderInfo').addClass("errors");
+							$('html, body').animate({ scrollTop: 0 }, 'slow');
+							return false;
+			       	 }else{
+			       	 		$('#place_orderform').submit();
+			       	 }
+			       	 
+				
+			}
+			
+			
+			
+		</script>
+
+<style>
+	@media (max-width: 768px) {
+		.ticket td:nth-of-type(1):before { content: "Ticket Title"; font-weight:bold; }
+		.ticket td:nth-of-type(2):before { content: "Price"; font-weight:bold; }
+		.ticket td:nth-of-type(3):before { content: "Fee"; font-weight:bold; }
+		.ticket td:nth-of-type(4):before { content: "Quantity"; font-weight:bold; }
+		.ticket td:nth-of-type(5):before { content: "Total"; font-weight:bold; }
+		
+	}	
+</style>		   
+<section>
+	
+	<%= render(:partial => "tickets/event_top_banner" , :object => :collection) %> 	 
+	
+	
+	<div class="main">
+		 <div id="orderInfo"  class="marT60"></div>
+		 <!--Content Left-->
+		 
+    	<div class="left_columm">
+	    	<%= form_tag({:controller => 'tickets', :action => 'place_order_attendee'}, :id => 'place_orderform', :name => 'place_orderform') do %>	
+	    	
+	    	<div class="marT60">
+	        	<div class="mtitle fl">
+	            	<h1 class="fl"><%= I18n.t 'event.view.ticket'%> <span><%= I18n.t 'event.view.information'%></span></h1>
+	            </div> <div class="clear"></div>
+	            
+	            <div class="event_detail pad3 marT20">
+		            <table class="ticket table">
+		                <thead>
+			                <tr>
+			                    <th style="width: 157px;"><%= I18n.t 'event.view.ticket_title' %></th>
+			                    <th style="width: 101px;"><%= I18n.t 'event.view.price' %></th>
+			                    <th style="width: 87px;"><%= I18n.t 'event.view.fee' %></th>
+			                    <th style="width: 96px;"><%= I18n.t 'event.view.qty' %></th>
+			                    <th style="width: 99px;"><%= I18n.t 'event.purchase.total' %></th>
+			                </tr>
+		                </thead>
+	              		<tbody>
+	              			<%
+                                	total=0
+                                	qty = 0
+                                	ticket_amt = 0
+                                	total_fees = 0
+                                	
+                                	if free_tickets.count > 0
+       			 
+						       			 for free in free_tickets 
+						       			 	
+                                			if params[:ticket_qty][free[:id].to_s] && params[:ticket_qty][free[:id].to_s]!='0'
+                                %>
+		                                		 <tr>
+				                                  	 <td><%= free[:free_ticket_name] %></td>
+				                                  	 <td><%= set_currency(0) %></td>
+				                                  	 <td><%= set_currency(0) %></td>
+				                                  	 <td style="text-align:center;"><%= params[:ticket_qty][free[:id].to_s] %></td>
+				                                  	 <td><%= set_currency(0) %><% total+=0 %>
+				                                  	 	<input type="hidden" name="ticket_qty_total[<%= free[:id] %>]" value="0" />
+				                                  	 	<input type="hidden" name="ticket_ids[]" value="<%= free[:id] %>" />
+				                                  	 	<input type="hidden" name="ticket_totals[]" value="0" />
+				                                  	 	<input type="hidden" name="ticket_amt[]" value="0" />
+				                                  	 	<input type="hidden" name="ticket_fees[]" value="0" />
+				                                  	 	<input type="hidden" name="ticket_qtys[]" value="<%= params[:ticket_qty][free[:id].to_s] %>" />
+				                                  	 </td>
+				                                </tr>
+                                <%
+                                			qty+=params[:ticket_qty][free[:id].to_s].to_i
+                                			end
+                                		end 
+                                	end	
+                                %>
+                                 
+                                 <%
+                                	if paid_tickets.count > 0
+       			 
+						       			 for paid in paid_tickets 
+						       			 	
+                               				if params[:ticket_qty][paid[:id].to_s] && params[:ticket_qty][paid[:id].to_s]!='0'
+                                %>
+		                                		 <tr>
+				                                  	 <td><%= paid[:paid_ticket_name] %></td>
+				                                  	 <td><%= set_currency(paid[:paid_price]) %></td>
+				                                  	 <td>
+				                                  	 	<% 
+				                                  	 		ticket_amt += paid[:paid_price] * params[:ticket_qty][paid[:id].to_s].to_i
+				                                  	 		if paid[:paid_fee]>0
+				                                  	 			
+				                                  	 			fee= paid[:paid_fee] * params[:ticket_qty][paid[:id].to_s].to_i
+				                                  	 			
+				                                  	 			ticket_amt_per = paid[:paid_price] * params[:ticket_qty][paid[:id].to_s].to_i
+				                                  	 		else
+				                                  	 			fee = 0
+				                                  	 			ticket_amt_per = 0
+				                                  	 		end	
+				                                  	 		total_fees += fee
+				                                  	 	%>
+				                                  	 	<%= set_currency(fee) %></td>
+				                                  	 <td style="text-align:center;"><%= params[:ticket_qty][paid[:id].to_s] %></td>
+				                                  	 <td>
+				                                  	 	<% 
+				                                  	 	if @event[:event_pass_fees]==1
+				                                  	 		amt = params[:ticket_qty][paid[:id].to_s].to_i * paid[:paid_buyer_total]
+				                                  	 	elsif @event[:event_pass_fees]==3
+				                                  	 		if paid[:paid_service_fee]==1
+				                                  	 			amt = params[:ticket_qty][paid[:id].to_s].to_i * paid[:paid_buyer_total]
+				                                  	 		else
+				                                  	 			amt = paid[:paid_price] * params[:ticket_qty][paid[:id].to_s].to_i
+				                                  	 			ticket_amt -= fee
+				                                  	 			ticket_amt_per -= fee
+				                                  	 		end			
+				                                  	 	else
+				                                  	 			amt = paid[:paid_price] * params[:ticket_qty][paid[:id].to_s].to_i
+				                                  	 			ticket_amt -= fee
+				                                  	 			ticket_amt_per -= fee
+				                                  	 	end		 
+				                                  	 	if amt==nil
+				                                  	 		amt=0
+				                                  	 	end	
+				                                  	 	
+				                                  	 	%>
+				                                  	 	<%= set_currency(amt) %><% total+=amt.to_f %>
+				                                  	 	<input type="hidden" name="ticket_qty_total[<%= paid[:id] %>]" value="<%= amt %>" />
+				                                  	 	<input type="hidden" name="ticket_ids[]" value="<%= paid[:id] %>" />
+				                                  	 	<input type="hidden" name="ticket_totals[]" value="<%= amt %>" />
+				                                  	 	
+				                                  	 	<input type="hidden" name="ticket_amt[]" value="<%= ticket_amt_per %>" />
+				                                  	 	<input type="hidden" name="ticket_fees[]" value="<%= fee %>" />
+				                                  	 	
+				                                  	 	<input type="hidden" name="ticket_qtys[]" value="<%= params[:ticket_qty][paid[:id].to_s] %>" />
+				                                  	 </td>
+				                                </tr>
+                                <%
+                                			qty+=params[:ticket_qty][paid[:id].to_s].to_i
+                                			end
+                                		end 
+                                	end	
+                                %>
+                                 <%
+                                	if donation_tickets.count > 0
+       			 
+						       			 for donation in donation_tickets 
+						       			 	
+                               				if params[:ticket_qty][donation[:id].to_s] && params[:ticket_qty][donation[:id].to_s]!='0' && params[:ticket_qty][donation[:id].to_s].to_f > 0
+                                %>
+		                                		 <tr>
+				                                  	 <td><%= donation[:donation_ticket_name] %></td>
+				                                  	 <td ><%= set_currency(params[:ticket_qty][donation[:id].to_s]) %></td>
+				                                  	 <td>
+				                                  	 	<% fee = params[:ticket_qty][donation[:id].to_s].to_f*@site[:paid_ticket_fee]/100 
+				                                  	 		ticket_amt += params[:ticket_qty][donation[:id].to_s].to_f
+				                                  	 		total_fees += fee
+				                                  	 		ticket_amt_per = params[:ticket_qty][donation[:id].to_s].to_f
+				                                  	 	%>
+				                                  	 	<%= set_currency(fee) %></td>
+				                                  	 <td style="text-align:center;">1</td>
+				                                  	 <td><% 
+				                                  	 
+				                                  	
+				                                  	 if @event[:event_pass_fees]==1
+				                                  	 		 amt = params[:ticket_qty][donation[:id].to_s].to_f + fee 
+				                                  	 	elsif @event[:event_pass_fees]==3
+				                                  	 		if donation[:donation_service_fee]==1
+				                                  	 			 amt = params[:ticket_qty][donation[:id].to_s].to_f + fee 
+				                                  	 		else
+				                                  	 			amt = params[:ticket_qty][donation[:id].to_s].to_f
+				                                  	 			ticket_amt -= fee
+				                                  	 			ticket_amt_per -= fee
+				                                  	 		end			
+				                                  	 	else
+				                                  	 			amt = params[:ticket_qty][donation[:id].to_s].to_f
+				                                  	 			ticket_amt -= fee
+				                                  	 			ticket_amt_per -= fee
+				                                  	 	end	
+				                                  	 %><%= set_currency(amt) %><% total+=amt %>
+				                                  	 	<input type="hidden" name="ticket_qty_total[<%= donation[:id] %>]" value="<%= amt %>" />
+				                                  	 	<input type="hidden" name="ticket_ids[]" value="<%= donation[:id] %>" />
+				                                  	 	<input type="hidden" name="ticket_totals[]" value="<%= amt %>" />
+				                                  	 	<input type="hidden" name="ticket_qtys[]" value="1" />
+				                                  	 	
+				                                  	 	<input type="hidden" name="ticket_amt[]" value="<%= ticket_amt_per %>" />
+				                                  	 	<input type="hidden" name="ticket_fees[]" value="<%= fee %>" />
+				                                  	 	
+				                                  	 </td>
+				                                </tr>
+                                <%
+                                			qty+=1
+                                			end
+                                		end 
+                                	end	
+                                %>
+                                
+	              		</tbody>
+	              	</table>	
+	            	<div class="total_main fr">
+						<div class="total_amount"><%= I18n.t 'event.purchase.total_amount' %></div>
+						<div class="total_div"> <%= set_currency(total) %></div>
+						<div class="clear"></div>
+					</div><div class="clear"></div> 	
+	            	    	<input type="hidden" name="purchase_addresse[event_id]" id="event_id" value="<%= @event[:id] %>" />
+	                        <input type="hidden" name="purchase_addresse[total]" id="total" value="<%= total %>" />
+	                        <input type="hidden" name="purchase_addresse[random_no]" id="random_no" value="<%= @random_no %>" />
+	                        <input type="hidden" name="purchase_addresse[barcode_random]" id="barcode_random" value="<%= @barcode %>" />
+	                        <input type="hidden" name="purchase_addresse[user_id]" id="user_id" value="<%= @user[:id] %>" />
+	                        <input type="hidden" name="purchase_addresse[ticket_qty]" id="user_id" value="<%= qty %>" />
+	                        
+	                        <input type="hidden" name="attendee[payment_type]" value="<%= params[:attendee][:payment_type] %>" />
+	                        <input type="hidden" name="attendee[event_id]" value="<%= @event[:id] %>" />
+	                        <input type="hidden" name="attendee[notes]" value="<%= params[:attendee][:notes] %>" />
+	                        <input type="hidden" name="attendee[total]"  value="<%= total %>" />
+	                        <input type="hidden" name="attendee[attendee_id]" value="<%= @event_attendee[:id] %>" />
+	                        
+	                        <input type="hidden" name="ctype" value="<%= @order[:ctype] %>" />
+	                    
+	            	
+	            	<div class="clear"></div>
+				</div><div class="clear"></div>
+	        </div>
+	        
+	        <div class="marT45">
+	        	<div class="mtitle fl">
+	            	<h1 class="fl">
+	            		<% if @order %>
+	            			<% if @order[:title_of_page]!=nil && @order[:title_of_page]!='' %>
+	            				<%= @order[:title_of_page] %>
+	            			<% else %>
+	            				<%= I18n.t 'event.purchase.reg_info'%>
+	            			<% end %>
+	            	    <% else %>
+	            	    	<%= I18n.t 'event.purchase.reg_info'%>
+	            	    <% end %>
+	            	</h1>
+	            </div><div class="clear"></div>
+	        </div>
+	        
+	        <div class="event_detail marT20 pad3P">
+            	<div class="login_signup">
+            		<h3><%= I18n.t 'add_attendee.attendee_info'%></h3>
+            		
+					
+                    
+                    	<div class="marT20">
+	                        <label><%= I18n.t 'user.fname'%> : <span class="red">*</span></label>
+	                        <input type="text" name="first_name[]" id="buyer_first_name" value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_first_name'%> />
+	                    </div>
+	                    
+	                    <div class="marT20">
+	                        <label><%= I18n.t 'user.lname'%> : <span class="red">*</span></label>
+	                        <input type="text" name="last_name[]" id="buyer_last_name" value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_last_name'%> />
+	                    </div>
+	                
+	              
+                    
+                    	<div class="marT20">
+	                        <label><%= I18n.t 'user.email'%> : <span class="red">*</span></label>
+	                        <input type="text" name="email[]" id="buyer_email" value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_email'%> />
+	                    </div>  
+	                    
+	              
+      				
+      				<div>
+      					<% if @event_attendee[:home_phone]=='10' || @event_attendee[:home_phone]=='11' %>
+	      					<div class="marT20">
+		                        <label><%= I18n.t 'user.home_phone'%> : <% if @order[:home_phone]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="home_phone[]" id="buyer_home_phone" value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_home_phone'%> />
+		                    </div>
+		                <% end %>     
+      					
+      					<% if @event_attendee[:cell_phone]=='10' || @event_attendee[:cell_phone]=='11' %>
+          					<div class="marT20">
+		                        <label><%= I18n.t 'user.cell_phone'%> : <% if @event_attendee[:cell_phone]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="cell_phone[]" id="buyer_cell_phone" value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_cell_phone'%> />
+		                    </div>
+          				<% end %>
+      			
+      			
+      					
+				<% if @event_attendee[:billing_address]=='10' || @event_attendee[:billing_address]=='11' %>
+  					<br /><h3><%= I18n.t 'user.bill_add'%></h3>
+					
+							<div class="marT20">
+		                        <label><%= I18n.t 'user.country'%> : <% if @event_attendee[:billing_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <% if @country.count > 0 %>
+		                        <div class="posrel">
+                                    <select name="bill_country[]" id="user_address_bill_country" class="table_selectbox TW97p W50P_T" onchange="set_state(this.value, 'bill')">
+                                       	  <option value="">-- <%= I18n.t 'user.select_country'%> --</option>
+										  <% for ct in @country %>
+										    	<option value="<%= ct[:country_name] %>" ><%= ct[:country_name] %></option>
+										  <% end %> 
+                                    </select><div class="clear"></div>
+				        		</div>
+				        		<% else %>
+			                    	<input type="text" name="bill_country[]" id="user_address_bill_country" value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_billing_country'%> />
+			                    <% end %> 
+		                    </div>
+          				
+          					<div class="marT20">
+		                        <label><%= I18n.t 'user.add'%> : <% if @event_attendee[:billing_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="bill_add1[]" id="user_address_bill_add1"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_billing_add'%> />
+		                    </div>
+		                    
+		                    <div class="marT20">
+		                        <label><%= I18n.t 'user.add2'%> : <% if @event_attendee[:billing_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="bill_add2[]" id="user_address_bill_add2"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_billing_add2'%> />
+		                    </div>
+		                    
+		                    <div class="marT20">
+		                        <label><%= I18n.t 'user.city'%> : <% if @event_attendee[:billing_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="bill_city[]" id="user_address_bill_city"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_billing_add'%> />
+		                    </div>
+          				
+          				 <%
+	                        if @user_address[:bill_country] == 0 || @user_address[:bill_country] == nil || @user_address[:bill_country] == ''
+			
+								@state = State.find_all_state()
+						    else
+								
+								@state = State.find_state_by_country(@user_address[:bill_country])
+						    end	
+							
+	                      %>
+	                      
+	                      <div class="marT20">
+		                        <label><%= I18n.t 'user.state'%> : <% if @event_attendee[:billing_address]=='11' %><span class="red">*</span><% end %></label>
+		                       <% if @state.count > 0 %>
+		                        <div class="posrel">
+	                                <div id="bill_state_list">
+	                                <select class="table_selectbox TW97p W50P_T" name="bill_state[]" id="user_address_bill_state">
+	                                   	  <option value="">-- <%= I18n.t 'user.select_state'%> --</option>
+										   <% for st in @state %>
+												    <option value="<%= st[:state_name] %>" ><%= st[:state_name] %></option>
+										   <% end %>
+	                                </select>
+	                                </div><div class="clear"></div>
+				        		</div>
+				        		<% else %>
+			                    	<%= text_field_tag :bill_state, '', :class => 'textbox TW97p', :name => 'bill_state[]', :id => 'bill_state', :placeholder => (I18n.t 'place.enter_billing_state') %>
+			                    <% end %> 
+		                 </div>
+		                    
+          				
+          				 <div class="marT20">
+	                        <label><%= I18n.t 'user.zip'%> : <% if @event_attendee[:billing_address]=='11' %><span class="red">*</span><% end %></label>
+	                        <input type="text" name="bill_zip[]" id="user_address_bill_zip"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_billing_zip_postal'%> />
+		                 </div>
+          				
+				<% end %>
+				<div class="clr"></div>
+				
+				
+				<% if @event_attendee[:home_address]=='10' || @event_attendee[:home_address]=='11' %>
+  					<br /><h3><%= I18n.t 'user.home_add'%></h3>
+					
+							<div class="marT20">
+		                        <label><%= I18n.t 'user.country'%>: <% if @event_attendee[:home_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <% if @country.count > 0 %>
+		                        <div class="posrel">
+                                    <select name="home_country[]" id="user_address_home_country" class="table_selectbox TW97p W50P_T" onchange="set_state(this.value, 'home')">
+                                       	  <option value="">-- <%= I18n.t 'user.select_country'%> --</option>
+										  <% for ct in @country %>
+										    	<option value="<%= ct[:country_name] %>" ><%= ct[:country_name] %></option>
+										  <% end %> 
+                                    </select><div class="clear"></div>
+				        		</div>
+				        		<% else %>
+			                    	<input type="text" name="home_country[]" id="user_address_home_country" value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_home_country'%> />
+			                    <% end %> 
+		                    </div>
+          				
+          					<div class="marT20">
+		                        <label><%= I18n.t 'user.add'%>: <% if @event_attendee[:home_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="home_add1[]" id="user_address_home_add1"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_home_address'%> />
+		                    </div>
+		                    
+		                    <div class="marT20">
+		                        <label><%= I18n.t 'user.add2'%> : <% if @event_attendee[:home_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="home_add2[]" id="user_address_home_add2"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_home_address2'%> />
+		                    </div>
+		                    
+		                    <div class="marT20">
+		                        <label><%= I18n.t 'user.city'%>: <% if @event_attendee[:home_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="home_city[]" id="user_address_home_city"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_home_address2'%> />
+		                    </div>
+          				
+          				 <%
+	                        if @user_address[:home_country] == 0 || @user_address[:home_country] == nil || @user_address[:home_country] == ''
+			
+								@state = State.find_all_state()
+						    else
+								
+								@state = State.find_state_by_country(@user_address[:home_country])
+						    end	
+							
+	                      %>
+	                      
+	                      <div class="marT20">
+		                        <label><%= I18n.t 'user.state'%> : <% if @event_attendee[:home_address]=='11' %><span class="red">*</span><% end %></label>
+		                       <% if @state.count > 0 %>
+		                        <div class="posrel">
+	                                <div id="home_state_list">
+	                                <select class="table_selectbox TW97p W50P_T" name="home_state[]" id="user_address_home_state">
+	                                   	  <option value="">-- <%= I18n.t 'user.select_state'%> --</option>
+										   <% for st in @state %>
+												    <option value="<%= st[:state_name] %>"><%= st[:state_name] %></option>
+										   <% end %>
+	                                </select>
+	                                </div><div class="clear"></div>
+				        		</div>
+				        		<% else %>
+			                    	<%= text_field_tag :home_state, '', :class => 'textbox TW97p', :name => 'home_state[]', :id => 'home_state', :placeholder => (I18n.t 'place.enter_your_home_state') %>
+			                    <% end %> 
+		                 </div>
+		                    
+          				
+          				 <div class="marT20">
+	                        <label><%= I18n.t 'user.zip'%> : <% if @event_attendee[:home_address]=='11' %><span class="red">*</span><% end %></label>
+	                        <input type="text" name="home_zip[]" id="user_address_home_zip"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_home_zip_postal_code'%> />
+		                 </div>
+				<% end %>
+				<div class="clr"></div>
+				
+  			
+  			
+  			
+				
+				<% if @event_attendee[:shipping_address]=='10' || @event_attendee[:shipping_address]=='11' %>
+  					<br /><h3><%= I18n.t 'user.ship_add'%></h3>
+					
+							<div class="marT20">
+		                        <label><%= I18n.t 'user.country'%> : <% if @event_attendee[:shipping_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <% if @country.count > 0 %>
+		                        <div class="posrel">
+                                    <select name="ship_country[]" id="user_address_ship_country" class="table_selectbox TW97p W50P_T" onchange="set_state(this.value, 'ship')">
+                                       	  <option value="">-- <%= I18n.t 'user.select_country'%> --</option>
+										  <% for ct in @country %>
+										    	<option value="<%= ct[:country_name] %>" ><%= ct[:country_name] %></option>
+										  <% end %> 
+                                    </select><div class="clear"></div>
+				        		</div>
+				        		<% else %>
+			                    	<input type="text" name="ship_country[]" id="user_address_ship_country" value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_shipping_country'%> />
+			                    <% end %> 
+		                    </div>
+          				
+          					<div class="marT20">
+		                        <label><%= I18n.t 'user.add'%> : <% if @event_attendee[:shipping_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="ship_add1[]" id="user_address_ship_add1"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_shipping_address'%> />
+		                    </div>
+		                    
+		                    <div class="marT20">
+		                        <label><%= I18n.t 'user.add2'%>: <% if @event_attendee[:shipping_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="ship_add2[]" id="user_address_ship_add2"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_shipping_address2'%> />
+		                    </div>
+		                    
+		                    <div class="marT20">
+		                        <label><%= I18n.t 'user.city'%> : <% if @event_attendee[:shipping_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="ship_city[]" id="user_address_ship_city"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_shipping_address2'%> />
+		                    </div>
+          				
+          				 <%
+	                        if @user_address[:ship_country] == 0 || @user_address[:ship_country] == nil || @user_address[:ship_country] == ''
+			
+								@state = State.find_all_state()
+						    else
+								
+								@state = State.find_state_by_country(@user_address[:ship_country])
+						    end	
+							
+	                      %>
+	                      
+	                      <div class="marT20">
+		                        <label><%= I18n.t 'user.state'%> : <% if @event_attendee[:shipping_address]=='11' %><span class="red">*</span><% end %></label>
+		                       <% if @state.count > 0 %>
+		                        <div class="posrel">
+	                                <div id="ship_state_list">
+	                                <select class="table_selectbox TW97p W50P_T" name="ship_state[]" id="user_address_ship_state">
+	                                   	  <option value="">-- <%= I18n.t 'user.select_state'%> --</option>
+										   <% for st in @state %>
+												    <option value="<%= st[:state_name] %>" ><%= st[:state_name] %></option>
+										   <% end %>
+	                                </select>
+	                                </div><div class="clear"></div>
+				        		</div>
+				        		<% else %>
+			                    	<%= text_field_tag :home_state, '', :class => 'textbox TW97p', :name => 'ship_state[]', :id => 'ship_state', :placeholder => (I18n.t 'place.enter_your_shipping_state') %>
+			                    <% end %> 
+		                 </div>
+		                    
+          				
+          				 <div class="marT20">
+	                        <label><%= I18n.t 'user.zip'%> : <% if @event_attendee[:shipping_address]=='11' %><span class="red">*</span><% end %></label>
+	                        <input type="text" name="ship_zip[]" id="user_address_ship_zip"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_shipping_zip_postal' %> />
+		                 </div>
+				<% end %>
+				<div class="clr"></div>
+				
+				
+				<% if @event_attendee[:work_address]=='10' || @event_attendee[:work_address]=='11' %>
+  					<br /><h3><%= I18n.t 'user.work_add'%></h3>
+					
+							<div class="marT20">
+		                        <label><%= I18n.t 'user.country'%> : <% if @event_attendee[:working_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <% if @country.count > 0 %>
+		                        <div class="posrel">
+                                    <select name="work_country[]" id="user_address_work_country" class="table_selectbox TW97p W50P_T" onchange="set_state(this.value, 'work')">
+                                       	  <option value="">-- <%= I18n.t 'user.select_country'%> --</option>
+										  <% for ct in @country %>
+										    	<option value="<%= ct[:country_name] %>" ><%= ct[:country_name] %></option>
+										  <% end %> 
+                                    </select><div class="clear"></div>
+				        		</div>
+				        		<% else %>
+			                    	<input type="text" name="work_country[]" id="user_address_work_country" value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_working_country' %> />
+			                    <% end %> 
+		                    </div>
+          				
+          					<div class="marT20">
+		                        <label><%= I18n.t 'user.add'%> : <% if @event_attendee[:working_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="work_add1[]" id="user_address_work_add1"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_working_add' %> />
+		                    </div>
+		                    
+		                    <div class="marT20">
+		                        <label><%= I18n.t 'user.add2'%> : <% if @event_attendee[:working_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="work_add2[]" id="user_address_work_add2"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_working_add2' %> />
+		                    </div>
+		                    
+		                    <div class="marT20">
+		                        <label><%= I18n.t 'user.city'%> : <% if @event_attendee[:working_address]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="work_city[]" id="user_address_work_city"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_working_add2' %> />
+		                    </div>
+          				
+          				 <%
+	                        if @user_address[:work_country] == 0 || @user_address[:work_country] == nil || @user_address[:work_country] == ''
+			
+								@state = State.find_all_state()
+						    else
+								
+								@state = State.find_state_by_country(@user_address[:work_country])
+						    end	
+							
+	                      %>
+	                      
+	                      <div class="marT20">
+		                        <label><%= I18n.t 'user.state'%> : <% if @event_attendee[:working_address]=='11' %><span class="red">*</span><% end %></label>
+		                       <% if @state.count > 0 %>
+		                        <div class="posrel">
+	                                <div id="work_state_list">
+	                                <select class="table_selectbox TW97p W50P_T" name="work_state[]" id="user_address_work_state">
+	                                   	  <option value="">-- <%= I18n.t 'user.select_state'%> --</option>
+										   <% for st in @state %>
+												    <option value="<%= st[:state_name] %>" ><%= st[:state_name] %></option>
+										   <% end %>
+	                                </select>
+	                                </div><div class="clear"></div>
+				        		</div>
+				        		<% else %>
+			                    	<%= text_field_tag :work_state, '', :class => 'textbox TW97p', :name => 'work_state[]', :id => 'work_state', :placeholder =>  (I18n.t 'place.enter_your_working_state') %>
+			                    <% end %> 
+		                 </div>
+		                    
+          				
+          				 <div class="marT20">
+	                        <label><%= I18n.t 'user.zip'%> : <% if @event_attendee[:working_address]=='11' %><span class="red">*</span><% end %></label>
+	                        <input type="text" name="work_zip[]" id="user_address_work_zip"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_working_zip_postal' %> />
+		                 </div>
+      					
+      			<% if @event_attendee[:job_title]=='10' || @event_attendee[:job_title]=='11' %>
+  						 <div class="marT20">
+	                        <label><%= I18n.t 'user.job'%> : <% if @event_attendee[:job_title]=='11' %><span class="red">*</span><% end %></label>
+	                        <input type="text" name="work_job_title[]" id="user_address_work_job_title"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_work_job_title' %> />
+		                 </div>
+  				<% end %>
+  				
+  				
+  				<% if @event_attendee[:company]=='10' || @event_attendee[:company]=='11' %>
+  						<div class="marT20">
+	                        <label><%= I18n.t 'user.company'%> : <% if @event_attendee[:company]=='11' %><span class="red">*</span><% end %></label>
+	                        <input type="text" name="work_company[]" id="user_address_work_company"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_company' %> />
+		            	</div>
+  				<% end %>
+  				
+  				
+  				<% if @event_attendee[:work_phone]=='10' || @event_attendee[:work_phone]=='11' %>
+  						<div class="marT20">
+	                        <label><%= I18n.t 'user.work_phone'%> : <% if @event_attendee[:work_phone]=='11' %><span class="red">*</span><% end %></label>
+	                        <input type="text" name="work_phone[]" id="user_address_work_phone"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_work_phone' %> />
+		            	</div>
+		        <% end %>
+  				
+  				
+  				<% if @event_attendee[:blog]=='10' || @event_attendee[:blog]=='11' %>
+  						<div class="marT20">
+	                        <label><%= I18n.t 'user.blog'%> : <% if @event_attendee[:blog]=='11' %><span class="red">*</span><% end %></label>
+	                        <input type="text" name="work_blog[]" id="user_address_work_blog"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_blog' %> />
+		            	</div>
+		       <% end %>
+  				
+  				
+  				<% if @event_attendee[:website]=='10' || @event_attendee[:website]=='11' %>
+  						<div class="marT20">
+	                        <label><%= I18n.t 'user.website'%> : <% if @event_attendee[:website]=='11' %><span class="red">*</span><% end %></label>
+	                        <input type="text" name="work_website[]" id="user_address_work_website"  value="" class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_website' %> />
+		            	</div>
+  				<% end %>
+  				
+			<% end %>
+			<div class="clr"></div>
+  				
+  				
+  				<% if @event_attendee[:gender]=='10' || @event_attendee[:gender]=='11' || @event_attendee[:birth_date]=='10' || @event_attendee[:birth_date]=='11' || @event_attendee[:age]=='10' || @event_attendee[:age]=='11' %>
+  					<br /><h3><%= I18n.t 'user.other'%></h3>
+					<% if @event_attendee[:gender]=='10' || @event_attendee[:gender]=='11' %>
+						<div class="posrel">
+	                        <%= select_tag :gender, options_for_select(User::GENDER), :name => 'gender[]', :id => 'purchase_addresse_gender', :class => 'table_selectbox TW97p W50P_T' %>
+	                       <div class="clear"></div>
+		        		</div>
+		        	<% end %>	
+  				
+  					<% if @event_attendee[:birth_date]=='10' || @event_attendee[:birth_date]=='11' %>
+	  						<div class="marT20">
+		                        <label><%= I18n.t 'user.bdate'%> : <% if @event_attendee[:birth_date]=='11' %><span class="red">*</span><% end %></label>
+		                        <%= text_field_tag :birth_date, '', :class => 'textbox TW25p date_only', :name => 'birth_date[]' %>
+		                    </div>
+	  				<% end %>
+	  				
+  				
+  				
+  					<% if @event_attendee[:age]=='10' || @event_attendee[:age]=='11' %>
+  							<div class="marT20">
+		                        <label><%= I18n.t 'user.age'%> : <% if @event_attendee[:age]=='11' %><span class="red">*</span><% end %></label>
+		                        <input type="text" name="age[]" id="age"  class="textbox TW97p" placeholder=<%= I18n.t 'place.enter_your_age' %> />
+		                    </div>
+  					<% end %>
+  				
+  				
+  				<% end %><div class="clr"></div>
+  				
+  				
+  				
+  				<% if @questions.count > 0 %>
+      				<br /><br /><h3><%= I18n.t 'user.que'%> </h3>
+  						
+      				<%
+      				@ticks = params[:ticket_qty] 
+      				for q in @questions
+      					@ask = 1
+      					if (q[:rules]=='11' || q[:rules]=='1') 
+      						
+      						if q[:spec_ticket]==1
+          						@ask = 0
+          						@que_ticks = q[:tickets].split(',')
+          						@que_ticks.each do |ticks|
+          							if(@ticks.include?(ticks))
+          								 @ask = 1
+          							end	
+          						end	
+      						end	
+      						
+      					if(@ask==1) %>
+      					
+      						<div class="marT20">
+		                        <label><%= q[:que] %> : <% if q[:rules]=='11' %><span class="red">*</span><% end %></label>
+		                         <% if q[:que_type]=='text' %>
+		                        	<input type="text" name="que[<%= q[:id] %>][]" id="que_<%= q[:id] %>"  class="textbox TW97p"  />
+		                         <% elsif q[:que_type]=='para' %>
+		                         	<textarea name="que[<%= q[:id] %>][]" id="que_<%= q[:id] %>" class="TW97p" ></textarea>
+		                         <% else
+          						 	%>
+          						 	<br />	
+          						 	<%
+          						 	@que_options = QuestionOption.find(:all, :conditions => ['que_id=?', q[:id]])
+              						 i=0
+              						 if q[:que_type]=='select'
+              						 	%>
+              						 		<div class="posrel">
+				                                <select class="table_selectbox TW97p W50P_T" name="que[<%= q[:id] %>][]" id="que_<%= q[:id] %>">
+              						 	<%
+              						 end	
+              						 for opt in @que_options
+                  						 if q[:que_type]=='radio' %>
+                  						 		<input type="radio" class="regular-radio" name="que[<%= q[:id] %>][]" id="que_<%= q[:id] %><%= opt[:id] %>" value="<%= opt[:value] %>" <% if i==0 %> checked="checked" <% end %> />
+                  						 		<label class="mar0" for="que_<%= q[:id] %><%= opt[:id] %>"></label>
+												<label class="font_size14" style="margin: 0 3%;"><%= opt[:value] %></label>
+                  						 <% elsif q[:que_type]=='check' %>
+                  						 		<input type="checkbox" class="regular-checkbox" name="que[<%= q[:id] %>][]" id="que_<%= q[:id] %><%= opt[:id] %>"  value="<%= opt[:value] %>" <% if i==0 %> checked="checked" <% end %> />
+                  						 		<label class="mar0" for="que_<%= q[:id] %><%= opt[:id] %>"></label>
+												<label class="font_size14" style="margin: 0 3%;"><%= opt[:value] %></label>
+                  						 		
+                  						 <% else %>
+                  						 		<option value="<%= opt[:value] %>" ><%= opt[:value] %></option>
+                  						 <% end 
+                  					 	i+=1
+                  					 end
+                  					 if q[:que_type]=='select'
+              						 	%>
+              						 		</select></div>
+              						 	<%
+              						 end		 
+                  					%>
+          						 	
+          						 <% end %>
+          						 	
+          						<div class="clr"></div>
+          						
+		                    </div>
+		            	<% 
+      						end
+      					end
+      				end %>
+      				
+  				<% end %>
+  				
+  				
+  				<% if @waivers.count > 0 %>
+      				<br /><br /><h3><%= I18n.t 'add_attendee.waivers'%></h3>
+  						
+      				<%
+      				@ticks = params[:ticket_qty] 
+      				for q in @waivers
+      					@ask = 1
+      					if (q[:rules]=='11' || q[:rules]=='1') 
+      						
+      						if q[:spec_ticket]==1
+          						@ask = 0
+          						@que_ticks = q[:tickets].split(',')
+          						@que_ticks.each do |ticks|
+          							if(@ticks.include?(ticks))
+          								 @ask = 1
+          							end	
+          						end	
+      						end	
+      						
+      					if(@ask==1) 
+      					@que_options = QuestionOption.find(:first, :conditions => ['que_id=?', q[:id]])
+      					%>
+      						<div class="marT20">
+		                        <label><%= q[:que] %> : <% if q[:rules]=='11' %><span class="red">*</span><% end %></label>
+		                        <textarea readonly="readonly" class="TW97p"><%= @que_options[:value] %></textarea>
+		                        <br/><br/><input type="checkbox" name="que[<%= q[:id] %>][]" id="que_<%= q[:id] %><%= @que_options[:id] %>" value="1" class="regular-checkbox" />
+          						<label class="mar0" for="que_<%= q[:id] %><%= @que_options[:id] %>"></label>
+								<label class="font_size14" style="margin: 0 3%;"> <%= I18n.t 'user.agree_wiever'%></label>
+          						
+		                    </div>
+		                <% 
+      						end
+      					end
+      				end %>
+      				
+  				<% end %>
+  				
+  				
+  				<input type="hidden" name="ticket_id[]" value="0" />
+  			</div>
+  			
+  			
+  				        		
+            		
+            		</div>
+            </div><div class="clear"></div>
+	        
+	        <div class="marT20"><a href="javascript:" class="btn fr" onclick="submit_check_form();"><%= I18n.t 'event.purchase.pay_now'%></a></div>
+			<div class="clear"></div>
+	        
+	        <% end %>
+	        <div class="clear"></div>
+        </div>
+        
+        <!--Content Right-->
+        <%= render(:partial => "tickets/event_detail_siebar" , :object => :collection) %> 
+           <div class="clear"></div>
+    </div>
+    
+    
+    
+</section>
+
+
+
+	

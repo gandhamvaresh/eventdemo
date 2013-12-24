@@ -1,0 +1,312 @@
+<%
+	free_tickets = Ticket.get_free_ticket(@event[:id])
+	paid_tickets = Ticket.get_paid_ticket(@event[:id])
+	donation_tickets = Ticket.get_donation_ticket(@event[:id])	
+%>  
+
+<script>
+	function submit_check_form(){
+		var chk = true;
+		
+		$('#orderInfo').text("");
+		$('#orderInfo').removeClass("errors");
+		
+		 <%
+        	if free_tickets.count > 0
+				 for free in free_tickets %>
+       					if($('#ticket_qty_<%= free[:id] %>').val() > 0){
+       			 			chk=false;
+       			 		}	
+       			 <% end
+       		end
+       	%>
+       	
+       	<%
+        	if paid_tickets.count > 0
+				 for paid in paid_tickets %>
+				 
+       					if($('#ticket_qty_<%= paid[:id] %>').val() > 0){
+       			 			chk=false;
+       			 		}	
+       			 <% end
+       		end
+       	%>
+       	
+       	<%
+        	if donation_tickets.count > 0
+				 for donation in donation_tickets %>
+				 
+       					if($('#ticket_qty_<%= donation[:id] %>').val() > 0){
+       			 			chk=false;
+       			 		}	
+       			 <% end
+       		end
+       	%>
+       	
+       	 if(chk){
+       	 		$('#orderInfo').text("<%= I18n.t 'invite_add_attendee.invalid_quantity'%>");
+				$('#orderInfo').addClass("errors marT60");
+				return false;
+       	 }else{
+       	 		$('#purchase').submit();
+       	 }
+		
+	}
+</script>
+<style>
+	@media (max-width: 768px) {
+		.attendees td:nth-of-type(1):before { content: "<%= I18n.t 'invite_add_attendee.ticket_type'%>";  }
+		.attendees td:nth-of-type(2):before { content: "<%= I18n.t 'create_event.end_sales'%>";  }
+		.attendees td:nth-of-type(3):before { content: "<%= I18n.t 'event.view.price'%>"; }
+		.attendees td:nth-of-type(4):before { content: "<%= I18n.t 'event.view.fee'%>"; }
+		.attendees td:nth-of-type(5):before { content: "<%= I18n.t 'event.view.qty'%>"; }
+	}	
+</style>	
+ <% @act_class = 'Attendees' %>         	
+ <%= render(:partial => "manage_event/common_banner" , :object => :collection) %>  	
+
+<section>
+	<div class="main">
+    	 <div id="orderInfo" style="margin-bottom: 0px;" ></div>
+    	 
+    	<div class="left_columm">
+    	<div class="marT60">
+        	
+        	<div class="mtitle fl">
+            	<h1 class="fl"> <%= I18n.t 'invite_add_attendee.add_attendee_add'%> <span> <%= I18n.t 'invite_add_attendee.event_db_attendees'%> </span></h1>
+             
+            </div> <div class="clear"></div>
+             <%= form_tag({:controller => 'tickets', :action => 'add_attendee/'+@event[:id].to_s}, :id => 'purchase', :name => 'purchase') do %>	
+             
+            <div class="event_detail pad7 marT25">
+	            <table class="attendees table">
+	                <thead>
+	                <tr>
+	                    <th style="width: 140px;"><%= I18n.t 'invite_add_attendee.ticket_type'%></th>
+	                    <th style="width: 120px;"><%= I18n.t 'create_event.end_sales'%></th>
+	                    <th style="width: 71px;"><%= I18n.t 'event.view.price'%></th>
+	                    <th style="width: 71px;"><%= I18n.t 'event.view.fee'%></th>
+	                    <th style="width: 155px;"><%= I18n.t 'event.view.qty'%></th>
+	                </tr>
+	                </thead>
+	                <tbody>
+	                <%
+                    	pur_available=0
+                    	now_date = DateTime.now.strftime('%Y-%m-%d %H:%M:%S')
+                    	if free_tickets.count > 0
+	 
+			       			 for free in free_tickets 
+			       			 	
+                    %>
+                    		 <tr>
+                                <td>
+                                	<%= free[:free_ticket_name]%>
+                                	<% if free[:free_description]!='' && free[:free_description]!=nil %>
+                                		<a href="javascript:" onclick="if($('#<%= free[:id] %>').val()==1){ $('#desc_<%= free[:id] %>').hide(); $('#<%= free[:id] %>').val(0);  this.innerHTML = 'View More';}else{ $('#desc_<%= free[:id] %>').show(); $('#<%= free[:id] %>').val(1);   this.innerHTML = 'Hide';}"><%= I18n.t 'event.view.view_more'%></a>
+                                		<input type="hidden" id="<%= free[:id] %>" value="0" />
+                                		<div id="desc_<%= free[:id] %>" style="display: none;">
+                                			<%= free[:free_description] %>
+                                		</div>
+                                	<% end %>
+                                </td>
+                                <td><% if free[:free_start_sale]!=nil %><%= free[:free_start_sale].strftime(@site[:date_time_format]) %><% end %></td>
+                                <td><%= I18n.t 'event.view.free'%></td>
+                                <td><%= I18n.t 'event.view.free'%></td>
+                                <td>
+			                    		<% if(free[:free_end_sale]==nil || free[:free_end_sale] < now_date || free[:free_start_sale] > now_date || @event[:event_end_date_time] < now_date ) %>
+		                                    <%= I18n.t 'event.view.na'%>  
+		                                <% else 
+		                                		available = free[:free_qty].to_i - free[:used].to_i
+		                                		
+		                                		if free[:free_min_purchase]==nil or free[:free_min_purchase]==''
+		                                			free[:free_min_purchase]=@site[:min_purchase_allowed]
+		                                		end
+		                                		
+		                                		if free[:free_max_purchase]==nil or free[:free_max_purchase]==''
+		                                			free[:free_max_purchase]=@site[:max_purchase_allowed]
+		                                		end
+		                                		
+		                                		if (available > free[:free_min_purchase])
+		                                			pur_available=1
+		                                			
+		                                		if available > 	free[:free_max_purchase] && free[:free_max_purchase]>0
+		                                			available = free[:free_max_purchase]
+		                                		end	
+		                                %>
+		                                    <div class="posrel">
+			                                    <select name="ticket_qty[<%= free[:id] %>]" id="ticket_qty_<%= free[:id] %>" class="table_selectbox TW150">
+			                                        <option value="0">0</option>
+			                                        <%
+			                                        	free[:free_min_purchase].upto(available) do |n|
+			                                        	    %><option value="<%= n %>"><%= n %></option> <%
+														end
+			                                        %>
+			                                        
+			                                    </select>
+				                            <div class="clear"></div>
+							        		</div>       
+	                                    <% 
+	                                    	else
+	                                    		%> <%= I18n.t 'event.view.sold_out'%> <%
+	                                    	end
+	                                    end %>
+			                    </td>
+                            </tr>
+                    <%
+                    		end 
+                    	end	
+                    %>
+                     
+                     <%
+                    	if paid_tickets.count > 0
+	 
+			       			 for paid in paid_tickets 
+			       			 	
+                    %>
+                    		 <tr>
+                                <td>
+                                	<%= paid[:paid_ticket_name]%>
+                                	<% if paid[:paid_description]!='' && paid[:paid_description]!=nil %>
+                                		<a href="javascript:" onclick="if($('#<%= paid[:id] %>').val()==1){ $('#desc_<%= paid[:id] %>').hide(); $('#<%= paid[:id] %>').val(0);  this.innerHTML = 'View More';}else{ $('#desc_<%= paid[:id] %>').show(); $('#<%= paid[:id] %>').val(1);  this.innerHTML = 'Hide'; }"><%= I18n.t 'event.view.view_more'%></a>
+                                		<input type="hidden" id="<%= paid[:id] %>" value="0" />
+                                		<div id="desc_<%= paid[:id] %>" style="display: none;">
+                                			<%= paid[:paid_description] %>
+                                		</div>
+                                	<% end %>
+                                </td>
+                                <td><% if paid[:paid_start_sale]!=nil %><%= paid[:paid_start_sale].strftime(@site[:date_time_format]) %><% end %></td>
+                                <td><%= set_currency(paid[:paid_price]) %></td>
+                                <td><%= set_currency(paid[:paid_fee]) %></td>
+                                <td>
+			                    		<% if(paid[:paid_end_sale]==nil || paid[:paid_end_sale] < now_date || paid[:paid_start_sale] > now_date || @event[:event_end_date_time] < now_date ) %>
+		                                    <%= I18n.t 'event.view.na'%>  
+		                                <% else 
+		                                		available = paid[:paid_qty].to_i - paid[:used].to_i
+		                                		if paid[:paid_min_purchase]==nil or paid[:paid_min_purchase]==''
+		                                			paid[:paid_min_purchase]=@site[:min_purchase_allowed]
+		                                		end
+		                                		
+		                                		if paid[:paid_max_purchase]==nil or paid[:paid_max_purchase]==''
+		                                			paid[:paid_max_purchase]=@site[:max_purchase_allowed]
+		                                		end
+		                                			
+		                                		if (available > paid[:paid_min_purchase])
+		                                			pur_available=1
+		                                			
+		                                		if available > 	paid[:paid_max_purchase] && paid[:paid_max_purchase]>0
+		                                			available = paid[:paid_max_purchase]
+		                                		end		
+		                                %>
+		                                    <div class="posrel">
+			                                    <select name="ticket_qty[<%= paid[:id] %>]" id="ticket_qty_<%= paid[:id] %>" class="table_selectbox TW150">
+			                                         <option value="0">0</option>
+			                                        <%
+			                                        	paid[:paid_min_purchase].upto(available) do |n|
+			                                        	    %><option value="<%= n %>"><%= n %></option> <%
+														end
+			                                        %>
+			                                        
+			                                    </select>
+				                            <div class="clear"></div>
+							        		</div>       
+	                                    <% 
+	                                    	else
+	                                    		%> <%= I18n.t 'event.view.sold_out'%> <%
+	                                    	end
+	                                    end %>
+			                    </td>
+                            </tr>
+                    <%
+                    		end 
+                    	end	
+                    %>
+                     <%
+                    	if donation_tickets.count > 0
+	 
+			       			 for donation in donation_tickets 
+			       			 	
+                    %>
+                    		 <tr>
+                                <td>
+                                	<%= donation[:donation_ticket_name]%>
+                                	<% if donation[:donation_description]!='' && donation[:donation_description]!=nil %>
+                                		<a href="javascript:" onclick="if($('#<%= donation[:id] %>').val()==1){ $('#desc_<%= donation[:id] %>').hide(); $('#<%= donation[:id] %>').val(0);  this.innerHTML = 'View More';}else{ $('#desc_<%= donation[:id] %>').show(); $('#<%= donation[:id] %>').val(1);  this.innerHTML = 'Hide'; }"><%= I18n.t 'event.view.view_more'%></a>
+                                		<input type="hidden" id="<%= donation[:id] %>" value="0" />
+                                		<div id="desc_<%= donation[:id] %>" style="display: none;">
+                                			<%= donation[:donation_description] %>
+                                		</div>
+                                	<% end %>
+                                </td>
+                                <td><% if donation[:donation_start_sale]!=nil %><%= donation[:donation_start_sale].strftime(@site[:date_time_format]) %><% end %></td>
+                                <td><%= I18n.t 'event.view.na'%></td>
+                                <td><%= I18n.t 'event.view.na'%></td>
+                                <td>
+			                    		<% if donation[:donation_end_sale]==nil || donation[:donation_end_sale] < now_date  || donation[:donation_start_sale] > now_date || @event[:event_end_date_time] < now_date  %>
+		                                    <%= I18n.t 'event.view.na'%>
+		                                <% else
+		                                		available = donation[:donation_qty].to_i - donation[:used].to_i
+		                                		if (available > 0)
+		                                			pur_available=1
+		                                 %>
+		                                   <%= I18n.t 'event.view.amount'%>(<%= @site[:currency_symbol] %>) <input type="text" name="ticket_qty[<%= donation[:id] %>]" id="ticket_qty_<%= donation[:id] %>"  class="textbox TW150" style="height: 30px;"  />
+	                                    <% 
+	                                    	else
+	                                    		%> <%= I18n.t 'event.view.sold_out'%> <%
+	                                    	end
+	                                     end %>
+			                    </td>
+                            </tr>
+                    <%
+                    		end 
+                    	end	
+                    %>
+	                
+	                </tbody>
+	            </table>
+	             <% if pur_available==0 %><div class="pad20 textcenter"><strong><%= I18n.t 'invite_add_attendee.invalid_quantity'%></strong></div>  <% end %>
+	            <div class="clear"></div>
+			</div>
+        	 <% if pur_available==1 %>
+        	<div class="shadow marT40 pad3P">
+        			<div class="form">
+                        <label><%= I18n.t 'invite_add_attendee.payment_type'%></label>
+                        <select name="attendee[payment_type]" id="payment_type_attendee" class="selectbox">
+                        		<option value="Paid with check"><%= I18n.t 'invite_add_attendee.paid_with_check'%></option>
+								<option value="Paid with cash"><%= I18n.t 'invite_add_attendee.paid_with_cash'%></option>
+								<option value="Paid directly online with PayPal"><%= I18n.t 'invite_add_attendee.paid_directly_online_with_PayPal'%></option>
+								<option value="Paid online non-PayPal"><%= I18n.t 'invite_add_attendee.paid_online_non_PayPal'%> </option>
+								<option value="Paid by Google Checkout"><%= I18n.t 'invite_add_attendee.paid_by_google_checkout'%> </option>
+								<option value="Complimentary"><%= I18n.t 'invite_add_attendee.complimentary'%> </option>
+								<option value="No payment necessary"><%= I18n.t 'invite_add_attendee.no_payment_necessary'%></option>
+								<option value="Other"><%= I18n.t 'invite_add_attendee.other'%> </option>
+                        	</select>
+                        	
+                        <label class="marT20"><%= I18n.t 'invite_add_attendee.notes'%></label>
+                        <textarea name="attendee[notes]" id="notes_attendee" class="textbox" ></textarea>
+                      <input type="hidden" name="attendee[event_id]" id="attendee_event_id" value="<%= @event[:id] %>" />
+                        <input type="hidden" name="event_id" id="event_id" value="<%= @event[:id] %>" />
+                      <br /> <a href="javascript:" class="btn fr marT15" onclick="submit_check_form();" ><%= I18n.t 'event.view.buy_tickets'%></a>
+                       
+                    </div>
+           
+           	<div class="clear"></div>
+           	</div><% end %>
+           	
+           	 <% end %> 
+        </div>
+        
+           <div class="clear"></div>
+    </div>  
+    	
+    	        	
+		     <%= render(:partial => "manage_event/manage_event_sidebar" , :object => :collection) %>  
+		<div class="clear"></div>
+        </div>
+           <div class="clear"></div>
+   
+</section>
+
+
+<% @edit_menu_class = 'Manage' %>
+<%= render(:partial => "manage_event/edit_menu" , :object => :collection) %> 
+<div class="clear "></div>

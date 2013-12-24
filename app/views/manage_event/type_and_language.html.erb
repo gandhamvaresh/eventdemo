@@ -1,0 +1,81 @@
+<% @lang = Language.find(:all, :conditions => ['language_active=?',1]) %>
+ <%
+	 @one_theme = EventTheme.one_theme(@event[:id])
+	if @one_theme
+       theme_id = @one_theme[:theme_id]
+       else @one_theme = Theme.find(:first)
+       theme_id = @one_theme[:id]
+       end
+       
+ %>
+<% @act_class = 'Event Type &amp; Language' %>  
+<%= render(:partial => "common_banner" , :object => :collection) %> 
+
+<section>
+	<div class="main">
+			            
+		         
+    	<div class="left_columm">
+            <div class="marT60">
+            	
+            <%= form_tag({:controller => 'manage_event', :action => 'type_and_language'}, :id => 'edit_order_confirmation', :name => 'edit_order_confirmation') do %> 
+			
+                <div class="mtitle">
+                    <h1><%= I18n.t 'type_and_language.set_event_type'%> &amp; <span><%= I18n.t 'manage_event_sidebar.language'%></span></h1>
+					<span><%= I18n.t 'type_and_language.attendees_will_see_settings_select'%></span>          
+                </div>            
+                <div class="shadow marT20 pad3P">
+                    <label class="font_size15"><strong><%= I18n.t 'manage_event_sidebar.event_type'%></strong></label>
+                    <div class="type_language marT20">
+                        <input type="radio" name="event[event_type]" <% if @event[:event_type]==0 %> checked="checked" <% end %> value="0" />
+                        <span><%= I18n.t 'type_and_language.ticketed_event'%></span>
+                        <p><%= I18n.t 'type_and_language.choose_option_ticket_eg_example'%></p>
+                        <div class="clear"></div>                    
+                        
+                        <input type="radio"  name="event[event_type]" <% if @event[:event_type]==1 %> checked="checked" <% end %>  value="1" >
+                        <span><%= I18n.t 'type_and_language.registration_event'%></span>
+                        <p><%= I18n.t 'type_and_language.choose_option_registration_event_eg'%>
+									<%= I18n.t 'type_and_language.example_registration_info_type'%></p>
+                        <div class="clear"></div> 
+                    </div>
+                    <div class="marT25">
+                    	<label class="font_size15"><strong><%= I18n.t 'type_and_language.language_regional_settings'%></strong></label><br />
+                        <select class="selectbox marT10 TW150" id="" name="event[language_id]">
+							<% for lang in @lang %>
+								<option value="<%= lang[:id] %>" <% if lang[:id]==@event[:language_id] %> selected="selected" <% end %>><%= lang[:language_name] %></option>
+							<% end %>
+						</select>	
+							  
+                        <p class="marT10"><%= I18n.t 'type_and_language.your_event_display_date_time_language'%></p>
+                    </div>
+                </div>
+                <div class="marT25">
+                	<input type="hidden" name="id" id="id" value="<%= @event[:id] %>" />
+                	<input type="submit"  class="btn fr" value="<%= I18n.t 'type_and_language.save_changes'%>">
+                </div>
+                <div class="clear"></div>
+                <% end %>
+                
+                <div class="mtitle marT25">
+                    <h1><%= I18n.t 'button.preview' %></h1>            
+                </div>            
+                <div class="shadow marT20 pad3P">
+                	<div>
+						<!--<iframe frameborder="1" allowfullscreen="" style="overflow:scroll; width:100%; height:516px;" allowtransparency="true" src="<%= APP_CONFIG['development']['site_url'] %>events/event_theme_page?event_id=<%= @event[:id] %>&theme_id=<%= theme_id %>"></iframe>-->
+						<% event_id = @event[:id]  %>
+						<%= render(:partial => "/events/event_theme_page" , :object => :collection) %>
+					</div>
+                </div>
+            </div>        
+    	</div>  
+    
+    	
+    	<%= render(:partial => "manage_event_sidebar" , :object => :collection) %>
+		<div class="clear"></div>
+    </div>
+           <div class="clear"></div>
+   
+</section>
+<% @edit_menu_class = 'Manage' %>
+<%= render(:partial => "edit_menu" , :object => :collection) %> 
+<div class="clear "></div>

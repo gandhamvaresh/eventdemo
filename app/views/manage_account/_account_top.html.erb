@@ -1,0 +1,8 @@
+<% @site = SiteSetting.find(:first) %>
+<div class="main marTB40 shadow pad15">
+	<div class="mtitle fl">
+       	<h1><%= I18n.t 'myticket_index.myticket_my' %><span><%= I18n.t 'account_sidebar.account' %></span></h1>
+    </div>
+    <div class="marT10 since"><%= @site[:site_name] %> <%= I18n.t 'account_top.account_since' %> <span class="color_1"><%= @user[:created_at].strftime(@site[:date_format]) %></span></div>
+    <div class="clear"></div>	
+</div>

@@ -1,0 +1,6 @@
+  <select class="selectbox_date TW260 marR10" name="event[subcategory]" id="event_subcategory">
+					  <option value="">-- <%= I18n.t 'promote_event_page.select_subcategory'%>--</option>
+					  <% for subcat in @subcategory %>
+					    <option value="<%= subcat[:id] %>"><%= subcat[:category_name] %></option>
+					  <% end %>
+				  </select>
