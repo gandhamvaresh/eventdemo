@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class WalletController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/wallet_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ApplicationController
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-withdraw">#withdraw</a>
+    
+    <li><a href="#method-i-withdraw123">#withdraw123</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActiveAdmin.html">ActiveAdmin</a>
+  
+    <li><a href="./ActiveAdmin/Views.html">ActiveAdmin::Views</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages.html">ActiveAdmin::Views::Pages</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages/Base.html">ActiveAdmin::Views::Pages::Base</a>
+  
+    <li><a href="./AffiliatesController.html">AffiliatesController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./AuthController.html">AuthController</a>
+  
+    <li><a href="./CancelOrdersController.html">CancelOrdersController</a>
+  
+    <li><a href="./ContactListHelper.html">ContactListHelper</a>
+  
+    <li><a href="./ContactListsController.html">ContactListsController</a>
+  
+    <li><a href="./ContactListsHelper.html">ContactListsHelper</a>
+  
+    <li><a href="./ContactsController.html">ContactsController</a>
+  
+    <li><a href="./ContactsHelper.html">ContactsHelper</a>
+  
+    <li><a href="./CustomAdminHeader.html">CustomAdminHeader</a>
+  
+    <li><a href="./ErrorsController.html">ErrorsController</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./ExceptionsController.html">ExceptionsController</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./InvitesController.html">InvitesController</a>
+  
+    <li><a href="./ManageAccountController.html">ManageAccountController</a>
+  
+    <li><a href="./ManageAccountHelper.html">ManageAccountHelper</a>
+  
+    <li><a href="./ManageEventController.html">ManageEventController</a>
+  
+    <li><a href="./ManageEventHelper.html">ManageEventHelper</a>
+  
+    <li><a href="./MobileLoginsController.html">MobileLoginsController</a>
+  
+    <li><a href="./MyTicketsController.html">MyTicketsController</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./OrdersController.html">OrdersController</a>
+  
+    <li><a href="./OrganizersController.html">OrganizersController</a>
+  
+    <li><a href="./PagesController.html">PagesController</a>
+  
+    <li><a href="./ProductsHelper.html">ProductsHelper</a>
+  
+    <li><a href="./PurchasesController.html">PurchasesController</a>
+  
+    <li><a href="./ReferrersController.html">ReferrersController</a>
+  
+    <li><a href="./SearchController.html">SearchController</a>
+  
+    <li><a href="./TicketsController.html">TicketsController</a>
+  
+    <li><a href="./TipsController.html">TipsController</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WalletController.html">WalletController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class WalletController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/wallet_controller.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.manage_wallet'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@event_wallet</span> = <span class="ruby-constant">Wallet</span>.<span class="ruby-identifier">event_wallet_amount</span>(<span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-ivar">@ref_wallet</span> = <span class="ruby-constant">Wallet</span>.<span class="ruby-identifier">ref_wallet_amount</span>(<span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-ivar">@aff_wallet</span> = <span class="ruby-constant">Wallet</span>.<span class="ruby-identifier">aff_wallet_amount</span>(<span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-comment">#render :text =&gt; @ref_wallet.count</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-withdraw" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">withdraw</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="withdraw-source">
+            <pre><span class="ruby-comment"># File app/controllers/wallet_controller.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">withdraw</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+    
+      <span class="ruby-identifier">send_withdraw</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'wallet_controller.withdraw_request_send'</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>
+      
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:all_id</span>].<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+      <span class="ruby-ivar">@all</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:all_id</span>]
+      <span class="ruby-ivar">@all</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">send_withdraw</span>(<span class="ruby-identifier">id</span>)
+      <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] =  <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'wallet_controller.withdraw_request_send'</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>
+      
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- withdraw-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- withdraw-method -->
+
+    
+      <div id="method-i-withdraw123" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">withdraw123</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="withdraw123-source">
+            <pre><span class="ruby-comment"># File app/controllers/wallet_controller.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">withdraw123</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+     <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.withdraw_wallet'</span>
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+     <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+     <span class="ruby-ivar">@wallet</span> = <span class="ruby-constant">Wallet</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    
+     <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+        <span class="ruby-ivar">@amount</span> = <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:due</span>].<span class="ruby-identifier">to_f</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:amount</span>].<span class="ruby-identifier">to_f</span>
+        <span class="ruby-constant">Wallet</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;due = ? &quot;</span>, <span class="ruby-ivar">@amount</span>], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:id</span>]])
+        
+        <span class="ruby-ivar">@with</span> = <span class="ruby-constant">WalletWithdraw</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-ivar">@with</span>[<span class="ruby-value">:wallet_id</span>] = <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:id</span>]
+        <span class="ruby-ivar">@with</span>[<span class="ruby-value">:withdraw_ip</span>] = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">remote_ip</span>
+        <span class="ruby-ivar">@with</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]
+        <span class="ruby-ivar">@with</span>[<span class="ruby-value">:withdraw_amount</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:amount</span>]
+        
+        <span class="ruby-ivar">@with</span>.<span class="ruby-identifier">save</span>
+         
+        <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">withdraw_request</span>(<span class="ruby-ivar">@user</span>, <span class="ruby-ivar">@with</span>).<span class="ruby-identifier">deliver</span>
+        <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] =  <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'wallet_controller.withdraw_request_send'</span>
+        <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>
+     <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- withdraw123-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- withdraw123-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

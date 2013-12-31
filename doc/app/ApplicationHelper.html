@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>module ApplicationHelper - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/application_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-cancel_available">#cancel_available</a>
+    
+    <li><a href="#method-i-check_img">#check_img</a>
+    
+    <li><a href="#method-i-event_title">#event_title</a>
+    
+    <li><a href="#method-i-paypal_amt">#paypal_amt</a>
+    
+    <li><a href="#method-i-set_currency">#set_currency</a>
+    
+    <li><a href="#method-i-ticket_name">#ticket_name</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActiveAdmin.html">ActiveAdmin</a>
+  
+    <li><a href="./ActiveAdmin/Views.html">ActiveAdmin::Views</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages.html">ActiveAdmin::Views::Pages</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages/Base.html">ActiveAdmin::Views::Pages::Base</a>
+  
+    <li><a href="./AffiliatesController.html">AffiliatesController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./AuthController.html">AuthController</a>
+  
+    <li><a href="./CancelOrdersController.html">CancelOrdersController</a>
+  
+    <li><a href="./ContactListHelper.html">ContactListHelper</a>
+  
+    <li><a href="./ContactListsController.html">ContactListsController</a>
+  
+    <li><a href="./ContactListsHelper.html">ContactListsHelper</a>
+  
+    <li><a href="./ContactsController.html">ContactsController</a>
+  
+    <li><a href="./ContactsHelper.html">ContactsHelper</a>
+  
+    <li><a href="./CustomAdminHeader.html">CustomAdminHeader</a>
+  
+    <li><a href="./ErrorsController.html">ErrorsController</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./ExceptionsController.html">ExceptionsController</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./InvitesController.html">InvitesController</a>
+  
+    <li><a href="./ManageAccountController.html">ManageAccountController</a>
+  
+    <li><a href="./ManageAccountHelper.html">ManageAccountHelper</a>
+  
+    <li><a href="./ManageEventController.html">ManageEventController</a>
+  
+    <li><a href="./ManageEventHelper.html">ManageEventHelper</a>
+  
+    <li><a href="./MobileLoginsController.html">MobileLoginsController</a>
+  
+    <li><a href="./MyTicketsController.html">MyTicketsController</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./OrdersController.html">OrdersController</a>
+  
+    <li><a href="./OrganizersController.html">OrganizersController</a>
+  
+    <li><a href="./PagesController.html">PagesController</a>
+  
+    <li><a href="./ProductsHelper.html">ProductsHelper</a>
+  
+    <li><a href="./PurchasesController.html">PurchasesController</a>
+  
+    <li><a href="./ReferrersController.html">ReferrersController</a>
+  
+    <li><a href="./SearchController.html">SearchController</a>
+  
+    <li><a href="./TicketsController.html">TicketsController</a>
+  
+    <li><a href="./TipsController.html">TipsController</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WalletController.html">WalletController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module ApplicationHelper</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-cancel_available" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cancel_available</span><span
+            class="method-args">(date)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cancel_available-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cancel_available</span>(<span class="ruby-identifier">date</span>)
+  <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+  <span class="ruby-identifier">chk_date</span> = (<span class="ruby-identifier">date</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:cancel_time_limit</span>].<span class="ruby-identifier">hours</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d %H:%M:%S'</span>)
+  <span class="ruby-identifier">now_date</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d %H:%M:%S'</span>)
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">now_date</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">chk_date</span>
+    <span class="ruby-value">0</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cancel_available-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cancel_available-method -->
+
+    
+      <div id="method-i-check_img" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">check_img</span><span
+            class="method-args">(img,type,folder)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="check_img-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_img</span>(<span class="ruby-identifier">img</span>,<span class="ruby-identifier">type</span>,<span class="ruby-identifier">folder</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">img!</span>=<span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">img</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> 
+      
+      <span class="ruby-identifier">full_path</span> = <span class="ruby-node">&quot;/public/data/#{folder}/#{type}/#{img}&quot;</span>
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;#{Rails.root}/&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">full_path</span>)
+          <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span>   <span class="ruby-node">&quot;data/#{folder}/#{type}/#{img}&quot;</span>
+      <span class="ruby-keyword">else</span>
+         <span class="ruby-keyword">if</span> <span class="ruby-identifier">folder</span><span class="ruby-operator">==</span><span class="ruby-string">'thumb'</span>
+           <span class="ruby-identifier">folder1</span> = <span class="ruby-string">&quot;orig&quot;</span>
+         <span class="ruby-keyword">else</span>
+           <span class="ruby-identifier">folder1</span> = <span class="ruby-string">&quot;thumb&quot;</span>
+         <span class="ruby-keyword">end</span>
+         <span class="ruby-identifier">full_path</span> = <span class="ruby-node">&quot;/public/data/#{folder1}/#{type}/#{img}&quot;</span>
+         
+          <span class="ruby-keyword">if</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;#{Rails.root}/&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">full_path</span>)
+            <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span>   <span class="ruby-node">&quot;data/#{folder1}/#{type}/#{img}&quot;</span>
+          <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span>  <span class="ruby-string">&quot;0&quot;</span>
+          <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>      
+    <span class="ruby-keyword">else</span>  
+          <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span>  <span class="ruby-string">&quot;0&quot;</span>
+    <span class="ruby-keyword">end</span>
+ <span class="ruby-keyword">end</span></pre>
+          </div><!-- check_img-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- check_img-method -->
+
+    
+      <div id="method-i-event_title" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">event_title</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="event_title-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">event_title</span>(<span class="ruby-identifier">id</span>)
+   <span class="ruby-identifier">event_title</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">select</span>(<span class="ruby-string">&quot;event_title&quot;</span>).<span class="ruby-identifier">where</span>(<span class="ruby-identifier">id</span>)
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">event_title</span>[<span class="ruby-value">0</span>][<span class="ruby-value">:event_title</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- event_title-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- event_title-method -->
+
+    
+      <div id="method-i-paypal_amt" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">paypal_amt</span><span
+            class="method-args">(amt)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>set currency end ###########</p>
+          
+
+          
+          <div class="method-source-code" id="paypal_amt-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">paypal_amt</span>(<span class="ruby-identifier">amt</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">amt</span><span class="ruby-operator">==</span><span class="ruby-string">''</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">amt</span><span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>
+     <span class="ruby-identifier">amt</span>=<span class="ruby-value">0</span>
+  <span class="ruby-keyword">end</span>  
+    <span class="ruby-identifier">amount</span> = <span class="ruby-identifier">number_to_currency</span>(<span class="ruby-identifier">amt</span>, <span class="ruby-value">:unit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-value">:separator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-value">:delimiter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>)
+    <span class="ruby-identifier">amount</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- paypal_amt-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- paypal_amt-method -->
+
+    
+      <div id="method-i-set_currency" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_currency</span><span
+            class="method-args">(amt)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>set amount with currency ############</p>
+          
+
+          
+          <div class="method-source-code" id="set_currency-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_currency</span>(<span class="ruby-identifier">amt</span>)  
+
+  <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">amt</span><span class="ruby-operator">==</span><span class="ruby-string">''</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">amt</span><span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>
+     <span class="ruby-identifier">amt</span>=<span class="ruby-value">0</span>
+  <span class="ruby-keyword">end</span>  
+   
+    <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_symbol_side</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'left'</span>)
+      
+       <span class="ruby-identifier">amount</span> = <span class="ruby-identifier">number_to_currency</span>(<span class="ruby-identifier">amt</span>, <span class="ruby-value">:unit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_symbol</span>], <span class="ruby-value">:separator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-value">:delimiter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;,&quot;</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:decimal_points</span>], <span class="ruby-value">:negative_format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;-%u%n&quot;</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;%u%n&quot;</span>)
+    
+    
+    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_symbol_side</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'left_space'</span>)
+      
+       <span class="ruby-identifier">amount</span> = <span class="ruby-identifier">number_to_currency</span>(<span class="ruby-identifier">amt</span>, <span class="ruby-value">:unit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_symbol</span>], <span class="ruby-value">:separator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-value">:delimiter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;,&quot;</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:decimal_points</span>], <span class="ruby-value">:negative_format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;-%u %n&quot;</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;%u %n&quot;</span>)
+    
+    
+    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_symbol_side</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'right'</span>)
+      
+       <span class="ruby-identifier">amount</span> = <span class="ruby-identifier">number_to_currency</span>(<span class="ruby-identifier">amt</span>, <span class="ruby-value">:unit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_symbol</span>], <span class="ruby-value">:separator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-value">:delimiter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;,&quot;</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:decimal_points</span>], <span class="ruby-value">:negative_format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;-%n%u&quot;</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;%n%u&quot;</span>)
+    
+    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_symbol_side</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'right_space'</span>)
+      
+       <span class="ruby-identifier">amount</span> = <span class="ruby-identifier">number_to_currency</span>(<span class="ruby-identifier">amt</span>, <span class="ruby-value">:unit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_symbol</span>], <span class="ruby-value">:separator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-value">:delimiter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;,&quot;</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:decimal_points</span>], <span class="ruby-value">:negative_format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;-%n %u&quot;</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;%n %u&quot;</span>)
+   
+    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_symbol_side</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'left_code'</span>)
+      
+       <span class="ruby-identifier">amount</span> = <span class="ruby-identifier">number_to_currency</span>(<span class="ruby-identifier">amt</span>, <span class="ruby-value">:unit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_code</span>], <span class="ruby-value">:separator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-value">:delimiter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;,&quot;</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:decimal_points</span>], <span class="ruby-value">:negative_format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;-%u%n&quot;</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;%u%n&quot;</span>)
+    
+    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_symbol_side</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'left_space_code'</span>)
+      
+       <span class="ruby-identifier">amount</span> = <span class="ruby-identifier">number_to_currency</span>(<span class="ruby-identifier">amt</span>, <span class="ruby-value">:unit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_code</span>], <span class="ruby-value">:separator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-value">:delimiter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;,&quot;</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:decimal_points</span>], <span class="ruby-value">:negative_format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;-%u %n&quot;</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;%u %n&quot;</span>)
+    
+    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_symbol_side</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'right_code'</span>)
+      
+       <span class="ruby-identifier">amount</span> = <span class="ruby-identifier">number_to_currency</span>(<span class="ruby-identifier">amt</span>, <span class="ruby-value">:unit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_code</span>], <span class="ruby-value">:separator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-value">:delimiter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;,&quot;</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:decimal_points</span>], <span class="ruby-value">:negative_format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;-%n%u&quot;</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;%n%u&quot;</span>)
+    
+    <span class="ruby-keyword">else</span>
+      
+       <span class="ruby-identifier">amount</span> = <span class="ruby-identifier">number_to_currency</span>(<span class="ruby-identifier">amt</span>, <span class="ruby-value">:unit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_code</span>], <span class="ruby-value">:separator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-value">:delimiter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;,&quot;</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:decimal_points</span>], <span class="ruby-value">:negative_format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;-%n %u&quot;</span>, <span class="ruby-value">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;%n %u&quot;</span>)
+    <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">amount</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set_currency-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set_currency-method -->
+
+    
+      <div id="method-i-ticket_name" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ticket_name</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="ticket_name-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ticket_name</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-ivar">@tic</span> = <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:free</span>]<span class="ruby-operator">==</span><span class="ruby-value">1</span>
+     <span class="ruby-keyword">return</span> <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:free_ticket_name</span>] 
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:paid</span>]<span class="ruby-operator">==</span><span class="ruby-value">1</span>
+     <span class="ruby-keyword">return</span> <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:paid_ticket_name</span>]
+  <span class="ruby-keyword">else</span>
+     <span class="ruby-keyword">return</span> <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:donation_ticket_name</span>]   
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- ticket_name-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ticket_name-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

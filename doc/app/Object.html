@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class Object - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/admin/admin_user.rb
+    <li>app/admin/authorize_settings.rb
+    <li>app/admin/cancel_orders.rb
+    <li>app/admin/categories.rb
+    <li>app/admin/cities.rb
+    <li>app/admin/events.rb
+    <li>app/admin/facebook_settings.rb
+    <li>app/admin/galleries.rb
+    <li>app/admin/pages.rb
+    <li>app/admin/paypal_settings.rb
+    <li>app/admin/purchases.rb
+    <li>app/admin/site_settings.rb
+    <li>app/admin/tickets.rb
+    <li>app/admin/twitter_settings.rb
+    <li>app/admin/user_addresses.rb
+    <li>app/admin/users.rb
+    <li>app/admin/wallet_settings.rb
+    <li>app/admin/wallet_withdraws.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">BasicObject
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-active">#active</a>
+    
+    <li><a href="#method-i-cancel">#cancel</a>
+    
+    <li><a href="#method-i-cancel_feature">#cancel_feature</a>
+    
+    <li><a href="#method-i-child_categories">#child_categories</a>
+    
+    <li><a href="#method-i-confirm">#confirm</a>
+    
+    <li><a href="#method-i-confirm_cancel">#confirm_cancel</a>
+    
+    <li><a href="#method-i-confirms">#confirms</a>
+    
+    <li><a href="#method-i-create">#create</a>
+    
+    <li><a href="#method-i-delete_categories">#delete_categories</a>
+    
+    <li><a href="#method-i-delete_event">#delete_event</a>
+    
+    <li><a href="#method-i-delete_user">#delete_user</a>
+    
+    <li><a href="#method-i-destroy">#destroy</a>
+    
+    <li><a href="#method-i-destroy_user">#destroy_user</a>
+    
+    <li><a href="#method-i-fb_settings">#fb_settings</a>
+    
+    <li><a href="#method-i-inactive">#inactive</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-list">#list</a>
+    
+    <li><a href="#method-i-make_feature">#make_feature</a>
+    
+    <li><a href="#method-i-manage">#manage</a>
+    
+    <li><a href="#method-i-monthly">#monthly</a>
+    
+    <li><a href="#method-i-password">#password</a>
+    
+    <li><a href="#method-i-show">#show</a>
+    
+    <li><a href="#method-i-update">#update</a>
+    
+    <li><a href="#method-i-view_chart">#view_chart</a>
+    
+    <li><a href="#method-i-withdraw_con">#withdraw_con</a>
+    
+    <li><a href="#method-i-yearly">#yearly</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActiveAdmin.html">ActiveAdmin</a>
+  
+    <li><a href="./ActiveAdmin/Views.html">ActiveAdmin::Views</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages.html">ActiveAdmin::Views::Pages</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages/Base.html">ActiveAdmin::Views::Pages::Base</a>
+  
+    <li><a href="./AffiliatesController.html">AffiliatesController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./AuthController.html">AuthController</a>
+  
+    <li><a href="./CancelOrdersController.html">CancelOrdersController</a>
+  
+    <li><a href="./ContactListHelper.html">ContactListHelper</a>
+  
+    <li><a href="./ContactListsController.html">ContactListsController</a>
+  
+    <li><a href="./ContactListsHelper.html">ContactListsHelper</a>
+  
+    <li><a href="./ContactsController.html">ContactsController</a>
+  
+    <li><a href="./ContactsHelper.html">ContactsHelper</a>
+  
+    <li><a href="./CustomAdminHeader.html">CustomAdminHeader</a>
+  
+    <li><a href="./ErrorsController.html">ErrorsController</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./ExceptionsController.html">ExceptionsController</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./InvitesController.html">InvitesController</a>
+  
+    <li><a href="./ManageAccountController.html">ManageAccountController</a>
+  
+    <li><a href="./ManageAccountHelper.html">ManageAccountHelper</a>
+  
+    <li><a href="./ManageEventController.html">ManageEventController</a>
+  
+    <li><a href="./ManageEventHelper.html">ManageEventHelper</a>
+  
+    <li><a href="./MobileLoginsController.html">MobileLoginsController</a>
+  
+    <li><a href="./MyTicketsController.html">MyTicketsController</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./OrdersController.html">OrdersController</a>
+  
+    <li><a href="./OrganizersController.html">OrganizersController</a>
+  
+    <li><a href="./PagesController.html">PagesController</a>
+  
+    <li><a href="./ProductsHelper.html">ProductsHelper</a>
+  
+    <li><a href="./PurchasesController.html">PurchasesController</a>
+  
+    <li><a href="./ReferrersController.html">ReferrersController</a>
+  
+    <li><a href="./SearchController.html">SearchController</a>
+  
+    <li><a href="./TicketsController.html">TicketsController</a>
+  
+    <li><a href="./TipsController.html">TipsController</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WalletController.html">WalletController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Object</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-active" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">active</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="active-source">
+            <pre><span class="ruby-comment"># File app/admin/categories.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">active</span>
+    <span class="ruby-constant">Category</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;category_status = ? &quot;</span>, <span class="ruby-value">1</span>], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]])
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/admin/categories/&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Category Image Activated Successfully.'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- active-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- active-method -->
+
+    
+      <div id="method-i-cancel" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cancel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cancel-source">
+            <pre><span class="ruby-comment"># File app/admin/purchases.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cancel</span>
+   <span class="ruby-ivar">@page_title</span> = <span class="ruby-string">'Cancel Order '</span><span class="ruby-operator">+</span><span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">site_title</span>
+   <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;cancel&quot;</span> , <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'active_admin'</span>    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cancel-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cancel-method -->
+
+    
+      <div id="method-i-cancel_feature" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cancel_feature</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cancel_feature-source">
+            <pre><span class="ruby-comment"># File app/admin/events.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cancel_feature</span>
+  <span class="ruby-ivar">@ids</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@ids</span>
+    <span class="ruby-constant">Event</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;feature = 0 &quot;</span>], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-identifier">i</span>])
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/admin/events&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Event(s) removed from featured Successfully.'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cancel_feature-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cancel_feature-method -->
+
+    
+      <div id="method-i-child_categories" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">child_categories</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="child_categories-source">
+            <pre><span class="ruby-comment"># File app/admin/categories.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">child_categories</span>
+   <span class="ruby-ivar">@category</span> = <span class="ruby-string">'Category list'</span>
+   <span class="ruby-ivar">@page_title</span> = <span class="ruby-string">'Category List'</span><span class="ruby-operator">+</span><span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">site_title</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;category_list&quot;</span> , <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'active_admin'</span>
+  
+  <span class="ruby-comment">#redirect_to &quot;category_list&quot;+params[:id].to_s, :notice =&gt; 'Event Deactivated Successfully.'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- child_categories-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- child_categories-method -->
+
+    
+      <div id="method-i-confirm" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">confirm</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="confirm-source">
+            <pre><span class="ruby-comment"># File app/admin/wallet_withdraws.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confirm</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>] 
+     <span class="ruby-identifier">withdraw_con</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+     <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">confirm_withdraw_request</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]).<span class="ruby-identifier">deliver</span>
+     
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:all_id</span>].<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+     <span class="ruby-ivar">@all</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:all_id</span>]
+     <span class="ruby-ivar">@all</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+       <span class="ruby-identifier">withdraw_con</span>(<span class="ruby-identifier">id</span>)
+       <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">confirm_withdraw_request</span>(<span class="ruby-identifier">id</span>).<span class="ruby-identifier">deliver</span>
+     <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>     
+  
+   <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/admin/wallet_withdraws/&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Withdrawal Request Confirmed Successfully.'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- confirm-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- confirm-method -->
+
+    
+      <div id="method-i-confirm_cancel" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">confirm_cancel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="confirm_cancel-source">
+            <pre><span class="ruby-comment"># File app/admin/cancel_orders.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confirm_cancel</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>] 
+        <span class="ruby-constant">CancelOrder</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;with_con = 1&quot;</span>], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]])
+        <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">confirm_cancel_withdraw_request</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]).<span class="ruby-identifier">deliver</span>
+     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:all_id</span>].<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+        <span class="ruby-ivar">@all</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:all_id</span>]
+        <span class="ruby-ivar">@all</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+          <span class="ruby-constant">CancelOrder</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;with_con = 1&quot;</span>], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-identifier">id</span>])
+          <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">confirm_cancel_withdraw_request</span>(<span class="ruby-identifier">id</span>).<span class="ruby-identifier">deliver</span>
+        <span class="ruby-keyword">end</span>
+     <span class="ruby-keyword">end</span>     
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/admin/cancel_orders/&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Cancel Order Payment Confirmed Successfully.'</span>
+ <span class="ruby-keyword">end</span></pre>
+          </div><!-- confirm_cancel-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- confirm_cancel-method -->
+
+    
+      <div id="method-i-confirms" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">confirms</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="confirms-source">
+            <pre><span class="ruby-comment"># File app/admin/cancel_orders.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confirms</span>
+  
+   <span class="ruby-ivar">@page_title</span> = <span class="ruby-string">'Confirmed Cancels '</span><span class="ruby-operator">+</span><span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">site_title</span>
+   <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;confirms&quot;</span> , <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'active_admin'</span>    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- confirms-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- confirms-method -->
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/admin/categories.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+    <span class="ruby-identifier">create!</span> <span class="ruby-keyword">do</span>  
+      <span class="ruby-ivar">@category</span> = <span class="ruby-constant">Category</span>.<span class="ruby-identifier">last</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:upload</span>]
+         <span class="ruby-identifier">num1</span> = <span class="ruby-string">'category_'</span><span class="ruby-operator">+</span><span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">5</span>)
+         <span class="ruby-identifier">name</span> = <span class="ruby-identifier">num1</span><span class="ruby-operator">+</span><span class="ruby-string">'_'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:upload</span>][<span class="ruby-string">'datafile'</span>].<span class="ruby-identifier">original_filename</span>
+         <span class="ruby-identifier">directory</span> = <span class="ruby-string">&quot;public/data/orig/category&quot;</span>
+         <span class="ruby-identifier">ext</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:upload</span>][<span class="ruby-string">'datafile'</span>].<span class="ruby-identifier">original_filename</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>)
+        
+         <span class="ruby-keyword">if</span> <span class="ruby-identifier">ext</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">==</span><span class="ruby-string">'jpg'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">ext</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">==</span><span class="ruby-string">'jpeg'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">ext</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">==</span><span class="ruby-string">'png'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">ext</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">==</span><span class="ruby-string">'gif'</span>  <span class="ruby-operator">||</span> <span class="ruby-identifier">ext</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">==</span><span class="ruby-string">'JPG'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">ext</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">==</span><span class="ruby-string">'JPEG'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">ext</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">==</span><span class="ruby-string">'PNG'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">ext</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">==</span><span class="ruby-string">'GIF'</span>  
+             <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">directory</span>, <span class="ruby-identifier">name</span>)
+             <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;wb&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:upload</span>][<span class="ruby-string">'datafile'</span>].<span class="ruby-identifier">read</span>) }
+                     
+           
+             <span class="ruby-ivar">@category</span>[<span class="ruby-value">:category_image</span>] = <span class="ruby-identifier">name</span>
+             <span class="ruby-ivar">@category</span>.<span class="ruby-identifier">save</span>
+             
+            
+            <span class="ruby-keyword">if</span> <span class="ruby-ivar">@category</span>[<span class="ruby-value">:category_parent_id</span>]<span class="ruby-operator">!=</span><span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@category</span>[<span class="ruby-value">:category_parent_id</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@category</span>[<span class="ruby-value">:category_parent_id</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span>
+                <span class="ruby-identifier">redirect_to</span>(<span class="ruby-string">&quot;/admin/categories/child_categories/&quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@category</span>[<span class="ruby-value">:category_parent_id</span>].<span class="ruby-identifier">to_s</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Child Category Updated Succesfully.'</span> ) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+            <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">redirect_to</span>(<span class="ruby-string">&quot;/admin/categories&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Category Updated Succesfully.'</span> ) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+             <span class="ruby-keyword">end</span>    
+         <span class="ruby-keyword">else</span>
+             <span class="ruby-identifier">redirect_to</span>(<span class="ruby-string">&quot;/admin/categories/new&quot;</span>,  <span class="ruby-value">:flash</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Upload JPEG, PNG or GIF Image only.'</span> } ) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+             
+          
+         <span class="ruby-keyword">end</span> 
+       <span class="ruby-keyword">end</span>     
+     <span class="ruby-keyword">end</span>   
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create-method -->
+
+    
+      <div id="method-i-delete_categories" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_categories</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_categories-source">
+            <pre><span class="ruby-comment"># File app/admin/categories.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_categories</span>
+    <span class="ruby-ivar">@categories</span> = <span class="ruby-constant">Category</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-identifier">ref_id</span> = <span class="ruby-ivar">@categories</span>[<span class="ruby-value">:category_parent_id</span>]       
+     
+    <span class="ruby-ivar">@categories</span>.<span class="ruby-identifier">destroy</span>
+     
+    <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'child_categories/'</span><span class="ruby-operator">+</span><span class="ruby-identifier">ref_id</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Categories was successfully destroyed.'</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_categories-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_categories-method -->
+
+    
+      <div id="method-i-delete_event" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_event</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_event-source">
+            <pre><span class="ruby-comment"># File app/admin/events.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_event</span> 
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-identifier">user_id</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:user_id</span>]
+    
+    <span class="ruby-constant">Attendee</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-constant">EventRepeat</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-constant">EventTheme</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+    
+    <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">destroy</span>
+    <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Event was successfully destroyed.'</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_event-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_event-method -->
+
+    
+      <div id="method-i-delete_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_user-source">
+            <pre><span class="ruby-comment"># File app/admin/users.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_user</span>
+    <span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">user_id</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]<span class="ruby-operator">==</span><span class="ruby-identifier">user_id</span>
+      <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>
+      <span class="ruby-identifier">ref_id</span> = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:ref_id</span>]
+      <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">destroy</span>
+    <span class="ruby-keyword">else</span> 
+      <span class="ruby-identifier">ref_id</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">end</span>
+    
+    
+    <span class="ruby-ivar">@permission</span> = <span class="ruby-constant">Permission</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span> , <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'user_id=?'</span>, <span class="ruby-identifier">user_id</span>])
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@permission</span>
+      <span class="ruby-ivar">@permission</span>.<span class="ruby-identifier">destroy</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">ref_id</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+       <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/admin/users/&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User Account Deleted Successfully.'</span>
+    <span class="ruby-keyword">else</span>
+         <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'list/'</span><span class="ruby-operator">+</span><span class="ruby-identifier">ref_id</span>.<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-keyword">end</span> 
+   
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_user-method -->
+
+    
+      <div id="method-i-destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">destroy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="destroy-source">
+            <pre><span class="ruby-comment"># File app/admin/events.rb, line 124</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span> 
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-identifier">user_id</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:user_id</span>]
+    
+    <span class="ruby-constant">Attendee</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-constant">EventRepeat</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-constant">EventTheme</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+    
+    <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">destroy</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/admin/events/&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Event was successfully destroyed.'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- destroy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- destroy-method -->
+
+    
+      <div id="method-i-destroy_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">destroy_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="destroy_user-source">
+            <pre><span class="ruby-comment"># File app/admin/users.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy_user</span>
+    <span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">user_id</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]<span class="ruby-operator">==</span><span class="ruby-identifier">user_id</span>
+      <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>
+      <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">destroy</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-ivar">@permission</span> = <span class="ruby-constant">Permission</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span> , <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'user_id=?'</span>, <span class="ruby-identifier">user_id</span>])
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@permission</span>
+      <span class="ruby-ivar">@permission</span>.<span class="ruby-identifier">destroy</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/admin/users/&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User Account Deleted Successfully.'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- destroy_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- destroy_user-method -->
+
+    
+      <div id="method-i-fb_settings" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fb_settings</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="fb_settings-source">
+            <pre><span class="ruby-comment"># File app/admin/site_settings.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fb_settings</span>
+  <span class="ruby-ivar">@fb</span> = <span class="ruby-constant">FacebookSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+     <span class="ruby-ivar">@fb</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:facebook_setting</span>])
+     <span class="ruby-identifier">redirect_to</span>(<span class="ruby-string">&quot;/admin/site_settings/fb_settings&quot;</span> )
+  <span class="ruby-keyword">else</span>
+     <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;fb_settings&quot;</span> , <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'active_admin'</span>
+  <span class="ruby-keyword">end</span>   
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- fb_settings-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- fb_settings-method -->
+
+    
+      <div id="method-i-inactive" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">inactive</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="inactive-source">
+            <pre><span class="ruby-comment"># File app/admin/categories.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inactive</span>
+    <span class="ruby-constant">Category</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;category_status = ? &quot;</span>, <span class="ruby-value">0</span>], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]])
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/admin/categories/&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Category Image Deactivated Successfully.'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- inactive-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- inactive-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/admin/authorize_settings.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+   <span class="ruby-identifier">redirect_to</span>(<span class="ruby-string">&quot;/admin/authorize_settings/1/edit&quot;</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-list" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">list</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="list-source">
+            <pre><span class="ruby-comment"># File app/admin/categories.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">list</span>
+  <span class="ruby-ivar">@page_title</span> = <span class="ruby-string">'Category List'</span><span class="ruby-operator">+</span><span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">site_title</span>
+  
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;category_list&quot;</span> , <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'active_admin'</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- list-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- list-method -->
+
+    
+      <div id="method-i-make_feature" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">make_feature</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="make_feature-source">
+            <pre><span class="ruby-comment"># File app/admin/events.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_feature</span>
+  <span class="ruby-ivar">@ids</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+  <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+  
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@ids</span>
+    <span class="ruby-ivar">@cnt</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find_featured_events</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cnt</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:feature_limit</span>]
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-constant">Event</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;feature = 1 &quot;</span>], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-identifier">i</span>])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cnt</span>.<span class="ruby-identifier">count</span><span class="ruby-operator">&gt;=</span><span class="ruby-ivar">@site</span>[<span class="ruby-value">:feature_limit</span>]
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/admin/events&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:feature_limit</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">' Event(s) made featured Successfully. If you want to make another now then cancel some events first from featured list.'</span>
+  <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-string">&quot;/admin/events&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Event(s) made featured Successfully.'</span>
+  <span class="ruby-keyword">end</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- make_feature-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- make_feature-method -->
+
+    
+      <div id="method-i-manage" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">manage</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="manage-source">
+            <pre><span class="ruby-comment"># File app/admin/events.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">manage</span>
+  <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@event_attendee</span> = <span class="ruby-constant">EventAttendee</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]]).<span class="ruby-identifier">paginate</span>(<span class="ruby-value">:page</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:attendee_page</span>], <span class="ruby-value">:per_page</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>)
+  <span class="ruby-ivar">@orders</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find_orders_by_event_admin</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>],<span class="ruby-identifier">params</span>[<span class="ruby-value">:order_page</span>])
+           
+  <span class="ruby-ivar">@page_title</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>]<span class="ruby-operator">+</span><span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">site_title</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;manage&quot;</span> , <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'active_admin'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- manage-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- manage-method -->
+
+    
+      <div id="method-i-monthly" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">monthly</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="monthly-source">
+            <pre><span class="ruby-comment"># File app/admin/purchases.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">monthly</span>
+ 
+ <span class="ruby-ivar">@page_title</span> = <span class="ruby-string">'Monthly Transactions List '</span><span class="ruby-operator">+</span><span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">site_title</span>
+ <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;monthly&quot;</span> , <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'active_admin'</span>  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- monthly-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- monthly-method -->
+
+    
+      <div id="method-i-password" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">password</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="password-source">
+            <pre><span class="ruby-comment"># File app/admin/admin_user.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">password</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'test'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- password-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- password-method -->
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/admin/categories.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@category</span> = <span class="ruby-constant">Category</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@page_title</span> = <span class="ruby-ivar">@category</span>[<span class="ruby-value">:category_name</span>]<span class="ruby-operator">+</span><span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">site_title</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@category</span>[<span class="ruby-value">:category_parent_id</span>]<span class="ruby-operator">==</span><span class="ruby-value">0</span>
+      <span class="ruby-identifier">redirect_to</span>(<span class="ruby-string">&quot;/admin/categories&quot;</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Category Updated Succesfully.'</span> ) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">redirect_to</span>(<span class="ruby-string">&quot;/admin/categories/child_categories/&quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@category</span>[<span class="ruby-value">:category_parent_id</span>].<span class="ruby-identifier">to_s</span>, <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Child Category Updated Succesfully.'</span> ) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+   <span class="ruby-keyword">end</span>    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- show-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- show-method -->
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/admin/authorize_settings.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+   <span class="ruby-identifier">update!</span> <span class="ruby-keyword">do</span> 
+     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Authorize Setting was successfully updated.'</span>
+      <span class="ruby-identifier">redirect_to</span>(<span class="ruby-string">&quot;/admin/authorize_settings/1/edit&quot;</span> ) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update-method -->
+
+    
+      <div id="method-i-view_chart" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">view_chart</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="view_chart-source">
+            <pre><span class="ruby-comment"># File app/admin/users.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">view_chart</span>
+   <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;view_chart&quot;</span> , <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'active_admin'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- view_chart-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- view_chart-method -->
+
+    
+      <div id="method-i-withdraw_con" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">withdraw_con</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="withdraw_con-source">
+            <pre><span class="ruby-comment"># File app/admin/wallet_withdraws.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">withdraw_con</span>(<span class="ruby-identifier">id</span>)
+   <span class="ruby-ivar">@with</span> = <span class="ruby-constant">WalletWithdraw</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">id</span>)
+   <span class="ruby-ivar">@wallet</span> = <span class="ruby-constant">Wallet</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@with</span>[<span class="ruby-value">:wallet_id</span>])
+   
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:ref_id</span>]<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
+     <span class="ruby-ivar">@ref</span> = <span class="ruby-constant">ReferralCode</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:ref_id</span>])
+     <span class="ruby-ivar">@ref</span>[<span class="ruby-value">:due</span>] = <span class="ruby-ivar">@ref</span>[<span class="ruby-value">:due</span>].<span class="ruby-identifier">to_f</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@with</span>[<span class="ruby-value">:withdraw_amount</span>].<span class="ruby-identifier">to_f</span>
+     <span class="ruby-ivar">@ref</span>[<span class="ruby-value">:paid</span>] = <span class="ruby-ivar">@ref</span>[<span class="ruby-value">:paid</span>].<span class="ruby-identifier">to_f</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@with</span>[<span class="ruby-value">:withdraw_amount</span>].<span class="ruby-identifier">to_f</span>
+     <span class="ruby-ivar">@ref</span>.<span class="ruby-identifier">save</span>
+   <span class="ruby-keyword">end</span>
+     
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:aff_id</span>]<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>  
+     <span class="ruby-ivar">@aff</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:ref_id</span>])
+     <span class="ruby-ivar">@aff</span>[<span class="ruby-value">:due</span>] = <span class="ruby-ivar">@aff</span>[<span class="ruby-value">:due</span>].<span class="ruby-identifier">to_f</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@with</span>[<span class="ruby-value">:withdraw_amount</span>].<span class="ruby-identifier">to_f</span>
+     <span class="ruby-ivar">@aff</span>[<span class="ruby-value">:paid</span>] = <span class="ruby-ivar">@aff</span>[<span class="ruby-value">:paid</span>].<span class="ruby-identifier">to_f</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@with</span>[<span class="ruby-value">:withdraw_amount</span>].<span class="ruby-identifier">to_f</span>
+     <span class="ruby-ivar">@aff</span>.<span class="ruby-identifier">save</span>
+   <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:due</span>] = <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:due</span>].<span class="ruby-identifier">to_f</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@with</span>[<span class="ruby-value">:withdraw_amount</span>].<span class="ruby-identifier">to_f</span>
+   <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:paid</span>] = <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:paid</span>].<span class="ruby-identifier">to_f</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@with</span>[<span class="ruby-value">:withdraw_amount</span>].<span class="ruby-identifier">to_f</span>
+   <span class="ruby-ivar">@wallet</span>.<span class="ruby-identifier">save</span>
+    
+    <span class="ruby-ivar">@with</span>[<span class="ruby-value">:withdraw_status</span>] = <span class="ruby-value">1</span>
+    <span class="ruby-ivar">@with</span>.<span class="ruby-identifier">save</span>  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- withdraw_con-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- withdraw_con-method -->
+
+    
+      <div id="method-i-yearly" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">yearly</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="yearly-source">
+            <pre><span class="ruby-comment"># File app/admin/purchases.rb, line 54</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">yearly</span>
+  <span class="ruby-ivar">@page_title</span> = <span class="ruby-string">'Yearly Transactions List '</span><span class="ruby-operator">+</span><span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">site_title</span>
+ <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;yearly&quot;</span> , <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'active_admin'</span>  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- yearly-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- yearly-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

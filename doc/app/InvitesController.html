@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class InvitesController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/invites_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ApplicationController
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-add_attendee">#add_attendee</a>
+    
+    <li><a href="#method-i-add_guests">#add_guests</a>
+    
+    <li><a href="#method-i-attendees">#attendees</a>
+    
+    <li><a href="#method-i-create">#create</a>
+    
+    <li><a href="#method-i-cron_invite_email">#cron_invite_email</a>
+    
+    <li><a href="#method-i-delete">#delete</a>
+    
+    <li><a href="#method-i-delete_guest">#delete_guest</a>
+    
+    <li><a href="#method-i-edit_guest">#edit_guest</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActiveAdmin.html">ActiveAdmin</a>
+  
+    <li><a href="./ActiveAdmin/Views.html">ActiveAdmin::Views</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages.html">ActiveAdmin::Views::Pages</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages/Base.html">ActiveAdmin::Views::Pages::Base</a>
+  
+    <li><a href="./AffiliatesController.html">AffiliatesController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./AuthController.html">AuthController</a>
+  
+    <li><a href="./CancelOrdersController.html">CancelOrdersController</a>
+  
+    <li><a href="./ContactListHelper.html">ContactListHelper</a>
+  
+    <li><a href="./ContactListsController.html">ContactListsController</a>
+  
+    <li><a href="./ContactListsHelper.html">ContactListsHelper</a>
+  
+    <li><a href="./ContactsController.html">ContactsController</a>
+  
+    <li><a href="./ContactsHelper.html">ContactsHelper</a>
+  
+    <li><a href="./CustomAdminHeader.html">CustomAdminHeader</a>
+  
+    <li><a href="./ErrorsController.html">ErrorsController</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./ExceptionsController.html">ExceptionsController</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./InvitesController.html">InvitesController</a>
+  
+    <li><a href="./ManageAccountController.html">ManageAccountController</a>
+  
+    <li><a href="./ManageAccountHelper.html">ManageAccountHelper</a>
+  
+    <li><a href="./ManageEventController.html">ManageEventController</a>
+  
+    <li><a href="./ManageEventHelper.html">ManageEventHelper</a>
+  
+    <li><a href="./MobileLoginsController.html">MobileLoginsController</a>
+  
+    <li><a href="./MyTicketsController.html">MyTicketsController</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./OrdersController.html">OrdersController</a>
+  
+    <li><a href="./OrganizersController.html">OrganizersController</a>
+  
+    <li><a href="./PagesController.html">PagesController</a>
+  
+    <li><a href="./ProductsHelper.html">ProductsHelper</a>
+  
+    <li><a href="./PurchasesController.html">PurchasesController</a>
+  
+    <li><a href="./ReferrersController.html">ReferrersController</a>
+  
+    <li><a href="./SearchController.html">SearchController</a>
+  
+    <li><a href="./TicketsController.html">TicketsController</a>
+  
+    <li><a href="./TipsController.html">TipsController</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WalletController.html">WalletController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class InvitesController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-add_attendee" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_attendee</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>attendee module #######</p>
+          
+
+          
+          <div class="method-source-code" id="add_attendee-source">
+            <pre><span class="ruby-comment"># File app/controllers/invites_controller.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_attendee</span>
+   <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.add_attendee'</span>
+   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+   <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+   <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  
+   <span class="ruby-ivar">@org_id</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:organizer_id</span>]
+   
+   <span class="ruby-ivar">@event_theme</span> = <span class="ruby-constant">EventTheme</span>.<span class="ruby-identifier">one_theme</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>])
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event_theme</span>
+   <span class="ruby-keyword">else</span> <span class="ruby-ivar">@event_theme</span> = <span class="ruby-constant">Theme</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+   <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-ivar">@updates</span> = <span class="ruby-constant">EventUpdate</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+   <span class="ruby-ivar">@one_theme</span> = <span class="ruby-ivar">@event_theme</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_attendee-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_attendee-method -->
+
+    
+      <div id="method-i-add_guests" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_guests</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_guests-source">
+            <pre><span class="ruby-comment"># File app/controllers/invites_controller.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_guests</span>
+   <span class="ruby-ivar">@random</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+  
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+            <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:fetch_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'files'</span>)
+              <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">import</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:upload</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:guest</span>])
+            <span class="ruby-keyword">end</span>
+              
+            <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:fetch_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'manually'</span>)
+                <span class="ruby-identifier">ids</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:emails</span>]
+                
+                <span class="ruby-ivar">@newline</span> = <span class="ruby-identifier">ids</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\r\n/</span>)
+                  <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span> 
+                  <span class="ruby-identifier">k</span>=<span class="ruby-value">0</span>
+                   <span class="ruby-ivar">@newline</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+                       <span class="ruby-ivar">@commas</span> = <span class="ruby-ivar">@newline</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+                        <span class="ruby-identifier">j</span>=<span class="ruby-value">0</span>
+                         <span class="ruby-ivar">@commas</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+                           
+                             <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@commas</span>[<span class="ruby-identifier">j</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span>)
+                               <span class="ruby-ivar">@cons</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:guest</span>])
+                               <span class="ruby-ivar">@cons</span>[<span class="ruby-value">:email</span>] = <span class="ruby-identifier">c</span>
+                               <span class="ruby-ivar">@cons</span>.<span class="ruby-identifier">save</span>
+                               <span class="ruby-identifier">k</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                             <span class="ruby-keyword">end</span>
+                            <span class="ruby-identifier">j</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span> 
+                         <span class="ruby-keyword">end</span>
+                     <span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                   <span class="ruby-keyword">end</span>
+                  
+            <span class="ruby-keyword">end</span>
+            
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:guest</span>][<span class="ruby-value">:invite_id</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:guest</span>][<span class="ruby-value">:invite_id</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:guest</span>][<span class="ruby-value">:invite_id</span>]<span class="ruby-operator">!=</span><span class="ruby-string">'0'</span>
+              <span class="ruby-ivar">@guests</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'invite_id=?'</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:guest</span>][<span class="ruby-value">:invite_id</span>]])
+           <span class="ruby-keyword">else</span> 
+              <span class="ruby-ivar">@guests</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'random_no=?'</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:guest</span>][<span class="ruby-value">:random_no</span>]])
+           <span class="ruby-keyword">end</span>
+              
+          <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'contact_controller.success'</span>), <span class="ruby-value">:guest</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@guests</span>  }
+          
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_guests-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_guests-method -->
+
+    
+      <div id="method-i-attendees" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">attendees</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="attendees-source">
+            <pre><span class="ruby-comment"># File app/controllers/invites_controller.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">attendees</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.all_attendees_list'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-ivar">@event_attendee</span> = <span class="ruby-constant">EventAttendee</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]]).<span class="ruby-identifier">paginate</span>(<span class="ruby-value">:page</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>], <span class="ruby-value">:per_page</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- attendees-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- attendees-method -->
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/invites_controller.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.create_invite'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:invitation_id</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:invitation_id</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span>
+      <span class="ruby-ivar">@invite</span> = <span class="ruby-constant">Invite</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:invitation_id</span>])
+      <span class="ruby-ivar">@random</span> = <span class="ruby-string">'0'</span>
+      <span class="ruby-ivar">@guests</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'invite_id=?'</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:invitation_id</span>]])
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@invite</span> = <span class="ruby-constant">Invite</span>.<span class="ruby-identifier">new</span>  
+      <span class="ruby-ivar">@random</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">10</span>)
+      <span class="ruby-ivar">@guests</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'random_no=?'</span>, <span class="ruby-ivar">@random</span>])
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>  <span class="ruby-comment">#### Post start</span>
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:invitation_id</span>]<span class="ruby-operator">==</span><span class="ruby-string">''</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:invitation_id</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>
+          <span class="ruby-ivar">@invite</span> = <span class="ruby-constant">Invite</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:invite</span>])
+          <span class="ruby-ivar">@invite</span>.<span class="ruby-identifier">save</span>
+          <span class="ruby-ivar">@guest</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:random_no</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:random_no</span>]).<span class="ruby-identifier">update_all</span>(<span class="ruby-value">:invite_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@invite</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">:random_no</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'0'</span>)
+          
+      <span class="ruby-keyword">else</span>
+          <span class="ruby-ivar">@invite</span> = <span class="ruby-constant">Invite</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:invitation_id</span>])
+          <span class="ruby-ivar">@invite</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:invite</span>])
+         
+      <span class="ruby-keyword">end</span>
+      
+      
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:send_email</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span>
+              <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">send_invite_email</span>(<span class="ruby-ivar">@invite</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:send_email</span>], <span class="ruby-string">'Attendee'</span>).<span class="ruby-identifier">deliver</span>
+              <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'invite_controller.email_successfully'</span>
+              <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'create/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@invite</span>[<span class="ruby-value">:event_id</span>].<span class="ruby-identifier">to_s</span>, <span class="ruby-value">:invitation_id=</span><span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@invite</span>[<span class="ruby-value">:id</span>]) 
+      <span class="ruby-keyword">else</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:submit_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'send'</span>
+              <span class="ruby-ivar">@guest</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'invite_id=?'</span>, <span class="ruby-ivar">@invite</span>[<span class="ruby-value">:id</span>]])
+              
+              <span class="ruby-keyword">if</span> <span class="ruby-ivar">@guest</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                  <span class="ruby-keyword">for</span> <span class="ruby-identifier">g</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@guest</span>
+                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">g</span>[<span class="ruby-value">:first_name</span>]
+                        <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">g</span>[<span class="ruby-value">:first_name</span>]<span class="ruby-operator">+</span><span class="ruby-string">' '</span><span class="ruby-operator">+</span><span class="ruby-identifier">g</span>[<span class="ruby-value">:last_name</span>]
+                      <span class="ruby-keyword">else</span>
+                        <span class="ruby-ivar">@name</span> = <span class="ruby-string">''</span>;
+                      <span class="ruby-keyword">end</span>
+                      
+                      <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">send_invite_email</span>(<span class="ruby-ivar">@invite</span>, <span class="ruby-identifier">g</span>[<span class="ruby-value">:email</span>], <span class="ruby-ivar">@name</span>).<span class="ruby-identifier">deliver</span>
+                      <span class="ruby-identifier">g</span>[<span class="ruby-value">:sent</span>] = <span class="ruby-value">1</span>
+                      <span class="ruby-identifier">g</span>[<span class="ruby-value">:send_date_time</span>] = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d %H:%M:%S'</span>)
+                      <span class="ruby-identifier">g</span>.<span class="ruby-identifier">save</span>
+                  <span class="ruby-keyword">end</span>
+                  <span class="ruby-ivar">@invite</span>[<span class="ruby-value">:draft</span>]=<span class="ruby-value">0</span>
+                  <span class="ruby-ivar">@invite</span>[<span class="ruby-value">:sent</span>] = <span class="ruby-value">1</span>
+                  <span class="ruby-ivar">@invite</span>[<span class="ruby-value">:send_date_time</span>] = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d %H:%M:%S'</span>)
+                  <span class="ruby-ivar">@invite</span>.<span class="ruby-identifier">save</span>
+                  
+              <span class="ruby-keyword">end</span>
+              
+              <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'invite_controller.email_successfully'</span>
+              <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@invite</span>[<span class="ruby-value">:event_id</span>].<span class="ruby-identifier">to_s</span>) 
+          <span class="ruby-keyword">else</span>
+              <span class="ruby-ivar">@invite</span>[<span class="ruby-value">:draft</span>]=<span class="ruby-value">1</span>
+              <span class="ruby-ivar">@invite</span>.<span class="ruby-identifier">save</span>
+              <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'invite_controller.invite_saved_draft_successfully'</span>
+              <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@invite</span>[<span class="ruby-value">:event_id</span>].<span class="ruby-identifier">to_s</span>) 
+          <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      
+    <span class="ruby-keyword">end</span>   <span class="ruby-comment">#### Post ends</span>
+    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create-method -->
+
+    
+      <div id="method-i-cron_invite_email" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cron_invite_email</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>cron job ############</p>
+          
+
+          
+          <div class="method-source-code" id="cron_invite_email-source">
+            <pre><span class="ruby-comment"># File app/controllers/invites_controller.rb, line 205</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cron_invite_email</span>
+    <span class="ruby-ivar">@invites</span> = <span class="ruby-constant">Invite</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'draft=0 AND immediately=0'</span>])
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@invites</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+      <span class="ruby-keyword">for</span> <span class="ruby-identifier">inv</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@invites</span> 
+         <span class="ruby-ivar">@eve</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">inv</span>[<span class="ruby-value">:event_id</span>])
+         <span class="ruby-identifier">now_date</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d %H:%M'</span>)
+         <span class="ruby-ivar">@eve_date</span> = <span class="ruby-ivar">@eve</span>[<span class="ruby-value">:event_start_date_time</span>]
+         
+         <span class="ruby-keyword">if</span> <span class="ruby-identifier">inv</span>[<span class="ruby-value">:days</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">inv</span>[<span class="ruby-value">:days</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+           <span class="ruby-ivar">@eve_date</span> = <span class="ruby-ivar">@eve_date</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">inv</span>[<span class="ruby-value">:days</span>].<span class="ruby-identifier">days</span>
+         <span class="ruby-keyword">end</span>
+         
+         <span class="ruby-keyword">if</span> <span class="ruby-identifier">inv</span>[<span class="ruby-value">:hours</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">inv</span>[<span class="ruby-value">:hours</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+           <span class="ruby-ivar">@eve_date</span> = <span class="ruby-ivar">@eve_date</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">inv</span>[<span class="ruby-value">:hours</span>].<span class="ruby-identifier">hours</span>
+         <span class="ruby-keyword">end</span>
+         
+         <span class="ruby-keyword">if</span> <span class="ruby-identifier">inv</span>[<span class="ruby-value">:minutes</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">inv</span>[<span class="ruby-value">:minutes</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+           <span class="ruby-ivar">@eve_date</span> = <span class="ruby-ivar">@eve_date</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">inv</span>[<span class="ruby-value">:minutes</span>].<span class="ruby-identifier">minutes</span>
+         <span class="ruby-keyword">end</span>
+         
+         <span class="ruby-keyword">if</span> <span class="ruby-identifier">inv</span>[<span class="ruby-value">:select_date</span>].<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d %H:%M'</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">now_date</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@eve_date</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d %H:%M'</span>)<span class="ruby-operator">==</span><span class="ruby-identifier">now_date</span>
+            
+            <span class="ruby-ivar">@guest</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'invite_id=?'</span>, <span class="ruby-identifier">inv</span>[<span class="ruby-value">:id</span>]])
+            <span class="ruby-keyword">if</span> <span class="ruby-ivar">@guest</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">g</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@guest</span>
+                    <span class="ruby-keyword">if</span> <span class="ruby-identifier">g</span>[<span class="ruby-value">:first_name</span>]
+                      <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">g</span>[<span class="ruby-value">:first_name</span>]<span class="ruby-operator">+</span><span class="ruby-string">' '</span><span class="ruby-operator">+</span><span class="ruby-identifier">g</span>[<span class="ruby-value">:last_name</span>]
+                    <span class="ruby-keyword">else</span>
+                      <span class="ruby-ivar">@name</span> = <span class="ruby-string">''</span>;
+                    <span class="ruby-keyword">end</span>
+                    
+                    <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">send_invite_email</span>(<span class="ruby-identifier">inv</span>, <span class="ruby-identifier">g</span>[<span class="ruby-value">:email</span>], <span class="ruby-ivar">@name</span>).<span class="ruby-identifier">deliver</span>
+                    <span class="ruby-identifier">g</span>[<span class="ruby-value">:sent</span>] = <span class="ruby-value">1</span>
+                    <span class="ruby-identifier">g</span>[<span class="ruby-value">:send_date_time</span>] = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d %H:%M:%S'</span>)
+                    <span class="ruby-identifier">g</span>.<span class="ruby-identifier">save</span>
+                <span class="ruby-keyword">end</span> <span class="ruby-comment">## for guest ends</span>
+                <span class="ruby-identifier">inv</span>[<span class="ruby-value">:draft</span>]=<span class="ruby-value">0</span>
+                <span class="ruby-identifier">inv</span>[<span class="ruby-value">:sent</span>] = <span class="ruby-value">1</span>
+                <span class="ruby-identifier">inv</span>[<span class="ruby-value">:send_date_time</span>] = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d %H:%M:%S'</span>)
+                <span class="ruby-identifier">inv</span>.<span class="ruby-identifier">save</span>
+                
+            <span class="ruby-keyword">end</span> <span class="ruby-comment">### if guest ends</span>
+         <span class="ruby-keyword">end</span> <span class="ruby-comment">### date compare ends  </span>
+          
+       <span class="ruby-keyword">end</span> <span class="ruby-comment">### for ends</span>
+    <span class="ruby-keyword">end</span> <span class="ruby-comment">### if ends </span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'invite_create.done'</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cron_invite_email-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cron_invite_email-method -->
+
+    
+      <div id="method-i-delete" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete-source">
+            <pre><span class="ruby-comment"># File app/controllers/invites_controller.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>
+  <span class="ruby-ivar">@inv</span> = <span class="ruby-constant">Invite</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-identifier">event_id</span> = <span class="ruby-ivar">@inv</span>[<span class="ruby-value">:event_id</span>]
+  
+  <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:invite_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@inv</span>[<span class="ruby-value">:id</span>]).<span class="ruby-identifier">destroy_all</span>
+  <span class="ruby-ivar">@inv</span>.<span class="ruby-identifier">destroy</span>
+  
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'invite_controller.invite_deleted'</span>
+  <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index/'</span><span class="ruby-operator">+</span><span class="ruby-identifier">event_id</span>.<span class="ruby-identifier">to_s</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete-method -->
+
+    
+      <div id="method-i-delete_guest" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_guest</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_guest-source">
+            <pre><span class="ruby-comment"># File app/controllers/invites_controller.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_guest</span>
+  <span class="ruby-identifier">guest_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:guest_id</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">guest</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">guest_id</span>
+    <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">guest</span>).<span class="ruby-identifier">destroy</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:invitation_id</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:invitation_id</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+    <span class="ruby-ivar">@guests</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'invite_id=?'</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:invitation_id</span>]])
+  <span class="ruby-keyword">else</span> 
+    <span class="ruby-ivar">@guests</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'random_no=?'</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:random_no</span>]])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'contact_controller.success'</span>), <span class="ruby-value">:guest</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@guests</span>  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_guest-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_guest-method -->
+
+    
+      <div id="method-i-edit_guest" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_guest</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit_guest-source">
+            <pre><span class="ruby-comment"># File app/controllers/invites_controller.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_guest</span>
+    <span class="ruby-ivar">@guest</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+         <span class="ruby-ivar">@guest</span> = <span class="ruby-constant">InviteGuest</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:edit_guest</span>][<span class="ruby-value">:id</span>])
+         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@guest</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:edit_guest</span>])
+               
+              <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'contact_controller.success'</span>), <span class="ruby-value">:guest</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:edit_guest</span>]  }
+         <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@guest</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>[<span class="ruby-value">0</span>]}
+         <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit_guest-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit_guest-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/invites_controller.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.invite_list'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    
+    <span class="ruby-ivar">@schedules_invite</span> = <span class="ruby-constant">Invite</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND draft=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">0</span>])
+    <span class="ruby-ivar">@draft_invite</span> = <span class="ruby-constant">Invite</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND draft=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">1</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

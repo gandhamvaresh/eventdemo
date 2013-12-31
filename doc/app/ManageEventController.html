@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class ManageEventController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/manage_event_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ApplicationController
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-affiliate_codes">#affiliate_codes</a>
+    
+    <li><a href="#method-i-cancel">#cancel</a>
+    
+    <li><a href="#method-i-copy">#copy</a>
+    
+    <li><a href="#method-i-customize_order_form">#customize_order_form</a>
+    
+    <li><a href="#method-i-delete">#delete</a>
+    
+    <li><a href="#method-i-delete_affiliate_codes">#delete_affiliate_codes</a>
+    
+    <li><a href="#method-i-delete_code">#delete_code</a>
+    
+    <li><a href="#method-i-delete_que">#delete_que</a>
+    
+    <li><a href="#method-i-delete_update">#delete_update</a>
+    
+    <li><a href="#method-i-download_excel">#download_excel</a>
+    
+    <li><a href="#method-i-edit_affiliate_code">#edit_affiliate_code</a>
+    
+    <li><a href="#method-i-edit_code">#edit_code</a>
+    
+    <li><a href="#method-i-edit_news_and_updates">#edit_news_and_updates</a>
+    
+    <li><a href="#method-i-edit_order">#edit_order</a>
+    
+    <li><a href="#method-i-edit_order_confirmation">#edit_order_confirmation</a>
+    
+    <li><a href="#method-i-event_url_link">#event_url_link</a>
+    
+    <li><a href="#method-i-google_analytic_code">#google_analytic_code</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-news_and_updates">#news_and_updates</a>
+    
+    <li><a href="#method-i-orders">#orders</a>
+    
+    <li><a href="#method-i-org_url_link">#org_url_link</a>
+    
+    <li><a href="#method-i-promotional_codes">#promotional_codes</a>
+    
+    <li><a href="#method-i-publish">#publish</a>
+    
+    <li><a href="#method-i-question">#question</a>
+    
+    <li><a href="#method-i-type_and_language">#type_and_language</a>
+    
+    <li><a href="#method-i-waitlist_setting">#waitlist_setting</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActiveAdmin.html">ActiveAdmin</a>
+  
+    <li><a href="./ActiveAdmin/Views.html">ActiveAdmin::Views</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages.html">ActiveAdmin::Views::Pages</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages/Base.html">ActiveAdmin::Views::Pages::Base</a>
+  
+    <li><a href="./AffiliatesController.html">AffiliatesController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./AuthController.html">AuthController</a>
+  
+    <li><a href="./CancelOrdersController.html">CancelOrdersController</a>
+  
+    <li><a href="./ContactListHelper.html">ContactListHelper</a>
+  
+    <li><a href="./ContactListsController.html">ContactListsController</a>
+  
+    <li><a href="./ContactListsHelper.html">ContactListsHelper</a>
+  
+    <li><a href="./ContactsController.html">ContactsController</a>
+  
+    <li><a href="./ContactsHelper.html">ContactsHelper</a>
+  
+    <li><a href="./CustomAdminHeader.html">CustomAdminHeader</a>
+  
+    <li><a href="./ErrorsController.html">ErrorsController</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./ExceptionsController.html">ExceptionsController</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./InvitesController.html">InvitesController</a>
+  
+    <li><a href="./ManageAccountController.html">ManageAccountController</a>
+  
+    <li><a href="./ManageAccountHelper.html">ManageAccountHelper</a>
+  
+    <li><a href="./ManageEventController.html">ManageEventController</a>
+  
+    <li><a href="./ManageEventHelper.html">ManageEventHelper</a>
+  
+    <li><a href="./MobileLoginsController.html">MobileLoginsController</a>
+  
+    <li><a href="./MyTicketsController.html">MyTicketsController</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./OrdersController.html">OrdersController</a>
+  
+    <li><a href="./OrganizersController.html">OrganizersController</a>
+  
+    <li><a href="./PagesController.html">PagesController</a>
+  
+    <li><a href="./ProductsHelper.html">ProductsHelper</a>
+  
+    <li><a href="./PurchasesController.html">PurchasesController</a>
+  
+    <li><a href="./ReferrersController.html">ReferrersController</a>
+  
+    <li><a href="./SearchController.html">SearchController</a>
+  
+    <li><a href="./TicketsController.html">TicketsController</a>
+  
+    <li><a href="./TipsController.html">TipsController</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WalletController.html">WalletController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ManageEventController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-affiliate_codes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">affiliate_codes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Affiliate Codes</p>
+          
+
+          
+          <div class="method-source-code" id="affiliate_codes-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 578</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">affiliate_codes</span>
+     <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'.meta_title.affiliate_programs'</span>
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+     <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+     <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+     <span class="ruby-ivar">@affiliates</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? '</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+     
+     <span class="ruby-ivar">@visit</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">sum</span>(<span class="ruby-value">:visits</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? '</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+     <span class="ruby-ivar">@affiliate</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">sum</span>(<span class="ruby-value">:affiliates</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? '</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+     <span class="ruby-ivar">@sales</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">sum</span>(<span class="ruby-value">:sales</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? '</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+     <span class="ruby-ivar">@due</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">sum</span>(<span class="ruby-value">:due</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? '</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+     <span class="ruby-ivar">@paid</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">sum</span>(<span class="ruby-value">:paid</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? '</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+     
+     <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@affiliates</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+         <span class="ruby-identifier">render</span> <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_event/list_affiliate_codes'</span>
+     <span class="ruby-keyword">else</span>
+         <span class="ruby-ivar">@code</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">new</span>
+         <span class="ruby-identifier">render</span> <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_event/add_affiliate_codes'</span>
+     <span class="ruby-keyword">end</span>    
+       
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- affiliate_codes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- affiliate_codes-method -->
+
+    
+      <div id="method-i-cancel" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cancel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Cancel event</p>
+          
+
+          
+          <div class="method-source-code" id="cancel-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 738</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cancel</span>
+   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+      <span class="ruby-ivar">@event</span>[<span class="ruby-value">:cancel</span>] = <span class="ruby-value">1</span>
+      <span class="ruby-ivar">@event</span>[<span class="ruby-value">:cancel_date_time</span>] = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d %H:%M:%S'</span>)
+      <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">save</span>
+      
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.event_cancelled_successfully'</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'events'</span>, <span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index'</span>) }
+    <span class="ruby-keyword">end</span>  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cancel-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cancel-method -->
+
+    
+      <div id="method-i-copy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">copy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Copy Event</p>
+          
+
+          
+          <div class="method-source-code" id="copy-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 660</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">copy</span>
+   
+   <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+           
+       <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+            <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]).<span class="ruby-identifier">dup</span>
+            <span class="ruby-ivar">@old_event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])  
+            <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+            <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:event_title</span>]
+            <span class="ruby-ivar">@event</span>[<span class="ruby-value">:active</span>] = <span class="ruby-value">0</span>
+             <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_start_date_time</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>
+                <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_start_date_time</span>] = (<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:event_start_day</span>].<span class="ruby-identifier">days</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)
+                <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_end_date_time</span>] = (<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:event_start_day</span>].<span class="ruby-identifier">days</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)
+             <span class="ruby-keyword">end</span>  
+            <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_url_link</span>]  = <span class="ruby-string">''</span>
+           
+             <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">save</span>
+                  <span class="ruby-comment">#### attendees</span>
+                  <span class="ruby-ivar">@attendee</span> = <span class="ruby-constant">Attendee</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@old_event</span>[<span class="ruby-value">:id</span>]])
+                  
+                  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@attendee</span>
+                    <span class="ruby-ivar">@new_attendee</span> = <span class="ruby-ivar">@attendee</span>.<span class="ruby-identifier">dup</span>
+                    <span class="ruby-ivar">@new_attendee</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]
+                    <span class="ruby-ivar">@new_attendee</span>.<span class="ruby-identifier">save</span>
+                     <span class="ruby-ivar">@event</span>[<span class="ruby-value">:attendee</span>] = <span class="ruby-ivar">@new_attendee</span>[<span class="ruby-value">:id</span>]
+                  <span class="ruby-keyword">end</span>
+                  
+                  <span class="ruby-comment">#### event repeats</span>
+                  <span class="ruby-ivar">@repeat</span> = <span class="ruby-constant">EventRepeat</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@old_event</span>[<span class="ruby-value">:id</span>]])
+                  
+                  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@repeat</span>
+                    <span class="ruby-ivar">@new_repeat</span> = <span class="ruby-ivar">@repeat</span>.<span class="ruby-identifier">dup</span>
+                    <span class="ruby-ivar">@new_repeat</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]
+                    <span class="ruby-ivar">@new_repeat</span>.<span class="ruby-identifier">save</span>
+                  <span class="ruby-keyword">end</span>
+                  
+                   <span class="ruby-comment">#### event theme</span>
+                  <span class="ruby-ivar">@theme</span> = <span class="ruby-constant">EventTheme</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@old_event</span>[<span class="ruby-value">:id</span>]])
+                  
+                  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@theme</span>
+                    <span class="ruby-ivar">@new_theme</span> = <span class="ruby-ivar">@theme</span>.<span class="ruby-identifier">dup</span>
+                    <span class="ruby-ivar">@new_theme</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]
+                    <span class="ruby-ivar">@new_theme</span>.<span class="ruby-identifier">save</span>
+                  <span class="ruby-keyword">end</span>
+                  
+                  
+                   
+                   <span class="ruby-comment">#### event tickets</span>
+                  <span class="ruby-ivar">@tickets</span> = <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@old_event</span>[<span class="ruby-value">:id</span>]])
+                  
+                  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tickets</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                     <span class="ruby-ivar">@tickets</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ticket</span><span class="ruby-operator">|</span>
+                          <span class="ruby-identifier">ticket_clone</span> = <span class="ruby-identifier">ticket</span>.<span class="ruby-identifier">dup</span>
+                          <span class="ruby-identifier">ticket_clone</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]
+                          <span class="ruby-identifier">ticket_clone</span>.<span class="ruby-identifier">save</span>
+                      <span class="ruby-keyword">end</span>
+                  <span class="ruby-keyword">end</span>
+                  
+                 
+                  <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">create_event_email</span>(<span class="ruby-ivar">@event</span>).<span class="ruby-identifier">deliver</span>
+                  
+                  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.event_copied_successfully'</span>
+                  <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'events'</span>, <span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'edit/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span> ) }
+              
+                  <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@event</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:created</span>, <span class="ruby-value">:location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@event</span> }
+            <span class="ruby-keyword">else</span>
+                  <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;copy&quot;</span>, <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span> }
+                  <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-keyword">else</span>
+         <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">end</span> 
+      
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- copy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- copy-method -->
+
+    
+      <div id="method-i-customize_order_form" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">customize_order_form</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Customize Order Form</p>
+          
+
+          
+          <div class="method-source-code" id="customize_order_form-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">customize_order_form</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_customize_order_form'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-ivar">@questions</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]]) 
+   
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+        
+            
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket</span>]
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:tickets</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+                <span class="ruby-keyword">end</span>    
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:prefix</span>]
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:prefix</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:prefix</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:first_name</span>]    
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:first_name</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:first_name</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>)
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:last_name</span>]      
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:last_name</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:last_name</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>)
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:suffix</span>]      
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:suffix</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:suffix</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>)
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:email</span>]      
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:email</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:email</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>)
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_phone</span>]      
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:home_phone</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_phone</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>)
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:cell_phone</span>]      
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:cell_phone</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:cell_phone</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:billing_address</span>]     
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:billing_address</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:billing_address</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_address</span>] 
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:home_address</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_address</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:shipping_address</span>] 
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:shipping_address</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:shipping_address</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:job_title</span>] 
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:job_title</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:job_title</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:company</span>] 
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:company</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:company</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_address</span>] 
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:work_address</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_address</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_phone</span>] 
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:work_phone</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_phone</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:website</span>] 
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:website</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:website</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:blog</span>] 
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:blog</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:blog</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:gender</span>] 
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:gender</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gender</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:birth_date</span>] 
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:birth_date</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:birth_date</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:age</span>] 
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>][<span class="ruby-value">:age</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:age</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>) 
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:order_id</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_id</span>]<span class="ruby-operator">==</span><span class="ruby-string">''</span>)
+                     <span class="ruby-ivar">@order_form</span> = <span class="ruby-constant">OrderForm</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>])
+                     <span class="ruby-ivar">@order_form</span>.<span class="ruby-identifier">save</span>
+                <span class="ruby-keyword">else</span>
+                     <span class="ruby-ivar">@order_form</span> = <span class="ruby-constant">OrderForm</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:order_id</span>])
+                     <span class="ruby-ivar">@order_form</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>])  
+                <span class="ruby-keyword">end</span> 
+            
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@questions</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                  <span class="ruby-keyword">for</span> <span class="ruby-identifier">q</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@questions</span>
+                      <span class="ruby-ivar">@que_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_id</span>]
+                      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@que_id</span>
+                          <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@que_id</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>))
+                              <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>]
+                                <span class="ruby-identifier">q</span>[<span class="ruby-value">:rules</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">','</span>,<span class="ruby-string">''</span>)
+                                <span class="ruby-identifier">q</span>.<span class="ruby-identifier">save</span> 
+                              <span class="ruby-keyword">end</span>
+                          <span class="ruby-keyword">else</span>
+                              <span class="ruby-constant">QuestionOption</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;que_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+                              <span class="ruby-constant">Answer</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;que_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+                              <span class="ruby-identifier">q</span>.<span class="ruby-identifier">destroy</span>
+                          <span class="ruby-keyword">end</span>  
+                      <span class="ruby-keyword">end</span>
+                  <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.info_save_successfully'</span>
+                <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'customize_order_form'</span>)
+        
+   
+   <span class="ruby-keyword">end</span>       
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- customize_order_form-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- customize_order_form-method -->
+
+    
+      <div id="method-i-delete" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Delete Event</p>
+          
+
+          
+          <div class="method-source-code" id="delete-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 765</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>
+   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+      
+      <span class="ruby-constant">Attendee</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+      <span class="ruby-constant">EventRepeat</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+      <span class="ruby-constant">EventTheme</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+      <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;event_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event</span>[<span class="ruby-value">:organizer_id</span>]<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
+        <span class="ruby-ivar">@org</span> = <span class="ruby-constant">Organizer</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:organizer_id</span>])
+        <span class="ruby-ivar">@org</span>[<span class="ruby-value">:event_cnt</span>]= <span class="ruby-ivar">@org</span>[<span class="ruby-value">:event_cnt</span>]<span class="ruby-operator">-</span><span class="ruby-value">1</span>
+         <span class="ruby-ivar">@org</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">destroy</span>
+      
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.event_deleted_successfully'</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'events'</span>, <span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index'</span> ) }
+     
+    <span class="ruby-keyword">end</span>              
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete-method -->
+
+    
+      <div id="method-i-delete_affiliate_codes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_affiliate_codes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_affiliate_codes-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 648</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_affiliate_codes</span>
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@code</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>])
+        <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">destroy</span>
+        
+       <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.affiliate_code_deleted_successfully'</span>
+       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'affiliate_codes/'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>) }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_affiliate_codes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_affiliate_codes-method -->
+
+    
+      <div id="method-i-delete_code" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_code</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_code-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 564</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_code</span>
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@code</span> = <span class="ruby-constant">PromotionalCode</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>])
+        <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">destroy</span>
+        
+       <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.promotional_code_deleted_successfully'</span>
+       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'promotional_codes/'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>) }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_code-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_code-method -->
+
+    
+      <div id="method-i-delete_que" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_que</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_que-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_que</span>
+   <span class="ruby-identifier">q</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+   <span class="ruby-identifier">event_id</span> = <span class="ruby-identifier">q</span>[<span class="ruby-value">:event_id</span>]
+   <span class="ruby-constant">QuestionOption</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;que_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+   <span class="ruby-constant">Answer</span>.<span class="ruby-identifier">destroy_all</span>(<span class="ruby-string">&quot;que_id = &quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+   <span class="ruby-identifier">q</span>.<span class="ruby-identifier">destroy</span>
+   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.que_deleted_order_successfully'</span>
+   <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'customize_order_form/'</span><span class="ruby-operator">+</span><span class="ruby-identifier">event_id</span>.<span class="ruby-identifier">to_s</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_que-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_que-method -->
+
+    
+      <div id="method-i-delete_update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_update-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 342</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_update</span>
+      <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+              <span class="ruby-ivar">@update</span> = <span class="ruby-constant">EventUpdate</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+              <span class="ruby-ivar">@update</span>.<span class="ruby-identifier">destroy</span>  
+               
+              <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.update_delete_successfully'</span>
+              <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'news_and_updates/'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:eve</span>]) }
+       <span class="ruby-keyword">end</span>
+   
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_update-method -->
+
+    
+      <div id="method-i-download_excel" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">download_excel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="download_excel-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">download_excel</span>
+   <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+   <span class="ruby-ivar">@orders</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find_orders_by_event_total</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>])
+   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment">#format.xls# { send_data @products.to_csv(col_sep: &quot;\t&quot;) }</span>
+       <span class="ruby-identifier">filename</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>]<span class="ruby-operator">+</span><span class="ruby-string">&quot;.xls&quot;</span>
+       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xls</span>{ <span class="ruby-identifier">headers</span>[<span class="ruby-string">&quot;Content-Disposition&quot;</span>] = <span class="ruby-node">&quot;attachment; filename=\&quot;#{filename}\&quot;&quot;</span> }
+    
+   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- download_excel-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- download_excel-method -->
+
+    
+      <div id="method-i-edit_affiliate_code" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_affiliate_code</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit_affiliate_code-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 601</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_affiliate_code</span>
+   <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'.meta_title.edit_affiliate_code'</span>
+   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+   <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+   <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+          <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+                 
+                 <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>]<span class="ruby-operator">==</span><span class="ruby-string">''</span>)
+                     
+                          <span class="ruby-ivar">@code</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code</span>])
+                          <span class="ruby-ivar">@code</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]
+                           <span class="ruby-keyword">if</span> <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">save</span>
+                                <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.affiliate_code_added_successfully'</span>
+                                <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'affiliate_codes/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>) }
+                           <span class="ruby-keyword">else</span>
+                                <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;edit_affiliate_code&quot;</span>, <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_event/add_affiliate_codes'</span>}
+                                <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+                           <span class="ruby-keyword">end</span>
+                      
+                 <span class="ruby-keyword">else</span>
+                       <span class="ruby-ivar">@code</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>])
+                      
+                       <span class="ruby-keyword">if</span> <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code</span>]) 
+                             <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.affiliate_code_updated_successfully'</span>
+                             <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'affiliate_codes/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>) }
+                       <span class="ruby-keyword">else</span>
+                            
+                            <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;edit_affiliate_code&quot;</span>, <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_event/add_affiliate_codes'</span> }
+                            <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+                       <span class="ruby-keyword">end</span> 
+                 <span class="ruby-keyword">end</span> 
+              
+         <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+       
+       <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>] 
+         <span class="ruby-ivar">@code</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>])
+       <span class="ruby-keyword">else</span>  
+         <span class="ruby-ivar">@code</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">new</span>
+       <span class="ruby-keyword">end</span>  
+       <span class="ruby-identifier">render</span> <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_event/add_affiliate_codes'</span>
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit_affiliate_code-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit_affiliate_code-method -->
+
+    
+      <div id="method-i-edit_code" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_code</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit_code-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 502</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_code</span>
+   <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'.meta_title.m_edit_promotional_code'</span>
+   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+   <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+   <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+          <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+                 
+                 <span class="ruby-identifier">params</span>[<span class="ruby-value">:code</span>][<span class="ruby-value">:tickets</span>]= <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+                
+                 <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:code_use</span>]<span class="ruby-operator">==</span><span class="ruby-string">'0'</span>
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:code</span>][<span class="ruby-value">:uses</span>] = <span class="ruby-value">0</span>
+                 <span class="ruby-keyword">else</span>
+                    <span class="ruby-identifier">params</span>[<span class="ruby-value">:code</span>][<span class="ruby-value">:uses</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:uses</span>] 
+                 <span class="ruby-keyword">end</span>
+                 
+                 <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>]<span class="ruby-operator">==</span><span class="ruby-string">''</span>)
+                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:enter_code</span>]<span class="ruby-operator">==</span><span class="ruby-value">0</span>
+                         <span class="ruby-ivar">@code</span> = <span class="ruby-constant">PromotionalCode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code</span>])
+                         
+                         <span class="ruby-constant">PromotionalCode</span>.<span class="ruby-identifier">import</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:upload_doc</span>], <span class="ruby-ivar">@code</span>)
+                              
+                              <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.promotional_code_added_successfully'</span>
+                              <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'promotional_codes/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>) } 
+                      <span class="ruby-keyword">else</span>
+                          <span class="ruby-ivar">@code</span> = <span class="ruby-constant">PromotionalCode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code</span>])
+                           <span class="ruby-keyword">if</span> <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">save</span>
+                                <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.promotional_code_added_successfully'</span>
+                                <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'promotional_codes/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>) }
+                           <span class="ruby-keyword">else</span>
+                                <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;edit_code&quot;</span>, <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_event/add_promotional_codes'</span>}
+                                <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+                           <span class="ruby-keyword">end</span>
+                      <span class="ruby-keyword">end</span>
+                       
+                 <span class="ruby-keyword">else</span>
+                       <span class="ruby-ivar">@code</span> = <span class="ruby-constant">PromotionalCode</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>])
+                      
+                       <span class="ruby-keyword">if</span> <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code</span>]) 
+                             <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.promotional_code_updated_successfully'</span>
+                             <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'promotional_codes/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>) }
+                       <span class="ruby-keyword">else</span>
+                            
+                            <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;edit_code&quot;</span>, <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_event/add_promotional_codes'</span> }
+                            <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+                       <span class="ruby-keyword">end</span> 
+                 <span class="ruby-keyword">end</span> 
+              
+         <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+       
+       <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>] 
+         <span class="ruby-ivar">@code</span> = <span class="ruby-constant">PromotionalCode</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:code_id</span>])
+       <span class="ruby-keyword">else</span>  
+         <span class="ruby-ivar">@code</span> = <span class="ruby-constant">PromotionalCode</span>.<span class="ruby-identifier">new</span>
+       <span class="ruby-keyword">end</span>  
+       <span class="ruby-identifier">render</span> <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_event/add_promotional_codes'</span>
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit_code-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit_code-method -->
+
+    
+      <div id="method-i-edit_news_and_updates" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_news_and_updates</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit_news_and_updates-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 316</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_news_and_updates</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+         
+          <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event_update</span>][<span class="ruby-value">:updates</span>]<span class="ruby-operator">==</span><span class="ruby-string">''</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:event_update</span>][<span class="ruby-value">:updates</span>]<span class="ruby-operator">==</span><span class="ruby-string">'&amp;nbsp;'</span>)
+                     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.update_is_required'</span> 
+                <span class="ruby-keyword">else</span>
+                  <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:update_id</span>]<span class="ruby-operator">==</span><span class="ruby-string">'0'</span>)
+                      <span class="ruby-ivar">@eveupdates</span> = <span class="ruby-constant">EventUpdate</span>.<span class="ruby-identifier">new</span>
+                      <span class="ruby-ivar">@eveupdates</span>[<span class="ruby-value">:updates</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:event_update</span>][<span class="ruby-value">:updates</span>]
+                      <span class="ruby-ivar">@eveupdates</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:event_update</span>][<span class="ruby-value">:event_id</span>]
+                      
+                      <span class="ruby-ivar">@eveupdates</span>.<span class="ruby-identifier">save</span>
+                      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.update_added_successfully'</span>
+                  <span class="ruby-keyword">else</span>  
+                      <span class="ruby-ivar">@eveupdates</span> = <span class="ruby-constant">EventUpdate</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:update_id</span>])
+                      <span class="ruby-ivar">@eveupdates</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event_update</span>])
+                      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.update_updated_successfully'</span>  
+                  <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                  <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'news_and_updates/'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:event_update</span>][<span class="ruby-value">:event_id</span>]) }
+         <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-keyword">end</span>   
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit_news_and_updates-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit_news_and_updates-method -->
+
+    
+      <div id="method-i-edit_order" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_order</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit_order-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_order</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+    
+        <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'.meta_title.m_edit_orders'</span>
+        <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+        <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+        <span class="ruby-ivar">@order</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+        
+     <span class="ruby-keyword">if</span> <span class="ruby-constant">Event</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-ivar">@order</span>[<span class="ruby-value">:event_id</span>])   
+        <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@order</span>[<span class="ruby-value">:event_id</span>])
+        <span class="ruby-ivar">@questions</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]]) 
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+           <span class="ruby-ivar">@order</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>])
+           
+           <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.order_info_updated_successfully'</span>
+           <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'orders/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@order</span>[<span class="ruby-value">:event_id</span>].<span class="ruby-identifier">to_s</span>) 
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'events'</span> 
+    <span class="ruby-keyword">end</span>      
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'events'</span>  
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit_order-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit_order-method -->
+
+    
+      <div id="method-i-edit_order_confirmation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_order_confirmation</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Confirm Customize Order Form</p>
+          
+
+          
+          <div class="method-source-code" id="edit_order_confirmation-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 260</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_order_confirmation</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_edit_order_confirmation'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+        
+         <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+             
+                <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:order_id</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_id</span>]<span class="ruby-operator">==</span><span class="ruby-string">''</span>)
+                     <span class="ruby-ivar">@order_form</span> = <span class="ruby-constant">OrderForm</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>])
+                     <span class="ruby-ivar">@order_form</span>.<span class="ruby-identifier">save</span>
+                <span class="ruby-keyword">else</span>
+                     <span class="ruby-ivar">@order_form</span> = <span class="ruby-constant">OrderForm</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:order_id</span>])
+                     <span class="ruby-ivar">@order_form</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:order_form</span>])  
+                <span class="ruby-keyword">end</span> 
+                
+                <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.info_save_successfully'</span>
+                <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'edit_order_confirmation'</span>) }
+        <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-keyword">end</span>       
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit_order_confirmation-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit_order_confirmation-method -->
+
+    
+      <div id="method-i-event_url_link" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">event_url_link</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Change Event Link</p>
+          
+
+          
+          <div class="method-source-code" id="event_url_link-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 787</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">event_url_link</span>
+ <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+ <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_url_link</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:val</span>]
+ 
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'contact_controller.success'</span>)  }
+   <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>[<span class="ruby-value">0</span>]}
+   <span class="ruby-keyword">end</span>  
+     
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- event_url_link-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- event_url_link-method -->
+
+    
+      <div id="method-i-google_analytic_code" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">google_analytic_code</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Google Analytics</p>
+          
+
+          
+          <div class="method-source-code" id="google_analytic_code-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 354</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">google_analytic_code</span>
+     <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_google_analytics'</span>
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+     <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+     <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+     <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+          <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+             <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>])  
+             <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.google_analytics_saved_successfully'</span>
+             <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'google_analytic_code'</span>) }
+          <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- google_analytic_code-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- google_analytic_code-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Event Dashboard Page</p>
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_dashboard'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-ivar">@orders</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find_orders_by_event</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-ivar">@event_attendee</span> = <span class="ruby-constant">EventAttendee</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-news_and_updates" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">news_and_updates</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>News and updates</p>
+          
+
+          
+          <div class="method-source-code" id="news_and_updates-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">news_and_updates</span>
+     <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_add_news_updates'</span>
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+     <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+     <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- news_and_updates-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- news_and_updates-method -->
+
+    
+      <div id="method-i-orders" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">orders</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Orders Page</p>
+          
+
+          
+          <div class="method-source-code" id="orders-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 370</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">orders</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'.meta_title.m_orders'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-identifier">query</span> = <span class="ruby-string">'event_id='</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">' AND ticket_id&gt;0 AND payment=1'</span>
+    <span class="ruby-comment">#@orders = Purchase.where('event_id=? AND (ticket_id=0 or ticket_id=null) ' , @event[:id])</span>
+    <span class="ruby-identifier">order_by</span> = <span class="ruby-string">'order by id DESC'</span>
+    <span class="ruby-identifier">per_page</span> = <span class="ruby-value">5</span>
+    
+    
+      <span class="ruby-comment">### dsate range</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:date_range</span>]<span class="ruby-operator">==</span><span class="ruby-string">'week'</span>
+          <span class="ruby-identifier">time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">new</span>
+          <span class="ruby-identifier">day</span> = <span class="ruby-identifier">time</span>.<span class="ruby-identifier">wday</span>
+          <span class="ruby-identifier">eday</span> = <span class="ruby-value">6</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">day</span>
+         <span class="ruby-identifier">query</span> = <span class="ruby-identifier">query</span> <span class="ruby-operator">+</span> <span class="ruby-string">' AND DATE(created_at) between &quot;'</span><span class="ruby-operator">+</span>(<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">day</span>.<span class="ruby-identifier">days</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d'</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">'&quot; and &quot;'</span><span class="ruby-operator">+</span>(<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">eday</span>.<span class="ruby-identifier">days</span>).<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y-%m-%d'</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">'&quot;'</span>
+         <span class="ruby-comment">#@orders = Purchase.where(&quot;event_id=? AND (ticket_id=0 or ticket_id=null) AND DATE(created_at) between ? and ?  &quot;, @event[:id], Date.today - day.days, Date.today + eday.days) </span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:date_range</span>]<span class="ruby-operator">==</span><span class="ruby-string">'month'</span>
+         <span class="ruby-identifier">query</span> = <span class="ruby-identifier">query</span> <span class="ruby-operator">+</span> <span class="ruby-string">' AND MONTH(created_at)=&quot;'</span><span class="ruby-operator">+</span>(<span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%m'</span>)).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">'&quot;'</span>
+         <span class="ruby-comment">#@orders = Purchase.where(&quot;event_id=? AND (ticket_id=0 or ticket_id=null) AND MONTH(created_at)=? &quot;, @event[:id], DateTime.now.strftime('%m'))</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:date_range</span>]<span class="ruby-operator">==</span><span class="ruby-string">'year'</span>  
+        <span class="ruby-identifier">query</span> = <span class="ruby-identifier">query</span> <span class="ruby-operator">+</span> <span class="ruby-string">' AND YEAR(created_at)= &quot;'</span><span class="ruby-operator">+</span>(<span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%Y'</span>)).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">'&quot;'</span>
+        <span class="ruby-comment">#@orders = Purchase.where(&quot;event_id=? AND (ticket_id=0 or ticket_id=null)  AND YEAR(created_at)=? &quot;, @event[:id], DateTime.now.strftime('%Y'))</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:date_range</span>]<span class="ruby-operator">==</span><span class="ruby-string">'custom'</span>    
+         <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:start_date</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:start_date</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:end_date</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:end_date</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span>
+            <span class="ruby-identifier">query</span> = <span class="ruby-identifier">query</span> <span class="ruby-operator">+</span> <span class="ruby-string">' AND DATE(created_at) between &quot;'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:start_date</span>]<span class="ruby-operator">+</span><span class="ruby-string">'&quot; and &quot;'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:end_date</span>]<span class="ruby-operator">+</span><span class="ruby-string">'&quot;'</span> 
+            <span class="ruby-comment">#@orders = Purchase.where(&quot;event_id=? AND (ticket_id=0 or ticket_id=null)  AND DATE(created_at) between ? and ? &quot;, @event[:id], params[:start_date], params[:end_date])</span>
+         <span class="ruby-keyword">end</span>   
+      <span class="ruby-keyword">end</span>
+      
+      
+      <span class="ruby-comment">####  name,email,company, job title, blog</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:search</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:search</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+           <span class="ruby-identifier">query</span> = <span class="ruby-identifier">query</span> <span class="ruby-operator">+</span> <span class="ruby-string">' AND (first_name like &quot;%'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:search</span>]<span class="ruby-operator">+</span><span class="ruby-string">'%&quot; or last_name like &quot;%'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:search</span>]<span class="ruby-operator">+</span><span class="ruby-string">'%&quot; or work_company like &quot;%'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:search</span>]<span class="ruby-operator">+</span><span class="ruby-string">'%&quot; or work_job_title like &quot;%'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:search</span>]<span class="ruby-operator">+</span><span class="ruby-string">'%&quot; or work_blog like &quot;%'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:search</span>]<span class="ruby-operator">+</span><span class="ruby-string">'%&quot;'</span>
+          <span class="ruby-comment">#@orders = Purchase.where(&quot;event_id=? AND (ticket_id=0 or ticket_id=null) AND (first_name like ? or last_name like ? or work_company like ? or work_job_title like ? or work_blog like ?) &quot;, @event[:id], '%'+params[:search]+'%', '%'+params[:search]+'%', '%'+params[:search]+'%', '%'+params[:search]+'%', '%'+params[:search]+'%')</span>
+      <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-comment">####  order asc - desc</span>
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:sort_by</span>]<span class="ruby-operator">==</span><span class="ruby-string">'date_desc'</span>
+            <span class="ruby-identifier">order_by</span> = <span class="ruby-string">'order by created_at DESC'</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:sort_by</span>]<span class="ruby-operator">==</span><span class="ruby-string">'date_asc'</span>
+            <span class="ruby-identifier">order_by</span> = <span class="ruby-string">'order by created_at ASC'</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:sort_by</span>]<span class="ruby-operator">==</span><span class="ruby-string">'email_asc'</span>
+            <span class="ruby-identifier">order_by</span> = <span class="ruby-string">'order by email ASC'</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:sort_by</span>]<span class="ruby-operator">==</span><span class="ruby-string">'email_desc'</span>
+            <span class="ruby-identifier">order_by</span> = <span class="ruby-string">'order by email DESC'</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:sort_by</span>]<span class="ruby-operator">==</span><span class="ruby-string">'amt_asc'</span>
+            <span class="ruby-identifier">order_by</span> = <span class="ruby-string">'order by total ASC'</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:sort_by</span>]<span class="ruby-operator">==</span><span class="ruby-string">'amt_desc'</span>  
+            <span class="ruby-identifier">order_by</span> = <span class="ruby-string">'order by total DESC'</span>
+      <span class="ruby-keyword">end</span>
+      
+      
+      <span class="ruby-comment">#######  per page</span>
+      <span class="ruby-identifier">per_page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:per_page</span>]
+      <span class="ruby-comment">#@orders = Purchase.paginate(:page =&gt; params[:page], :per_page =&gt; params[:per_page])</span>
+    
+     
+       <span class="ruby-ivar">@orders</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find_by_sql</span>(<span class="ruby-string">'select * from purchases where '</span><span class="ruby-operator">+</span><span class="ruby-identifier">query</span><span class="ruby-operator">+</span><span class="ruby-string">' '</span><span class="ruby-operator">+</span><span class="ruby-identifier">order_by</span>).<span class="ruby-identifier">paginate</span>(<span class="ruby-value">:page</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>], <span class="ruby-value">:per_page</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">per_page</span>)
+       <span class="ruby-ivar">@orders_xls</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find_by_sql</span>(<span class="ruby-string">'select * from purchases where '</span><span class="ruby-operator">+</span><span class="ruby-identifier">query</span><span class="ruby-operator">+</span><span class="ruby-string">' '</span><span class="ruby-operator">+</span><span class="ruby-identifier">order_by</span>)
+    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- orders-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- orders-method -->
+
+    
+      <div id="method-i-org_url_link" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">org_url_link</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Change Organizer Link</p>
+          
+
+          
+          <div class="method-source-code" id="org_url_link-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 800</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">org_url_link</span>
+ <span class="ruby-ivar">@org</span> = <span class="ruby-constant">Organizer</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+ <span class="ruby-ivar">@org</span>[<span class="ruby-value">:page_url</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:val</span>]
+ 
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@org</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'contact_controller.success'</span>)  }
+   <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@org</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>[<span class="ruby-value">0</span>]}
+   <span class="ruby-keyword">end</span>  
+     
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- org_url_link-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- org_url_link-method -->
+
+    
+      <div id="method-i-promotional_codes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">promotional_codes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Promotional Codes</p>
+          
+
+          
+          <div class="method-source-code" id="promotional_codes-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 485</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">promotional_codes</span>
+     <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'.meta_title.m_promotional_codes'</span>
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+     <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+     <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+     <span class="ruby-ivar">@disc_codes</span> = <span class="ruby-constant">PromotionalCode</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND code_type=?'</span>,<span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>], <span class="ruby-string">'disc'</span>])
+     <span class="ruby-ivar">@access_codes</span> = <span class="ruby-constant">PromotionalCode</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND code_type=?'</span>,<span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>], <span class="ruby-string">'access'</span>])
+     <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@disc_codes</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@access_codes</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+         <span class="ruby-identifier">render</span> <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_event/list_promotional_codes'</span>
+     <span class="ruby-keyword">else</span>
+         <span class="ruby-ivar">@code</span> = <span class="ruby-constant">PromotionalCode</span>.<span class="ruby-identifier">new</span>
+         <span class="ruby-identifier">render</span> <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_event/add_promotional_codes'</span>
+     <span class="ruby-keyword">end</span>    
+       
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- promotional_codes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- promotional_codes-method -->
+
+    
+      <div id="method-i-publish" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">publish</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Publish Event</p>
+          
+
+          
+          <div class="method-source-code" id="publish-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 751</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">publish</span>
+   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+      <span class="ruby-ivar">@event</span>[<span class="ruby-value">:cancel</span>] = <span class="ruby-value">0</span>
+      <span class="ruby-ivar">@event</span>[<span class="ruby-value">:active</span>] = <span class="ruby-value">0</span>
+      <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">make_event_live_request</span>(<span class="ruby-ivar">@event</span>).<span class="ruby-identifier">deliver</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.event_submitted_publishing_wait_admin_approval'</span>
+      <span class="ruby-comment">#flash[:notice1] = &quot;Event Published successfully..!!&quot;</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>) }
+    <span class="ruby-keyword">end</span>  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- publish-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- publish-method -->
+
+    
+      <div id="method-i-question" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">question</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Add Custom Questions</p>
+          
+
+          
+          <div class="method-source-code" id="question-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">question</span>
+     <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_que_for_event'</span>
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+     <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+     <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+     <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:que_id</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_id</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_id</span>]<span class="ruby-operator">!=</span><span class="ruby-string">'0'</span>)
+       <span class="ruby-ivar">@que</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:que_id</span>])
+     <span class="ruby-keyword">else</span>
+       <span class="ruby-ivar">@que</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>])
+     <span class="ruby-keyword">end</span>    
+     <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+          <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+             <span class="ruby-ivar">@que</span>.<span class="ruby-identifier">save</span>
+             
+             <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@que</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'check'</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@que</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'select'</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@que</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'radio'</span>)
+                 
+                 <span class="ruby-ivar">@all_opt</span> = <span class="ruby-constant">QuestionOption</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'que_id=?'</span>, <span class="ruby-ivar">@que</span>[<span class="ruby-value">:id</span>]])
+                       
+                       
+                     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@all_opt</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                         
+                       <span class="ruby-keyword">for</span> <span class="ruby-identifier">all</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@all_opt</span>
+                           <span class="ruby-identifier">chk_id</span> = <span class="ruby-value">0</span>
+                           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_opt_id</span>]
+                             <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_opt_id</span>].<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                                 <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_opt_id</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">all</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+                                     <span class="ruby-identifier">chk_id</span> = <span class="ruby-value">1</span>
+                                 <span class="ruby-keyword">end</span>
+                             <span class="ruby-keyword">end</span> 
+                           <span class="ruby-keyword">end</span>
+                           
+                           <span class="ruby-keyword">if</span> <span class="ruby-identifier">chk_id</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                               <span class="ruby-identifier">all</span>.<span class="ruby-identifier">destroy</span>
+                           <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                       
+                     <span class="ruby-keyword">end</span>
+                  
+                  <span class="ruby-comment">#### options save</span>
+                     
+                     <span class="ruby-ivar">@opt</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_value</span>]
+                     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@opt</span>  
+                       <span class="ruby-keyword">if</span> <span class="ruby-ivar">@opt</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                         <span class="ruby-identifier">k</span>=<span class="ruby-value">0</span>
+                         <span class="ruby-ivar">@opt</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">opt</span><span class="ruby-operator">|</span>
+                            
+                            <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:que_opt_id</span>][<span class="ruby-identifier">k</span>]<span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_opt_id</span>][<span class="ruby-identifier">k</span>]<span class="ruby-operator">==</span><span class="ruby-string">'0'</span>)
+                                 <span class="ruby-ivar">@que_opt</span> = <span class="ruby-constant">QuestionOption</span>.<span class="ruby-identifier">new</span>
+                                 <span class="ruby-ivar">@que_opt</span>[<span class="ruby-value">:que_id</span>] = <span class="ruby-ivar">@que</span>[<span class="ruby-value">:id</span>]
+                                 <span class="ruby-ivar">@que_opt</span>[<span class="ruby-value">:qty</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_qty</span>][<span class="ruby-identifier">k</span>]
+                                 <span class="ruby-ivar">@que_opt</span>[<span class="ruby-value">:value</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_value</span>][<span class="ruby-identifier">k</span>]
+                                 <span class="ruby-ivar">@que_opt</span>.<span class="ruby-identifier">save</span>
+                             <span class="ruby-keyword">else</span>  
+                                 <span class="ruby-ivar">@tic</span> = <span class="ruby-constant">QuestionOption</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:que_opt_id</span>][<span class="ruby-identifier">k</span>])
+                                 <span class="ruby-ivar">@que_opt</span>[<span class="ruby-value">:que_id</span>] = <span class="ruby-ivar">@que</span>[<span class="ruby-value">:id</span>]
+                                 <span class="ruby-ivar">@que_opt</span>[<span class="ruby-value">:qty</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_qty</span>][<span class="ruby-identifier">k</span>]
+                                 <span class="ruby-ivar">@que_opt</span>[<span class="ruby-value">:value</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_value</span>][<span class="ruby-identifier">k</span>]
+                                 <span class="ruby-ivar">@que_opt</span>.<span class="ruby-identifier">save</span>
+                             <span class="ruby-keyword">end</span>
+                             
+                             <span class="ruby-identifier">k</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                         <span class="ruby-keyword">end</span>
+                         
+                       <span class="ruby-keyword">end</span>
+                     <span class="ruby-keyword">end</span>
+                     
+             <span class="ruby-keyword">end</span>
+               
+             <span class="ruby-keyword">if</span> <span class="ruby-ivar">@que</span>[<span class="ruby-value">:spec_ticket</span>]<span class="ruby-operator">==</span><span class="ruby-value">1</span>
+                 <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:tickets</span>]      
+                     <span class="ruby-ivar">@que</span>[<span class="ruby-value">:tickets</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:tickets</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+                     <span class="ruby-ivar">@que</span>.<span class="ruby-identifier">save</span>
+                 <span class="ruby-keyword">end</span>
+             <span class="ruby-keyword">end</span>
+             
+             <span class="ruby-keyword">if</span> <span class="ruby-ivar">@que</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'waiver'</span>
+                <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:waiv_id</span>]<span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:waiv_id</span>]<span class="ruby-operator">==</span><span class="ruby-string">'0'</span>)
+                     <span class="ruby-ivar">@que_opt</span> = <span class="ruby-constant">QuestionOption</span>.<span class="ruby-identifier">new</span>
+                     <span class="ruby-ivar">@que_opt</span>[<span class="ruby-value">:que_id</span>] = <span class="ruby-ivar">@que</span>[<span class="ruby-value">:id</span>]
+                     <span class="ruby-ivar">@que_opt</span>[<span class="ruby-value">:value</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_waiv</span>]
+                     <span class="ruby-ivar">@que_opt</span>.<span class="ruby-identifier">save</span>
+                 <span class="ruby-keyword">else</span>  
+                     <span class="ruby-ivar">@tic</span> = <span class="ruby-constant">QuestionOption</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:waiv_id</span>])
+                     <span class="ruby-ivar">@que_opt</span>[<span class="ruby-value">:que_id</span>] = <span class="ruby-ivar">@que</span>[<span class="ruby-value">:id</span>]
+                     <span class="ruby-ivar">@que_opt</span>[<span class="ruby-value">:value</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que_waiv</span>]
+                     <span class="ruby-ivar">@que_opt</span>.<span class="ruby-identifier">save</span> 
+                 <span class="ruby-keyword">end</span>
+             <span class="ruby-keyword">end</span>  
+             <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.que_added_order_successfully'</span>
+             <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'customize_order_form/'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>) }
+          <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- question-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- question-method -->
+
+    
+      <div id="method-i-type_and_language" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">type_and_language</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Event type and language</p>
+          
+
+          
+          <div class="method-source-code" id="type_and_language-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">type_and_language</span>
+     <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_edit_type_language'</span>
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+     <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+     <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+     
+     <span class="ruby-identifier">lang</span> = <span class="ruby-constant">Language</span>.<span class="ruby-identifier">find_name</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:language_id</span>])
+     <span class="ruby-identifier">set_locale</span>(<span class="ruby-identifier">lang</span>)
+   
+     <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+         
+          <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+              
+                <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>])  
+                 
+                 <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.info_save_successfully'</span>
+                 <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'type_and_language'</span>) }
+         <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-keyword">end</span>   
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- type_and_language-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- type_and_language-method -->
+
+    
+      <div id="method-i-waitlist_setting" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">waitlist_setting</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Waitlist Settings</p>
+          
+
+          
+          <div class="method-source-code" id="waitlist_setting-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_event_controller.rb, line 462</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">waitlist_setting</span>
+     <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'.meta_title.m_waitlist_setting'</span>
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]) 
+     <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+     <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+     <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+          <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+                 <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:list_id</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:list_id</span>]<span class="ruby-operator">==</span><span class="ruby-string">''</span>)
+                      <span class="ruby-ivar">@list</span> = <span class="ruby-constant">Waitlist</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:waitlist</span>])
+                      <span class="ruby-ivar">@list</span>.<span class="ruby-identifier">save</span>
+                 <span class="ruby-keyword">else</span>
+                      <span class="ruby-ivar">@list</span> = <span class="ruby-constant">Waitlist</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:list_id</span>])
+                      <span class="ruby-ivar">@list</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:waitlist</span>])  
+                 <span class="ruby-keyword">end</span> 
+               <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_event_controller.waitlist_settings_saved_successfully'</span>
+               <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'waitlist_setting'</span>) }
+         <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- waitlist_setting-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- waitlist_setting-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class AuthController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/auth_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ApplicationController
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-callback_error">#callback_error</a>
+    
+    <li><a href="#method-i-facebook">#facebook</a>
+    
+    <li><a href="#method-i-failure">#failure</a>
+    
+    <li><a href="#method-i-twitter">#twitter</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActiveAdmin.html">ActiveAdmin</a>
+  
+    <li><a href="./ActiveAdmin/Views.html">ActiveAdmin::Views</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages.html">ActiveAdmin::Views::Pages</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages/Base.html">ActiveAdmin::Views::Pages::Base</a>
+  
+    <li><a href="./AffiliatesController.html">AffiliatesController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./AuthController.html">AuthController</a>
+  
+    <li><a href="./CancelOrdersController.html">CancelOrdersController</a>
+  
+    <li><a href="./ContactListHelper.html">ContactListHelper</a>
+  
+    <li><a href="./ContactListsController.html">ContactListsController</a>
+  
+    <li><a href="./ContactListsHelper.html">ContactListsHelper</a>
+  
+    <li><a href="./ContactsController.html">ContactsController</a>
+  
+    <li><a href="./ContactsHelper.html">ContactsHelper</a>
+  
+    <li><a href="./CustomAdminHeader.html">CustomAdminHeader</a>
+  
+    <li><a href="./ErrorsController.html">ErrorsController</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./ExceptionsController.html">ExceptionsController</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./InvitesController.html">InvitesController</a>
+  
+    <li><a href="./ManageAccountController.html">ManageAccountController</a>
+  
+    <li><a href="./ManageAccountHelper.html">ManageAccountHelper</a>
+  
+    <li><a href="./ManageEventController.html">ManageEventController</a>
+  
+    <li><a href="./ManageEventHelper.html">ManageEventHelper</a>
+  
+    <li><a href="./MobileLoginsController.html">MobileLoginsController</a>
+  
+    <li><a href="./MyTicketsController.html">MyTicketsController</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./OrdersController.html">OrdersController</a>
+  
+    <li><a href="./OrganizersController.html">OrganizersController</a>
+  
+    <li><a href="./PagesController.html">PagesController</a>
+  
+    <li><a href="./ProductsHelper.html">ProductsHelper</a>
+  
+    <li><a href="./PurchasesController.html">PurchasesController</a>
+  
+    <li><a href="./ReferrersController.html">ReferrersController</a>
+  
+    <li><a href="./SearchController.html">SearchController</a>
+  
+    <li><a href="./TicketsController.html">TicketsController</a>
+  
+    <li><a href="./TipsController.html">TipsController</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WalletController.html">WalletController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class AuthController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-callback_error" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">callback_error</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="callback_error-source">
+            <pre><span class="ruby-comment"># File app/controllers/auth_controller.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">callback_error</span>
+   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:error_message</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:error_message</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:error_message</span>]
+   <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'home_controller.something_wrong_yor_facebook_amount_try_again'</span>
+   <span class="ruby-keyword">end</span>  
+   <span class="ruby-comment">#render :text =&gt; params</span>
+   <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- callback_error-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- callback_error-method -->
+
+    
+      <div id="method-i-facebook" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">facebook</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="facebook-source">
+            <pre><span class="ruby-comment"># File app/controllers/auth_controller.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">facebook</span>
+   <span class="ruby-keyword">if</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)        
+             <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:password</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'123456789'</span>)
+             <span class="ruby-ivar">@user</span>[<span class="ruby-value">:first_name</span>] = <span class="ruby-identifier">env</span>[<span class="ruby-string">&quot;omniauth.auth&quot;</span>][<span class="ruby-string">&quot;extra&quot;</span>][<span class="ruby-string">&quot;raw_info&quot;</span>][<span class="ruby-string">&quot;first_name&quot;</span>]
+             <span class="ruby-ivar">@user</span>[<span class="ruby-value">:last_name</span>] = <span class="ruby-identifier">env</span>[<span class="ruby-string">&quot;omniauth.auth&quot;</span>][<span class="ruby-string">&quot;extra&quot;</span>][<span class="ruby-string">&quot;raw_info&quot;</span>][<span class="ruby-string">&quot;last_name&quot;</span>]
+             <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>] = <span class="ruby-identifier">env</span>[<span class="ruby-string">&quot;omniauth.auth&quot;</span>][<span class="ruby-string">&quot;extra&quot;</span>][<span class="ruby-string">&quot;raw_info&quot;</span>][<span class="ruby-string">&quot;email&quot;</span>]
+             <span class="ruby-ivar">@user</span>[<span class="ruby-value">:fb_id</span>] = <span class="ruby-identifier">env</span>[<span class="ruby-string">&quot;omniauth.auth&quot;</span>][<span class="ruby-string">&quot;extra&quot;</span>][<span class="ruby-string">&quot;raw_info&quot;</span>][<span class="ruby-string">&quot;id&quot;</span>]
+             <span class="ruby-ivar">@user</span>[<span class="ruby-value">:fb_access_token</span>] = <span class="ruby-identifier">env</span>[<span class="ruby-string">&quot;omniauth.auth&quot;</span>][<span class="ruby-string">&quot;credentials&quot;</span>][<span class="ruby-string">&quot;token&quot;</span>]
+             <span class="ruby-ivar">@user</span>[<span class="ruby-value">:user_ip</span>] = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">remote_ip</span>
+                  
+              
+             <span class="ruby-ivar">@user_find</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'email=? '</span>, <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]])
+             <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user_find</span>
+              
+                  <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:fb_id</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:fb_id</span>]
+                  <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:fb_access_token</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:fb_access_token</span>]
+                  
+                  <span class="ruby-ivar">@user_find</span>.<span class="ruby-identifier">save</span>
+                 
+                 <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:active</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+                    <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:id</span>]
+                    <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:email</span>]
+                   
+                   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:set_pass</span>]<span class="ruby-operator">==</span><span class="ruby-value">1</span>
+                      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'home_controller.you_logged_in_successfully'</span>
+                      <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+                   <span class="ruby-keyword">end</span>
+                 <span class="ruby-keyword">else</span>
+                      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'home_controller.your_account_inactivate'</span>
+                      <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+                 <span class="ruby-keyword">end</span>  
+                  
+             <span class="ruby-keyword">else</span>
+              
+               <span class="ruby-ivar">@user</span>[<span class="ruby-value">:active</span>]=<span class="ruby-value">1</span>
+               <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">save</span>
+               
+               <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]
+               <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]
+               
+             <span class="ruby-keyword">end</span>
+             <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home/facebook_login'</span>
+       
+   <span class="ruby-keyword">else</span>
+       <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+   <span class="ruby-keyword">end</span>      
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- facebook-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- facebook-method -->
+
+    
+      <div id="method-i-failure" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">failure</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="failure-source">
+            <pre><span class="ruby-comment"># File app/controllers/auth_controller.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">failure</span>
+   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'home_controller.something_wrong_yor_facebook_amount_try_again'</span>
+   <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'login'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- failure-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- failure-method -->
+
+    
+      <div id="method-i-twitter" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">twitter</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="twitter-source">
+            <pre><span class="ruby-comment"># File app/controllers/auth_controller.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">twitter</span>
+   <span class="ruby-keyword">if</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)  
+     
+      <span class="ruby-identifier">auth</span> = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">env</span>[<span class="ruby-string">&quot;omniauth.auth&quot;</span>]
+      <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:password</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'123456789'</span>)
+     
+      <span class="ruby-ivar">@user</span>[<span class="ruby-value">:tw_oauth_token</span>] = <span class="ruby-identifier">auth</span>[<span class="ruby-string">'credentials'</span>][<span class="ruby-string">'token'</span>]
+      <span class="ruby-ivar">@user</span>[<span class="ruby-value">:tw_oauth_secret</span>] = <span class="ruby-identifier">auth</span>[<span class="ruby-string">'credentials'</span>][<span class="ruby-string">'secret'</span>]
+      <span class="ruby-ivar">@user</span>[<span class="ruby-value">:tw_screen_name</span>] = <span class="ruby-identifier">auth</span>[<span class="ruby-string">'extra'</span>][<span class="ruby-string">'raw_info'</span>][<span class="ruby-string">'screen_name'</span>]
+      <span class="ruby-ivar">@user</span>[<span class="ruby-value">:tw_id</span>] = <span class="ruby-identifier">auth</span>[<span class="ruby-string">'extra'</span>][<span class="ruby-string">'raw_info'</span>][<span class="ruby-string">'id'</span>] 
+      <span class="ruby-ivar">@user</span>[<span class="ruby-value">:user_ip</span>] = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">remote_ip</span>
+      
+      <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">auth</span>[<span class="ruby-string">'info'</span>][<span class="ruby-string">'name'</span>]
+      <span class="ruby-ivar">@split_name</span> = <span class="ruby-ivar">@name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">' '</span>)
+      <span class="ruby-ivar">@user</span>[<span class="ruby-value">:first_name</span>] = <span class="ruby-ivar">@split_name</span>[<span class="ruby-value">0</span>]
+      <span class="ruby-ivar">@user</span>[<span class="ruby-value">:last_name</span>] = <span class="ruby-ivar">@split_name</span>[<span class="ruby-value">1</span>]
+      
+       <span class="ruby-ivar">@user_find</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'tw_id=? '</span>, <span class="ruby-ivar">@user</span>[<span class="ruby-value">:tw_id</span>]])
+       <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user_find</span>
+        
+            <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:tw_oauth_token</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:tw_oauth_token</span>]
+            <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:tw_oauth_secret</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:tw_oauth_secret</span>]
+            <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:tw_screen_name</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:tw_screen_name</span>]
+            <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:tw_id</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:tw_id</span>]
+            
+            <span class="ruby-ivar">@user_find</span>.<span class="ruby-identifier">save</span>
+           
+           <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:active</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+              <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:id</span>]
+              <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:email</span>]
+             
+             <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user_find</span>[<span class="ruby-value">:set_pass</span>]<span class="ruby-operator">==</span><span class="ruby-value">1</span>
+                <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'home_controller.you_logged_in_successfully'</span>
+                <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+             <span class="ruby-keyword">end</span>
+           <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'home_controller.your_account_inactivate'</span>
+                <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+           <span class="ruby-keyword">end</span>  
+            
+       <span class="ruby-keyword">else</span>
+        
+         <span class="ruby-ivar">@user</span>[<span class="ruby-value">:active</span>]=<span class="ruby-value">1</span>
+         <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">save</span>
+         
+         <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]
+         <span class="ruby-comment">#session[:user_email] = @user[:email]</span>
+         
+       <span class="ruby-keyword">end</span>
+       
+       <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home/facebook_login'</span>
+   <span class="ruby-keyword">else</span>
+       <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+       <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>[<span class="ruby-value">:set_pass</span>]<span class="ruby-operator">==</span><span class="ruby-value">1</span>
+          <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'index'</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+       <span class="ruby-keyword">else</span>
+         <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home/facebook_login'</span>
+       <span class="ruby-keyword">end</span>     
+   <span class="ruby-keyword">end</span>       
+      
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- twitter-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- twitter-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

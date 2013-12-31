@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class TicketsController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/tickets_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ApplicationController
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-add_attendee">#add_attendee</a>
+    
+    <li><a href="#method-i-auth_net_aim">#auth_net_aim</a>
+    
+    <li><a href="#method-i-order">#order</a>
+    
+    <li><a href="#method-i-order_confirmed">#order_confirmed</a>
+    
+    <li><a href="#method-i-paypal">#paypal</a>
+    
+    <li><a href="#method-i-paypal_cancel">#paypal_cancel</a>
+    
+    <li><a href="#method-i-paypal_ipn">#paypal_ipn</a>
+    
+    <li><a href="#method-i-paypal_return">#paypal_return</a>
+    
+    <li><a href="#method-i-place_order">#place_order</a>
+    
+    <li><a href="#method-i-place_order_attendee">#place_order_attendee</a>
+    
+    <li><a href="#method-i-purchase">#purchase</a>
+    
+    <li><a href="#method-i-rename_pdf">#rename_pdf</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActiveAdmin.html">ActiveAdmin</a>
+  
+    <li><a href="./ActiveAdmin/Views.html">ActiveAdmin::Views</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages.html">ActiveAdmin::Views::Pages</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages/Base.html">ActiveAdmin::Views::Pages::Base</a>
+  
+    <li><a href="./AffiliatesController.html">AffiliatesController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./AuthController.html">AuthController</a>
+  
+    <li><a href="./CancelOrdersController.html">CancelOrdersController</a>
+  
+    <li><a href="./ContactListHelper.html">ContactListHelper</a>
+  
+    <li><a href="./ContactListsController.html">ContactListsController</a>
+  
+    <li><a href="./ContactListsHelper.html">ContactListsHelper</a>
+  
+    <li><a href="./ContactsController.html">ContactsController</a>
+  
+    <li><a href="./ContactsHelper.html">ContactsHelper</a>
+  
+    <li><a href="./CustomAdminHeader.html">CustomAdminHeader</a>
+  
+    <li><a href="./ErrorsController.html">ErrorsController</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./ExceptionsController.html">ExceptionsController</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./InvitesController.html">InvitesController</a>
+  
+    <li><a href="./ManageAccountController.html">ManageAccountController</a>
+  
+    <li><a href="./ManageAccountHelper.html">ManageAccountHelper</a>
+  
+    <li><a href="./ManageEventController.html">ManageEventController</a>
+  
+    <li><a href="./ManageEventHelper.html">ManageEventHelper</a>
+  
+    <li><a href="./MobileLoginsController.html">MobileLoginsController</a>
+  
+    <li><a href="./MyTicketsController.html">MyTicketsController</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./OrdersController.html">OrdersController</a>
+  
+    <li><a href="./OrganizersController.html">OrganizersController</a>
+  
+    <li><a href="./PagesController.html">PagesController</a>
+  
+    <li><a href="./ProductsHelper.html">ProductsHelper</a>
+  
+    <li><a href="./PurchasesController.html">PurchasesController</a>
+  
+    <li><a href="./ReferrersController.html">ReferrersController</a>
+  
+    <li><a href="./SearchController.html">SearchController</a>
+  
+    <li><a href="./TicketsController.html">TicketsController</a>
+  
+    <li><a href="./TipsController.html">TipsController</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WalletController.html">WalletController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class TicketsController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-add_attendee" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_attendee</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_attendee-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_attendee</span>
+   <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+   <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event_id</span>])
+   <span class="ruby-ivar">@org_id</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:organizer_id</span>]
+   
+   <span class="ruby-ivar">@event_theme</span> = <span class="ruby-constant">EventTheme</span>.<span class="ruby-identifier">one_theme</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>])
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event_theme</span>
+   <span class="ruby-keyword">else</span> <span class="ruby-ivar">@event_theme</span> = <span class="ruby-constant">Theme</span>.<span class="ruby-identifier">find_first_theme</span>
+   <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-ivar">@event_attendee</span> = <span class="ruby-constant">Attendee</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event_attendee</span>
+   <span class="ruby-keyword">else</span> <span class="ruby-ivar">@event_attendee</span> = <span class="ruby-constant">Attendee</span>.<span class="ruby-identifier">new</span>
+   <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-ivar">@questions</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND que_type!=&quot;waiver&quot; AND (rules=&quot;11&quot; or rules=&quot;1&quot;)'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+   <span class="ruby-ivar">@waivers</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND que_type=&quot;waiver&quot; AND (rules=&quot;11&quot; or rules=&quot;1&quot;)'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+   
+  
+   <span class="ruby-ivar">@barcode</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">10</span>)
+   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+   <span class="ruby-ivar">@timestamp</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">to_s</span>
+   
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>[<span class="ruby-value">:first_name</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@user</span>[<span class="ruby-value">:first_name</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+     <span class="ruby-ivar">@timestamp</span> = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:first_name</span>]<span class="ruby-operator">+</span><span class="ruby-string">'_'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@timestamp</span>
+   <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-ivar">@random_no</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot; &quot;</span>, <span class="ruby-string">&quot;_&quot;</span>)<span class="ruby-operator">+</span><span class="ruby-ivar">@timestamp</span>
+   
+   <span class="ruby-ivar">@updates</span> = <span class="ruby-constant">EventUpdate</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+   <span class="ruby-ivar">@one_theme</span> = <span class="ruby-ivar">@event_theme</span>
+   <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'application_login'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_attendee-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_attendee-method -->
+
+    
+      <div id="method-i-auth_net_aim" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">auth_net_aim</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="auth_net_aim-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 995</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">auth_net_aim</span>
+  <span class="ruby-ivar">@auth</span> = <span class="ruby-constant">AuthorizeSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@x_card_num</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'x_card_num'</span>]
+    <span class="ruby-ivar">@x_exp_date</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'x_exp_date'</span>]
+    <span class="ruby-ivar">@x_card_code</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'x_card_code'</span>]
+    
+    <span class="ruby-ivar">@x_first_name</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'x_first_name'</span>]
+    <span class="ruby-ivar">@x_last_name</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'x_last_name'</span>]
+    <span class="ruby-ivar">@x_address</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'x_address'</span>]
+    
+    <span class="ruby-ivar">@x_city</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'x_city'</span>]
+    <span class="ruby-ivar">@x_state</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'x_state'</span>]
+    <span class="ruby-ivar">@x_zip</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'x_zip'</span>]
+    <span class="ruby-ivar">@x_country</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'x_country'</span>]
+    
+    <span class="ruby-ivar">@x_login</span>=<span class="ruby-ivar">@auth</span>[<span class="ruby-string">'x_login'</span>]
+    <span class="ruby-ivar">@x_tran_key</span>=<span class="ruby-ivar">@auth</span>[<span class="ruby-string">'x_trans_key'</span>]
+    <span class="ruby-ivar">@x_type</span>=<span class="ruby-ivar">@auth</span>[<span class="ruby-string">'x_type'</span>]
+    <span class="ruby-ivar">@x_method</span>=<span class="ruby-ivar">@auth</span>[<span class="ruby-string">'x_method'</span>]
+    <span class="ruby-ivar">@x_description</span>=<span class="ruby-ivar">@auth</span>[<span class="ruby-string">'x_desc'</span>]
+    
+    <span class="ruby-ivar">@site_status</span>=<span class="ruby-ivar">@auth</span>[<span class="ruby-string">'x_site_status'</span>]  
+    
+    <span class="ruby-ivar">@post_url</span> = <span class="ruby-string">&quot;https://test.authorize.net/gateway/transact.dll&quot;</span>
+    
+    <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@site_status</span><span class="ruby-operator">==</span><span class="ruby-string">'sandbox'</span>)
+        
+      <span class="ruby-ivar">@post_url</span> = <span class="ruby-string">&quot;https://test.authorize.net/gateway/transact.dll&quot;</span>
+      <span class="ruby-ivar">@test_request</span>=<span class="ruby-keyword">true</span>
+    
+    <span class="ruby-keyword">else</span>
+    
+      <span class="ruby-ivar">@post_url</span> = <span class="ruby-string">&quot;https://secure.authorize.net/gateway/transact.dll&quot;</span>
+      <span class="ruby-ivar">@test_request</span>=<span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+    
+     <span class="ruby-ivar">@total</span> = <span class="ruby-identifier">params</span>[<span class="ruby-string">'total'</span>]
+      
+      
+      <span class="ruby-comment"># the API Login ID and Transaction Key must be replaced with valid values</span>
+      <span class="ruby-ivar">@post_values</span> = [
+        
+        [<span class="ruby-string">&quot;x_login&quot;</span>, <span class="ruby-ivar">@x_login</span>],
+        [<span class="ruby-string">&quot;x_tran_key&quot;</span>,<span class="ruby-ivar">@x_tran_key</span>],
+      
+        [<span class="ruby-string">&quot;x_version&quot;</span>,<span class="ruby-string">&quot;3.1&quot;</span>],
+        [<span class="ruby-string">&quot;x_delim_data&quot;</span>,<span class="ruby-string">&quot;TRUE&quot;</span>],
+        [<span class="ruby-string">&quot;x_delim_char&quot;</span>,<span class="ruby-string">&quot;|&quot;</span>],
+        [<span class="ruby-string">&quot;x_relay_response&quot;</span>,<span class="ruby-string">&quot;FALSE&quot;</span>],
+      
+        [<span class="ruby-string">&quot;x_type&quot;</span>, <span class="ruby-ivar">@x_type</span>],
+        [<span class="ruby-string">&quot;x_method&quot;</span>, <span class="ruby-ivar">@x_method</span>],
+        [<span class="ruby-string">&quot;x_card_num&quot;</span>, <span class="ruby-ivar">@x_card_num</span>],
+        [<span class="ruby-string">&quot;x_exp_date&quot;</span>, <span class="ruby-ivar">@x_exp_date</span>],
+      
+        [<span class="ruby-string">&quot;x_amount&quot;</span>, <span class="ruby-ivar">@total</span>],
+        [<span class="ruby-string">&quot;x_description&quot;</span>, <span class="ruby-ivar">@x_description</span>],
+      
+        [<span class="ruby-string">&quot;x_first_name&quot;</span>, <span class="ruby-ivar">@x_first_name</span>],
+        [<span class="ruby-string">&quot;x_last_name&quot;</span>, <span class="ruby-ivar">@x_last_name</span>],
+        [<span class="ruby-string">&quot;x_address&quot;</span> , <span class="ruby-ivar">@x_address</span>],
+        [<span class="ruby-string">&quot;x_state&quot;</span> , <span class="ruby-ivar">@x_state</span>],
+        [<span class="ruby-string">&quot;x_zip&quot;</span> , <span class="ruby-ivar">@x_zip</span>],
+        [<span class="ruby-string">&quot;x_modname&quot;</span> , <span class="ruby-ivar">@modname</span>],
+        [<span class="ruby-string">&quot;x_test_request&quot;</span>, <span class="ruby-ivar">@test_request</span>]
+        
+      ]
+      
+      <span class="ruby-ivar">@request</span> = <span class="ruby-constant">Curl</span><span class="ruby-operator">::</span><span class="ruby-constant">Easy</span>.<span class="ruby-identifier">http_post</span>(<span class="ruby-ivar">@post_url</span>, {<span class="ruby-value">:x_login</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_login</span>, <span class="ruby-value">:x_tran_key</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_tran_key</span> , <span class="ruby-value">:x_version</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;3.1&quot;</span>, <span class="ruby-value">:x_delim_data</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;TRUE&quot;</span>, <span class="ruby-value">:x_delim_char</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;|&quot;</span>, <span class="ruby-value">:x_relay_response</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;FALSE&quot;</span>, <span class="ruby-value">:x_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_type</span>, <span class="ruby-value">:x_method</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_method</span>, <span class="ruby-value">:x_card_num</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_card_num</span>, <span class="ruby-value">:x_exp_date</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_exp_date</span>, <span class="ruby-value">:x_amount</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@total</span>, <span class="ruby-value">:x_description</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_description</span>, <span class="ruby-value">:x_first_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_first_name</span>, <span class="ruby-value">:x_last_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_last_name</span> , <span class="ruby-value">:x_address</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_address</span>, <span class="ruby-value">:x_state</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_state</span>, <span class="ruby-value">:x_zip</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_zip</span>, <span class="ruby-value">:x_modname</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_modname</span>, <span class="ruby-value">:x_test_request</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@x_test_request</span>})
+      <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@request</span>.<span class="ruby-identifier">body_str</span>  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- auth_net_aim-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- auth_net_aim-method -->
+
+    
+      <div id="method-i-order" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">order</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="order-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 988</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">order</span>
+   <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+   <span class="ruby-ivar">@pur</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+   <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@pur</span>[<span class="ruby-value">:event_id</span>])
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- order-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- order-method -->
+
+    
+      <div id="method-i-order_confirmed" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">order_confirmed</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Order Confirm ####</p>
+          
+
+          
+          <div class="method-source-code" id="order_confirmed-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 923</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">order_confirmed</span>
+  
+  
+    
+   <span class="ruby-ivar">@pur</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+   <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@pur</span>[<span class="ruby-value">:event_id</span>])
+   <span class="ruby-ivar">@order</span> = <span class="ruby-constant">OrderForm</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+   <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+   
+   <span class="ruby-ivar">@meta_title</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>]<span class="ruby-comment">#I18n.t 'meta_title.ticket_purchase'</span>
+   <span class="ruby-ivar">@meta_keyword</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot; &quot;</span>, <span class="ruby-string">&quot;,&quot;</span>)
+   <span class="ruby-ivar">@meta_desc</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>]<span class="ruby-operator">+</span> <span class="ruby-string">' -- '</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_start_date_time</span>].<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%A, %B %d, %Y'</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">' -- '</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:organizer_host</span>]
+    
+    
+   <span class="ruby-identifier">lang</span> = <span class="ruby-constant">Language</span>.<span class="ruby-identifier">find_name</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:language_id</span>])
+   <span class="ruby-identifier">set_locale</span>(<span class="ruby-identifier">lang</span>)
+           
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@order</span>
+   <span class="ruby-keyword">else</span>
+     <span class="ruby-ivar">@order</span> = <span class="ruby-constant">OrderForm</span>.<span class="ruby-identifier">new</span>
+   <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:all_ids</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:all_qtys</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+       <span class="ruby-ivar">@ids</span> = <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:all_ids</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+       <span class="ruby-ivar">@qtys</span> = <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:all_qtys</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+       
+       <span class="ruby-identifier">k</span>=<span class="ruby-value">0</span>
+       <span class="ruby-keyword">for</span> <span class="ruby-identifier">id</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@ids</span>
+           <span class="ruby-ivar">@tot_tic</span> = <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_i</span>)
+           <span class="ruby-identifier">used</span> = <span class="ruby-ivar">@qtys</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@tot_tic</span>[<span class="ruby-value">:used</span>]
+           <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;used = ? &quot;</span>, <span class="ruby-identifier">used</span>], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_i</span>])
+           <span class="ruby-identifier">k</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+       <span class="ruby-keyword">end</span>
+   <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:promotioal_code_id</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+      <span class="ruby-constant">PromotionalCode</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;used_cnt = used_cnt+1 &quot;</span>], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:promotioal_code_id</span>]])  
+   <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-ivar">@all_pur</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'transaction_key=?'</span>, <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:id</span>]])  
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@all_pur</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+     <span class="ruby-keyword">for</span> <span class="ruby-identifier">all</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@all_pur</span>
+       <span class="ruby-identifier">generate_pdf</span>(<span class="ruby-identifier">all</span>, <span class="ruby-ivar">@event</span>)
+      
+     <span class="ruby-keyword">end</span>
+   <span class="ruby-keyword">end</span>
+   <span class="ruby-identifier">generate_pdf</span>(<span class="ruby-ivar">@pur</span>, <span class="ruby-ivar">@event</span>)
+   <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">confirm_order</span>(<span class="ruby-ivar">@pur</span>).<span class="ruby-identifier">deliver</span>
+   <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">confirm_order_admin</span>(<span class="ruby-ivar">@pur</span>).<span class="ruby-identifier">deliver</span>
+   
+   <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+   <span class="ruby-ivar">@org_id</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:organizer_id</span>]
+   <span class="ruby-ivar">@event_theme</span> = <span class="ruby-constant">EventTheme</span>.<span class="ruby-identifier">one_theme</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>])
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event_theme</span>
+   <span class="ruby-keyword">else</span> <span class="ruby-ivar">@event_theme</span> = <span class="ruby-constant">Theme</span>.<span class="ruby-identifier">find_first_theme</span>
+   <span class="ruby-keyword">end</span>
+   <span class="ruby-ivar">@one_theme</span> = <span class="ruby-ivar">@event_theme</span>
+    
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'application_login'</span>  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- order_confirmed-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- order_confirmed-method -->
+
+    
+      <div id="method-i-paypal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">paypal</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="paypal-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 1069</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">paypal</span>
+   <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+   <span class="ruby-ivar">@pur</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+   <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@pur</span>[<span class="ruby-value">:event_id</span>])
+   <span class="ruby-ivar">@paypal</span> = <span class="ruby-constant">PaypalSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+   
+   <span class="ruby-ivar">@Paypal_Email</span> = <span class="ruby-ivar">@paypal</span>[<span class="ruby-value">:paypal_email</span>]   
+   <span class="ruby-ivar">@Paypal_Status</span> = <span class="ruby-ivar">@paypal</span>[<span class="ruby-value">:site_status</span>]
+
+    <span class="ruby-identifier">lang</span> = <span class="ruby-constant">Language</span>.<span class="ruby-identifier">find_name</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:language_id</span>])
+          <span class="ruby-identifier">set_locale</span>(<span class="ruby-identifier">lang</span>)
+   <span class="ruby-ivar">@Paypal_Url</span>=<span class="ruby-string">'https://www.sandbox.paypal.com/cgi-bin/webscri'</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@Paypal_Status</span><span class="ruby-operator">==</span><span class="ruby-string">'Sandbox'</span>
+        <span class="ruby-ivar">@Paypal_Url</span>=<span class="ruby-string">'https://www.sandbox.paypal.com/cgi-bin/webscri'</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@Paypal_Status</span><span class="ruby-operator">==</span><span class="ruby-string">'Live'</span>
+        <span class="ruby-ivar">@Paypal_Url</span>=<span class="ruby-string">'https://www.paypal.com/cgi-bin/webscri'</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-ivar">@amt</span> = <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:total</span>]
+    <span class="ruby-comment">#@paypal_add_fees = @paypal[:transaction_fees]</span>
+    <span class="ruby-comment">#@add_fees = @paypal_add_fees * @amt/100</span>
+    <span class="ruby-ivar">@tot</span> = <span class="ruby-ivar">@amt</span> <span class="ruby-comment">#+@add_fees</span>
+    <span class="ruby-ivar">@add_fees</span> = <span class="ruby-value">0</span>
+    <span class="ruby-ivar">@total</span> = <span class="ruby-ivar">@amt</span> <span class="ruby-comment">#+@add_fees #paypal_amt(@tot)</span>
+    <span class="ruby-ivar">@currency_code</span> = <span class="ruby-ivar">@site</span>[<span class="ruby-value">:currency_code</span>]
+    <span class="ruby-ivar">@business</span> = <span class="ruby-ivar">@Paypal_Email</span>
+
+    <span class="ruby-ivar">@return</span> = <span class="ruby-constant">APP_CONFIG</span>[<span class="ruby-string">'development'</span>][<span class="ruby-string">'site_url'</span>]<span class="ruby-operator">+</span><span class="ruby-string">'tickets/paypal_return/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@pur</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">'?user_id='</span><span class="ruby-operator">+</span><span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>
+    <span class="ruby-ivar">@cancel_return</span> = <span class="ruby-constant">APP_CONFIG</span>[<span class="ruby-string">'development'</span>][<span class="ruby-string">'site_url'</span>]<span class="ruby-operator">+</span><span class="ruby-string">'tickets/paypal_cancel/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@pur</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">'?user_id='</span><span class="ruby-operator">+</span><span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>
+    <span class="ruby-ivar">@notify_url</span> = <span class="ruby-constant">APP_CONFIG</span>[<span class="ruby-string">'development'</span>][<span class="ruby-string">'site_url'</span>]<span class="ruby-operator">+</span><span class="ruby-string">'tickets/paypal_ipn/'</span>
+    <span class="ruby-ivar">@custom</span> = <span class="ruby-ivar">@total</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">'#'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">'#'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@pur</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>
+
+    <span class="ruby-ivar">@item_name</span> = (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'event.purchase.new_pur'</span>)<span class="ruby-operator">+</span> <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:first_name</span>] <span class="ruby-operator">+</span><span class="ruby-string">' '</span><span class="ruby-operator">+</span> <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:last_name</span>]<span class="ruby-operator">+</span>(<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'event.purchase.of_event'</span>)<span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>]
+    <span class="ruby-ivar">@item_number</span> = <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:random_no</span>]
+    
+    <span class="ruby-ivar">@amount</span> = <span class="ruby-ivar">@total</span>
+
+  <span class="ruby-comment">#render :text =&gt; params</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- paypal-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- paypal-method -->
+
+    
+      <div id="method-i-paypal_cancel" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">paypal_cancel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>This action is for when the buyer cancels</p>
+          
+
+          
+          <div class="method-source-code" id="paypal_cancel-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">paypal_cancel</span>
+    <span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>]
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">user_id</span>)
+        <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]
+        <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]
+        
+    <span class="ruby-identifier">cancel_purchase</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'event.purchase.pur_can'</span>
+    <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index'</span>) 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- paypal_cancel-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- paypal_cancel-method -->
+
+    
+      <div id="method-i-paypal_ipn" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">paypal_ipn</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="paypal_ipn-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">paypal_ipn</span>
+      
+      
+      <span class="ruby-ivar">@status</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'payment_status'</span>];
+      <span class="ruby-ivar">@custom</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'custom'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">'#'</span>)
+      
+       <span class="ruby-ivar">@user_id</span>=<span class="ruby-ivar">@custom</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span>
+       <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@user_id</span>)
+       <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]
+       <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]
+                        
+                        
+      <span class="ruby-ivar">@pay_id</span>=<span class="ruby-ivar">@custom</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">to_i</span>
+      <span class="ruby-ivar">@custom_amt</span>=<span class="ruby-ivar">@custom</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_f</span>
+      
+      <span class="ruby-ivar">@pay_gross</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'mc_gross'</span>]
+      
+      <span class="ruby-ivar">@payee_email</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'payer_email'</span>]
+      <span class="ruby-ivar">@payer_status</span> =<span class="ruby-identifier">params</span>[<span class="ruby-string">'payer_status'</span>]
+      
+      <span class="ruby-ivar">@txn_id</span>=<span class="ruby-identifier">params</span>[<span class="ruby-string">'txn_id'</span>]
+      
+      <span class="ruby-ivar">@chk_transaction_id</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:txn_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@txn_id</span>).<span class="ruby-identifier">count</span>
+     
+      <span class="ruby-comment">#UserMailer.confirm_paypal(@status.downcase,@pay_gross,@custom_amt,@chk_transaction_id,@txn_id,@payee_email,@pay_id).deliver</span>
+      
+      <span class="ruby-keyword">if</span>((<span class="ruby-ivar">@status</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span><span class="ruby-string">'completed'</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@status</span>.<span class="ruby-identifier">downcase</span><span class="ruby-operator">==</span><span class="ruby-string">'pending'</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-ivar">@pay_gross</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">==</span><span class="ruby-ivar">@custom_amt</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@pay_gross</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@custom_amt</span>.<span class="ruby-identifier">to_f</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@chk_transaction_id</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>)
+          <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">confirm_paypal</span>(<span class="ruby-ivar">@status</span>.<span class="ruby-identifier">downcase</span>,<span class="ruby-ivar">@pay_gross</span>,<span class="ruby-ivar">@custom_amt</span>,<span class="ruby-ivar">@chk_transaction_id</span>,<span class="ruby-ivar">@txn_id</span>,<span class="ruby-ivar">@payee_email</span>,<span class="ruby-ivar">@pay_id</span>).<span class="ruby-identifier">deliver</span>
+          
+          <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">'txn_id=?, payer_email=?, payment=1'</span>, <span class="ruby-ivar">@txn_id</span>, <span class="ruby-ivar">@payee_email</span>], [<span class="ruby-string">'id=? or transaction_key=?'</span>, <span class="ruby-ivar">@pay_id</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-ivar">@pay_id</span>.<span class="ruby-identifier">to_i</span>])
+          
+          <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'event.purchase.pur_suc'</span>
+      <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'event.purchase.pur_can'</span>
+          <span class="ruby-ivar">@pur</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@pay_id</span>)
+          <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:payment</span>]<span class="ruby-operator">==</span><span class="ruby-value">0</span>
+            <span class="ruby-identifier">cancel_purchase</span>(<span class="ruby-ivar">@pur</span>[<span class="ruby-value">:id</span>])
+          <span class="ruby-keyword">end</span>  
+           
+      <span class="ruby-keyword">end</span>  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- paypal_ipn-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- paypal_ipn-method -->
+
+    
+      <div id="method-i-paypal_return" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">paypal_return</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>This action is for when the buyer returns to your site from PayPal</p>
+          
+
+          
+          <div class="method-source-code" id="paypal_return-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">paypal_return</span>
+     <span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>]
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">user_id</span>)
+        <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]
+        <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]
+     <span class="ruby-comment">#render :text =&gt; params   </span>
+     <span class="ruby-keyword">if</span> <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+         <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'order_confirmed/'</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+     <span class="ruby-keyword">else</span>
+       <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'event.purchase.pur_can'</span>
+       <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index'</span>) 
+     <span class="ruby-keyword">end</span>      
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- paypal_return-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- paypal_return-method -->
+
+    
+      <div id="method-i-place_order" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">place_order</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="place_order-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">place_order</span>
+ 
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+    
+      <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+          <span class="ruby-ivar">@pur_add</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:purchase_addresse</span>])
+          <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:first_name</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:first_name</span>][<span class="ruby-value">0</span>]
+          <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:last_name</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:last_name</span>][<span class="ruby-value">0</span>]
+          <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:email</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:email</span>][<span class="ruby-value">0</span>]
+          
+          <span class="ruby-ivar">@eve</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:event_id</span>])
+          <span class="ruby-identifier">lang</span> = <span class="ruby-constant">Language</span>.<span class="ruby-identifier">find_name</span>(<span class="ruby-ivar">@eve</span>[<span class="ruby-value">:language_id</span>])
+          <span class="ruby-identifier">set_locale</span>(<span class="ruby-identifier">lang</span>)
+  
+          
+          
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_ids</span>]
+            <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_ids</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_ids</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+          <span class="ruby-keyword">end</span>
+          
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_qtys</span>]
+            <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_qtys</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_qtys</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+          <span class="ruby-keyword">end</span>
+          
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_totals</span>]
+            <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_totals</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_totals</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+          <span class="ruby-keyword">end</span>
+          
+          <span class="ruby-ivar">@pur_add</span>.<span class="ruby-identifier">save</span>
+          
+          
+          
+           <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:total</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> 
+             <span class="ruby-ivar">@wallet</span> = <span class="ruby-constant">Wallet</span>.<span class="ruby-identifier">new</span>
+             <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:credit</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ticket_amt</span>]
+             <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:purchase_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]
+             <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@eve</span>[<span class="ruby-value">:user_id</span>]
+             <span class="ruby-ivar">@wallet</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@eve</span>[<span class="ruby-value">:id</span>]
+             <span class="ruby-ivar">@wallet</span>.<span class="ruby-identifier">save</span>
+           <span class="ruby-keyword">end</span>   
+          
+           <span class="ruby-ivar">@questions</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND que_type!=&quot;waiver&quot; AND (rules=&quot;11&quot; or rules=&quot;1&quot;)'</span>, <span class="ruby-ivar">@eve</span>[<span class="ruby-value">:id</span>]])
+           <span class="ruby-ivar">@waivers</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND que_type=&quot;waiver&quot; AND (rules=&quot;11&quot; or rules=&quot;1&quot;)'</span>, <span class="ruby-ivar">@eve</span>[<span class="ruby-value">:id</span>]]) 
+           
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ctype</span>]<span class="ruby-operator">==</span><span class="ruby-string">'1'</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:prefix</span>]
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:prefix</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:prefix</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:suffix</span>]      
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:suffix</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:suffix</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                 
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_phone</span>]      
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:home_phone</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_phone</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:cell_phone</span>]      
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:cell_phone</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:cell_phone</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-comment">### bill address</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_add1</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:bill_add1</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_add1</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_add2</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:bill_add2</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_add2</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_city</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:bill_city</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_city</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_state</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:bill_state</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_state</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_zip</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:bill_zip</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_zip</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_country</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:bill_country</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_country</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-comment">#####  home address</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_add1</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:home_add1</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_add1</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_add2</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:home_add2</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_add2</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_city</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:home_city</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_city</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_state</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:home_state</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_state</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_zip</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:home_zip</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_zip</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_country</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:home_country</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_country</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-comment">######  ship country</span>
+                
+                 <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_add1</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ship_add1</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_add1</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_add2</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ship_add2</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_add2</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_city</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ship_city</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_city</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_state</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ship_state</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_state</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_zip</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ship_zip</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_zip</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_country</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ship_country</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_country</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-comment">#####  work address</span>
+                
+                 <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_add1</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_add1</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_add1</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_add2</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_add2</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_add2</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_city</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_city</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_city</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_state</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_state</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_state</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_zip</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_zip</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_zip</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_country</span>]     
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_country</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_country</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_job_title</span>] 
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_job_title</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_job_title</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_company</span>] 
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_company</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_company</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_phone</span>] 
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_phone</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_phone</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_website</span>] 
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_website</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_website</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_blog</span>] 
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_blog</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_blog</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:gender</span>] 
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:gender</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gender</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:birth_date</span>] 
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:birth_date</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:birth_date</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:age</span>] 
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:age</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:age</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_id</span>] 
+                    <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ticket_id</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_id</span>][<span class="ruby-value">0</span>]
+                <span class="ruby-keyword">end</span>
+               <span class="ruby-ivar">@pur_add</span>.<span class="ruby-identifier">save</span>
+               
+               
+               <span class="ruby-keyword">if</span>  <span class="ruby-ivar">@questions</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                  
+                  <span class="ruby-keyword">for</span> <span class="ruby-identifier">q</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@questions</span>
+                     <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>]
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>] 
+                            <span class="ruby-ivar">@answer</span> = <span class="ruby-constant">Answer</span>.<span class="ruby-identifier">new</span>
+                            <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:event_id</span>]
+                            <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:user_id</span>]
+                            <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:purchase_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]
+                            <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:que_id</span>] = <span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>]
+                            
+                           <span class="ruby-keyword">if</span> <span class="ruby-identifier">q</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'text'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">q</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'para'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">q</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'select'</span> 
+                                <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:answer</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>][<span class="ruby-value">0</span>]
+                           <span class="ruby-keyword">else</span>
+                                <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:answer</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+                           <span class="ruby-keyword">end</span> 
+                           <span class="ruby-ivar">@answer</span>.<span class="ruby-identifier">save</span>
+                       <span class="ruby-keyword">end</span> 
+                    <span class="ruby-keyword">end</span>    
+                  <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span> 
+                  
+                  
+              <span class="ruby-keyword">if</span> <span class="ruby-ivar">@waivers</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> 
+                 
+                  <span class="ruby-keyword">for</span> <span class="ruby-identifier">q</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@waivers</span>
+                    <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>]
+                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>]
+                        <span class="ruby-ivar">@answer</span> = <span class="ruby-constant">Answer</span>.<span class="ruby-identifier">new</span>
+                        <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:event_id</span>]
+                        <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:user_id</span>]
+                        <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:purchase_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]
+                        <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:que_id</span>] = <span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>]
+                        <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:answer</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>][<span class="ruby-value">0</span>]
+                        <span class="ruby-ivar">@answer</span>.<span class="ruby-identifier">save</span>
+                      <span class="ruby-keyword">end</span>
+                   <span class="ruby-keyword">end</span>   
+                  <span class="ruby-keyword">end</span> 
+              <span class="ruby-keyword">end</span>
+               
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-comment">#############  tickets save start</span>
+          
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ctype</span>]<span class="ruby-operator">==</span><span class="ruby-string">'2'</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_id</span>]
+                  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_id</span>].<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                      <span class="ruby-ivar">@ticket</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_id</span>]
+                      <span class="ruby-identifier">k</span>=<span class="ruby-value">0</span>
+                      
+                      <span class="ruby-ivar">@ticket</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ticket</span><span class="ruby-operator">|</span>
+                        
+                            <span class="ruby-ivar">@tic</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:purchase_addresse</span>])
+                           
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:first_name</span>][<span class="ruby-identifier">k</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>]
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:first_name</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:first_name</span>][<span class="ruby-identifier">k</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:last_name</span>][<span class="ruby-identifier">k</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>]
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:last_name</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:last_name</span>][<span class="ruby-identifier">k</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:email</span>][<span class="ruby-identifier">k</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>]
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:email</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:email</span>][<span class="ruby-identifier">k</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:prefix</span>]
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:prefix</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:prefix</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:suffix</span>]      
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:suffix</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:suffix</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                             
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_phone</span>]      
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:home_phone</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_phone</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:cell_phone</span>]      
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:cell_phone</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:cell_phone</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-comment">### bill address</span>
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_add1</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:bill_add1</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_add1</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_add2</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:bill_add2</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_add2</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_city</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:bill_city</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_city</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_state</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:bill_state</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_state</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_zip</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:bill_zip</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_zip</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_country</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:bill_country</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill_country</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-comment">#####  home address</span>
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_add1</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:home_add1</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_add1</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_add2</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:home_add2</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_add2</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_city</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:home_city</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_city</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_state</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:home_state</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_state</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_zip</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:home_zip</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_zip</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_country</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:home_country</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_country</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-comment">######  ship country</span>
+                            
+                             <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_add1</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ship_add1</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_add1</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_add2</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ship_add2</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_add2</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_city</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ship_city</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_city</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_state</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ship_state</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_state</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_zip</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ship_zip</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_zip</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_country</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ship_country</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ship_country</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-comment">#####  work address</span>
+                            
+                             <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_add1</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:work_add1</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_add1</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_add2</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:work_add2</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_add2</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_city</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:work_city</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_city</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_state</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:work_state</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_state</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_zip</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:work_zip</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_zip</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_country</span>]     
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:work_country</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_country</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_job_title</span>] 
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:work_job_title</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_job_title</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_company</span>] 
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:work_company</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_company</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_phone</span>] 
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:work_phone</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_phone</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_website</span>] 
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:work_website</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_website</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_blog</span>] 
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:work_blog</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_blog</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:gender</span>] 
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:gender</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gender</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:birth_date</span>] 
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:birth_date</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:birth_date</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                            
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:age</span>] 
+                                <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:age</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:age</span>][<span class="ruby-identifier">k</span>]
+                            <span class="ruby-keyword">end</span>
+                             <span class="ruby-ivar">@barcode</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">10</span>)
+                             
+                             <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:barcode_random</span>] = <span class="ruby-ivar">@barcode</span>
+                             <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:total</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_qty_total</span>][<span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_id</span>][<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_s</span>]
+                             <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ticket_id</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_id</span>][<span class="ruby-identifier">k</span>]
+                             <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:transaction_key</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>
+                             <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ticket_qty</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_qty</span>][<span class="ruby-identifier">k</span>]
+                             <span class="ruby-ivar">@tic</span>.<span class="ruby-identifier">save</span>
+                            
+                              
+                              
+                              <span class="ruby-keyword">if</span>  <span class="ruby-ivar">@questions</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                                  
+                                  <span class="ruby-keyword">for</span> <span class="ruby-identifier">q</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@questions</span>
+                                    <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>]
+                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ticket_id</span>].<span class="ruby-identifier">to_s</span>] 
+                                            <span class="ruby-ivar">@answer</span> = <span class="ruby-constant">Answer</span>.<span class="ruby-identifier">new</span>
+                                            <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:event_id</span>]
+                                            <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:user_id</span>]
+                                            <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:purchase_id</span>] = <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:id</span>]
+                                            <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:que_id</span>] = <span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>]
+                                            
+                                           <span class="ruby-keyword">if</span> <span class="ruby-identifier">q</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'text'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">q</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'para'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">q</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'select'</span> 
+                                                <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:answer</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ticket_id</span>].<span class="ruby-identifier">to_s</span>] 
+                                           <span class="ruby-keyword">else</span>
+                                                <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:answer</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ticket_id</span>].<span class="ruby-identifier">to_s</span>] .<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+                                           <span class="ruby-keyword">end</span> 
+                                           <span class="ruby-ivar">@answer</span>.<span class="ruby-identifier">save</span>
+                                       <span class="ruby-keyword">end</span> 
+                                    <span class="ruby-keyword">end</span>    
+                                  <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">end</span> 
+                                  
+                                  
+                              <span class="ruby-keyword">if</span> <span class="ruby-ivar">@waivers</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> 
+                                 
+                                  <span class="ruby-keyword">for</span> <span class="ruby-identifier">q</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@waivers</span>
+                                     <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>]
+                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ticket_id</span>].<span class="ruby-identifier">to_s</span>] 
+                                          <span class="ruby-ivar">@answer</span> = <span class="ruby-constant">Answer</span>.<span class="ruby-identifier">new</span>
+                                          <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:event_id</span>]
+                                          <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:user_id</span>]
+                                          <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:purchase_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]
+                                          <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:que_id</span>] = <span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>]
+                                          <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:answer</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-ivar">@tic</span>[<span class="ruby-value">:ticket_id</span>].<span class="ruby-identifier">to_s</span>][<span class="ruby-value">0</span>]
+                                          <span class="ruby-ivar">@answer</span>.<span class="ruby-identifier">save</span>
+                                        <span class="ruby-keyword">end</span>
+                                     <span class="ruby-keyword">end</span>   
+                                  <span class="ruby-keyword">end</span> 
+                              <span class="ruby-keyword">end</span>  
+                              
+                            <span class="ruby-identifier">k</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                      <span class="ruby-keyword">end</span> <span class="ruby-comment">#### ticket each end</span>
+                      
+                  <span class="ruby-keyword">end</span> <span class="ruby-comment">#### ticket count end</span>
+              <span class="ruby-keyword">end</span> <span class="ruby-comment">####  ticket exists end</span>
+          <span class="ruby-keyword">end</span> <span class="ruby-comment">### ctype end </span>
+          
+          
+          <span class="ruby-comment">############ tickets save end</span>
+          
+          
+          <span class="ruby-comment">##### ctype conditions for saperate tickets starts</span>
+          
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ctype</span>]<span class="ruby-operator">==</span><span class="ruby-string">'1'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ctype</span>]<span class="ruby-operator">==</span><span class="ruby-string">'0'</span> 
+               <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_ids</span>].<span class="ruby-identifier">count</span><span class="ruby-operator">==</span><span class="ruby-value">1</span>
+                  <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:transaction_key</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]
+                  <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ticket_id</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_ids</span>][<span class="ruby-value">0</span>].<span class="ruby-identifier">to_i</span>
+                  <span class="ruby-ivar">@pur_add</span>.<span class="ruby-identifier">save</span>
+                  
+               <span class="ruby-keyword">else</span>
+                  <span class="ruby-identifier">k</span>=<span class="ruby-value">0</span>
+                  <span class="ruby-ivar">@tic_per</span> = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_ids</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+                  <span class="ruby-ivar">@qty_per</span> = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_qtys</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+                  <span class="ruby-ivar">@amt_per</span> = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_totals</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>) 
+                  <span class="ruby-ivar">@fees_per</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_fees</span>]
+                  <span class="ruby-ivar">@ticamt_per</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_amt</span>]
+    
+                  <span class="ruby-keyword">for</span> <span class="ruby-identifier">nt</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@tic_per</span>
+                    <span class="ruby-ivar">@new_p</span> = <span class="ruby-ivar">@pur_add</span>.<span class="ruby-identifier">dup</span>
+                    <span class="ruby-ivar">@barcode</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">10</span>)
+                             
+                    <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:barcode_random</span>] = <span class="ruby-ivar">@barcode</span>
+                    
+                    <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:ticket_id</span>] = <span class="ruby-ivar">@tic_per</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_i</span>
+                    <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:ticket_qty</span>] = <span class="ruby-ivar">@qty_per</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_i</span>
+                    <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:total</span>] = <span class="ruby-ivar">@amt_per</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_f</span>
+                    <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:total_fees</span>] = <span class="ruby-ivar">@fees_per</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_f</span>
+                    <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:ticket_amt</span>] = <span class="ruby-ivar">@ticamt_per</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_f</span>
+                    
+                   
+                    <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:transaction_key</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]
+                    <span class="ruby-ivar">@new_p</span>.<span class="ruby-identifier">save</span>
+                    
+                    <span class="ruby-ivar">@answers</span> = <span class="ruby-constant">Answer</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'purchase_id = ?'</span>, <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]])
+                    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@answers</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">ans</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@answers</span>
+                            <span class="ruby-ivar">@new_ans</span> = <span class="ruby-identifier">ans</span>.<span class="ruby-identifier">dup</span>
+                            <span class="ruby-ivar">@new_ans</span>[<span class="ruby-value">:purchase_id</span>] = <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:id</span>]
+                            <span class="ruby-ivar">@new_ans</span>.<span class="ruby-identifier">save</span>
+                        <span class="ruby-keyword">end</span>
+                    <span class="ruby-keyword">end</span>
+                    <span class="ruby-identifier">k</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                  <span class="ruby-keyword">end</span>
+               <span class="ruby-keyword">end</span>   
+         <span class="ruby-keyword">end</span> 
+           <span class="ruby-comment">##### ctype conditions for saperate tickets ends</span>
+          
+          
+         <span class="ruby-keyword">if</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_user_join_id</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_user_join_id</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_visiter_id</span>]<span class="ruby-operator">==</span><span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_event_id</span>]<span class="ruby-operator">==</span><span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:event_id</span>]
+            <span class="ruby-ivar">@aff</span> = <span class="ruby-constant">Affiliate</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_affiliate_id</span>])
+            <span class="ruby-keyword">if</span> <span class="ruby-ivar">@aff</span>[<span class="ruby-value">:fee_amt</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@aff</span>[<span class="ruby-value">:fee_amt</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+              <span class="ruby-ivar">@your_share</span> = <span class="ruby-ivar">@aff</span>[<span class="ruby-value">:fee_amt</span>]
+            <span class="ruby-keyword">else</span>
+                <span class="ruby-ivar">@your_share</span> = <span class="ruby-ivar">@aff</span>[<span class="ruby-value">:fee_perc</span>] * <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:total</span>] <span class="ruby-operator">/</span><span class="ruby-value">100</span>
+            <span class="ruby-keyword">end</span>
+            
+            <span class="ruby-constant">UserJoin</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;ticket_sold = ticket_sold+? , sales = sales+?, share = share+? &quot;</span>, <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ticket_qty</span>], <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:total</span>], <span class="ruby-ivar">@your_share</span>], [<span class="ruby-string">&quot;id = ?&quot;</span>,<span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_user_join_id</span>]])
+            <span class="ruby-keyword">if</span> <span class="ruby-ivar">@your_share</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> 
+             <span class="ruby-ivar">@wallet_aff</span> = <span class="ruby-constant">Wallet</span>.<span class="ruby-identifier">new</span>
+             <span class="ruby-ivar">@wallet_aff</span>[<span class="ruby-value">:credit</span>] = <span class="ruby-ivar">@your_share</span>
+             <span class="ruby-ivar">@wallet_aff</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_visiter_id</span>]
+             <span class="ruby-ivar">@wallet_aff</span>[<span class="ruby-value">:aff_id</span>] = <span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_user_join_id</span>]
+             <span class="ruby-ivar">@wallet_aff</span>.<span class="ruby-identifier">save</span>
+           <span class="ruby-keyword">end</span>  
+            <span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_user_join_id</span>] = <span class="ruby-string">''</span>
+            <span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_visiter_id</span>] = <span class="ruby-string">''</span>
+            <span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_event_id</span>] = <span class="ruby-string">''</span>
+            <span class="ruby-identifier">session</span>[<span class="ruby-value">:aff_affiliate_id</span>] = <span class="ruby-string">''</span>
+         <span class="ruby-keyword">end</span>
+         
+         <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:test_payments</span>]<span class="ruby-operator">==</span><span class="ruby-value">1</span>
+                 <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;payment = 1 &quot;</span>], [<span class="ruby-string">&quot;transaction_key = ?&quot;</span>, <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]])
+                 
+                 <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'event.purchase.pur_suc'</span>
+                 <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'order_confirmed/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>) }
+         <span class="ruby-keyword">else</span>  
+            <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:total</span>]<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
+                 <span class="ruby-keyword">if</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:payment_gateway</span>]<span class="ruby-operator">==</span><span class="ruby-string">'auth'</span>
+                     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> {  <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'order/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)}
+                 <span class="ruby-keyword">else</span>
+                     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> {  <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'paypal/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)}
+                     
+                     <span class="ruby-comment">#format.html { render :text =&gt; params[:ticket_ids][0] }</span>
+                 <span class="ruby-keyword">end</span>     
+            <span class="ruby-keyword">else</span>  
+                 <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'event.purchase.pur_suc'</span>
+                 <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:payment</span>]=<span class="ruby-value">1</span>
+                 <span class="ruby-ivar">@pur_add</span>.<span class="ruby-identifier">save</span>
+                 <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">'payment=1'</span>], [<span class="ruby-string">'transaction_key=?'</span>,<span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]])
+                 <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'order_confirmed/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>) }
+            <span class="ruby-keyword">end</span>
+         <span class="ruby-keyword">end</span>  
+      <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- place_order-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- place_order-method -->
+
+    
+      <div id="method-i-place_order_attendee" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">place_order_attendee</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="place_order_attendee-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 744</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">place_order_attendee</span>
+  
+   <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+     
+       <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+           <span class="ruby-ivar">@pur_add</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:purchase_addresse</span>])
+           <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:first_name</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:first_name</span>][<span class="ruby-value">0</span>]
+           <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:last_name</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:last_name</span>][<span class="ruby-value">0</span>]
+           <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:email</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:email</span>][<span class="ruby-value">0</span>]
+           
+           <span class="ruby-ivar">@eve</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:event_id</span>])
+           <span class="ruby-ivar">@questions</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND que_type!=&quot;waiver&quot; AND (rules=&quot;11&quot; or rules=&quot;1&quot;)'</span>, <span class="ruby-ivar">@eve</span>[<span class="ruby-value">:id</span>]])
+           <span class="ruby-ivar">@waivers</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND que_type=&quot;waiver&quot; AND (rules=&quot;11&quot; or rules=&quot;1&quot;)'</span>, <span class="ruby-ivar">@eve</span>[<span class="ruby-value">:id</span>]]) 
+            
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_ids</span>]
+             <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_ids</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_ids</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+           <span class="ruby-keyword">end</span>
+           
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_qtys</span>]
+             <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_qtys</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_qtys</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+           <span class="ruby-keyword">end</span>
+           
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_totals</span>]
+             <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_totals</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_totals</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+           <span class="ruby-keyword">end</span>
+          
+          <span class="ruby-comment">#####  home address</span>
+          
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_city</span>]     
+               <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:home_city</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_city</span>][<span class="ruby-value">0</span>]
+           <span class="ruby-keyword">end</span>
+           
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_state</span>]     
+               <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:home_state</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:home_state</span>][<span class="ruby-value">0</span>]
+           <span class="ruby-keyword">end</span>
+          
+           <span class="ruby-comment">#####  work address</span>
+           
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_city</span>]     
+               <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_city</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_city</span>][<span class="ruby-value">0</span>]
+           <span class="ruby-keyword">end</span>
+           
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_state</span>]     
+               <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_state</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_state</span>][<span class="ruby-value">0</span>]
+           <span class="ruby-keyword">end</span>
+           
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_job_title</span>] 
+               <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_job_title</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_job_title</span>][<span class="ruby-value">0</span>]
+           <span class="ruby-keyword">end</span>
+           
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_company</span>] 
+               <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_company</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_company</span>][<span class="ruby-value">0</span>]
+           <span class="ruby-keyword">end</span>
+           
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_website</span>] 
+               <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_website</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_website</span>][<span class="ruby-value">0</span>]
+           <span class="ruby-keyword">end</span>
+           
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_blog</span>] 
+               <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:work_blog</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:work_blog</span>][<span class="ruby-value">0</span>]
+           <span class="ruby-keyword">end</span>
+          
+           <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_id</span>] 
+               <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ticket_id</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_id</span>][<span class="ruby-value">0</span>]
+           <span class="ruby-keyword">end</span>
+           <span class="ruby-ivar">@pur_add</span>.<span class="ruby-identifier">save</span>
+          
+         
+                <span class="ruby-keyword">if</span>  <span class="ruby-ivar">@questions</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                   
+                   <span class="ruby-keyword">for</span> <span class="ruby-identifier">q</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@questions</span>
+                      <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>]
+                         <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>] 
+                             <span class="ruby-ivar">@answer</span> = <span class="ruby-constant">Answer</span>.<span class="ruby-identifier">new</span>
+                             <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:event_id</span>]
+                             <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:user_id</span>]
+                             <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:purchase_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]
+                             <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:que_id</span>] = <span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>]
+                             
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">q</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'text'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">q</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'para'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">q</span>[<span class="ruby-value">:que_type</span>]<span class="ruby-operator">==</span><span class="ruby-string">'select'</span> 
+                                 <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:answer</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>][<span class="ruby-value">0</span>]
+                            <span class="ruby-keyword">else</span>
+                                 <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:answer</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+                            <span class="ruby-keyword">end</span> 
+                            <span class="ruby-ivar">@answer</span>.<span class="ruby-identifier">save</span>
+                        <span class="ruby-keyword">end</span> 
+                     <span class="ruby-keyword">end</span>   
+                   <span class="ruby-keyword">end</span>
+                 <span class="ruby-keyword">end</span> 
+                   
+                   
+               <span class="ruby-keyword">if</span> <span class="ruby-ivar">@waivers</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> 
+                   <span class="ruby-keyword">for</span> <span class="ruby-identifier">q</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@waivers</span>
+                     <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>]
+                       <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>]
+                         <span class="ruby-ivar">@answer</span> = <span class="ruby-constant">Answer</span>.<span class="ruby-identifier">new</span>
+                         <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:event_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:event_id</span>]
+                         <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:user_id</span>]
+                         <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:purchase_id</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]
+                         <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:que_id</span>] = <span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>]
+                         <span class="ruby-ivar">@answer</span>[<span class="ruby-value">:answer</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:que</span>][<span class="ruby-identifier">q</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>][<span class="ruby-value">0</span>]
+                         <span class="ruby-ivar">@answer</span>.<span class="ruby-identifier">save</span>
+                       <span class="ruby-keyword">end</span>
+                     <span class="ruby-keyword">end</span>  
+                   <span class="ruby-keyword">end</span> 
+               <span class="ruby-keyword">end</span>
+          
+          <span class="ruby-ivar">@event_attendee</span> = <span class="ruby-constant">EventAttendee</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:attendee</span>])
+          <span class="ruby-ivar">@event_attendee</span>.<span class="ruby-identifier">save</span>
+          
+          <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:attendee_id</span>] = <span class="ruby-ivar">@event_attendee</span>[<span class="ruby-value">:id</span>]
+          <span class="ruby-ivar">@pur_add</span>.<span class="ruby-identifier">save</span>
+          
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_ids</span>].<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+               
+               <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:transaction_key</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]
+               <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:ticket_id</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_ids</span>][<span class="ruby-value">0</span>].<span class="ruby-identifier">to_i</span>
+               <span class="ruby-ivar">@pur_add</span>.<span class="ruby-identifier">save</span>
+               <span class="ruby-identifier">generate_pdf</span>(<span class="ruby-ivar">@pur_add</span>, <span class="ruby-ivar">@eve</span>)
+               
+            <span class="ruby-keyword">else</span>
+               <span class="ruby-identifier">k</span>=<span class="ruby-value">0</span>
+                   <span class="ruby-ivar">@tic_per</span> = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_ids</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+                   <span class="ruby-ivar">@qty_per</span> = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_qtys</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+                   <span class="ruby-ivar">@amt_per</span> = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_totals</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>) 
+                   <span class="ruby-ivar">@fees_per</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_fees</span>]
+                   <span class="ruby-ivar">@ticamt_per</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_amt</span>]
+     
+                   <span class="ruby-keyword">for</span> <span class="ruby-identifier">nt</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@tic_per</span>
+                     <span class="ruby-ivar">@new_p</span> = <span class="ruby-ivar">@pur_add</span>.<span class="ruby-identifier">dup</span>
+                     <span class="ruby-ivar">@barcode</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">10</span>)
+                              
+                     <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:barcode_random</span>] = <span class="ruby-ivar">@barcode</span>
+                     
+                     <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:ticket_id</span>] = <span class="ruby-ivar">@tic_per</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_i</span>
+                     <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:ticket_qty</span>] = <span class="ruby-ivar">@qty_per</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_i</span>
+                     <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:total</span>] = <span class="ruby-ivar">@amt_per</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_f</span>
+                     <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:total_fees</span>] = <span class="ruby-ivar">@fees_per</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_f</span>
+                     <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:ticket_amt</span>] = <span class="ruby-ivar">@ticamt_per</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_f</span>
+                     
+                     <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:transaction_key</span>] = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]
+                     <span class="ruby-ivar">@new_p</span>.<span class="ruby-identifier">save</span>
+                     <span class="ruby-identifier">generate_pdf</span>(<span class="ruby-ivar">@new_p</span>, <span class="ruby-ivar">@eve</span>)
+                     
+                     <span class="ruby-ivar">@answers</span> = <span class="ruby-constant">Answer</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'purchase_id = ?'</span>, <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:id</span>]])
+                     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@answers</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                         <span class="ruby-keyword">for</span> <span class="ruby-identifier">ans</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@answers</span>
+                             <span class="ruby-ivar">@new_ans</span> = <span class="ruby-identifier">ans</span>.<span class="ruby-identifier">dup</span>
+                             <span class="ruby-ivar">@new_ans</span>[<span class="ruby-value">:purchase_id</span>] = <span class="ruby-ivar">@new_p</span>[<span class="ruby-value">:id</span>]
+                             <span class="ruby-ivar">@new_ans</span>.<span class="ruby-identifier">save</span>
+                         <span class="ruby-keyword">end</span>
+                     <span class="ruby-keyword">end</span>
+                     <span class="ruby-identifier">k</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+                 <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>              
+           <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">confirm_order</span>(<span class="ruby-ivar">@pur_add</span>).<span class="ruby-identifier">deliver</span>
+                  
+           <span class="ruby-ivar">@ids</span> = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_ids</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+           <span class="ruby-ivar">@qtys</span> = <span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:all_qtys</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">','</span>)
+           
+           <span class="ruby-identifier">k</span>=<span class="ruby-value">0</span>
+           <span class="ruby-keyword">for</span> <span class="ruby-identifier">id</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@ids</span>
+               <span class="ruby-ivar">@tot_tic</span> = <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_i</span>)
+               <span class="ruby-identifier">used</span> = <span class="ruby-ivar">@qtys</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@tot_tic</span>[<span class="ruby-value">:used</span>]
+               <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;used = ? &quot;</span>, <span class="ruby-identifier">used</span>], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_i</span>])
+               <span class="ruby-identifier">k</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+           <span class="ruby-keyword">end</span>
+            
+         <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'event.purchase.attendees_successfully_added'</span>
+         <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_event'</span>, <span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'orders/'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@pur_add</span>[<span class="ruby-value">:event_id</span>].<span class="ruby-identifier">to_s</span>) }
+      <span class="ruby-keyword">end</span>
+   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- place_order_attendee-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- place_order_attendee-method -->
+
+    
+      <div id="method-i-purchase" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">purchase</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="purchase-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">purchase</span>
+   <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+   <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:event_id</span>])
+   <span class="ruby-ivar">@org_id</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:organizer_id</span>]
+   <span class="ruby-ivar">@event_theme</span> = <span class="ruby-constant">EventTheme</span>.<span class="ruby-identifier">one_theme</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>])
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@event_theme</span>
+   <span class="ruby-keyword">else</span> <span class="ruby-ivar">@event_theme</span> = <span class="ruby-constant">Theme</span>.<span class="ruby-identifier">find_first_theme</span>
+   <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-identifier">lang</span> = <span class="ruby-constant">Language</span>.<span class="ruby-identifier">find_name</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:language_id</span>])
+   <span class="ruby-identifier">set_locale</span>(<span class="ruby-identifier">lang</span>)
+   <span class="ruby-ivar">@meta_title</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>]<span class="ruby-comment">#I18n.t 'meta_title.ticket_purchase'</span>
+   <span class="ruby-ivar">@meta_keyword</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot; &quot;</span>, <span class="ruby-string">&quot;,&quot;</span>)
+   <span class="ruby-ivar">@meta_desc</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>]<span class="ruby-operator">+</span> <span class="ruby-string">' -- '</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_start_date_time</span>].<span class="ruby-identifier">strftime</span>(<span class="ruby-string">'%A, %B %d, %Y'</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">' -- '</span><span class="ruby-operator">+</span><span class="ruby-ivar">@event</span>[<span class="ruby-value">:organizer_host</span>]
+   
+   <span class="ruby-ivar">@questions</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND que_type!=&quot;waiver&quot; AND (rules=&quot;11&quot; or rules=&quot;1&quot;)'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+   <span class="ruby-ivar">@waivers</span> = <span class="ruby-constant">Question</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=? AND que_type=&quot;waiver&quot; AND (rules=&quot;11&quot; or rules=&quot;1&quot;)'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+  
+   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+   <span class="ruby-ivar">@timestamp</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">to_s</span>
+   
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>[<span class="ruby-value">:first_name</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@user</span>[<span class="ruby-value">:first_name</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+     <span class="ruby-ivar">@timestamp</span> = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:first_name</span>]<span class="ruby-operator">+</span><span class="ruby-string">'_'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@timestamp</span>
+   <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-ivar">@random_no</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot; &quot;</span>, <span class="ruby-string">&quot;_&quot;</span>)<span class="ruby-operator">+</span><span class="ruby-ivar">@timestamp</span>
+   <span class="ruby-ivar">@barcode</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">10</span>)
+   
+   <span class="ruby-ivar">@updates</span> = <span class="ruby-constant">EventUpdate</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id=?'</span>, <span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>]])
+   <span class="ruby-ivar">@one_theme</span> = <span class="ruby-ivar">@event_theme</span>
+   <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'application_login'</span>
+ <span class="ruby-comment"># render :text =&gt; params</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- purchase-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- purchase-method -->
+
+    
+      <div id="method-i-rename_pdf" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rename_pdf</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="rename_pdf-source">
+            <pre><span class="ruby-comment"># File app/controllers/tickets_controller.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rename_pdf</span>
+  <span class="ruby-ivar">@purchase</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'ticket_id &gt; 0'</span>])
+  <span class="ruby-keyword">for</span> <span class="ruby-ivar">@pur</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@purchase</span>
+    <span class="ruby-comment"># @pur = Purchase.find(1)</span>
+     <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@pur</span>[<span class="ruby-value">:event_id</span>])
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@pur</span>[<span class="ruby-value">:user_id</span>])
+     <span class="ruby-ivar">@timestamp</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-ivar">@pur</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>
+     
+     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>[<span class="ruby-value">:first_name</span>]<span class="ruby-operator">!=</span><span class="ruby-string">''</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@user</span>[<span class="ruby-value">:first_name</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]<span class="ruby-operator">!=</span><span class="ruby-value">35</span>
+       <span class="ruby-ivar">@timestamp</span> = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:first_name</span>]<span class="ruby-operator">+</span><span class="ruby-string">'_'</span><span class="ruby-operator">+</span><span class="ruby-ivar">@timestamp</span>
+     <span class="ruby-keyword">end</span>
+     
+     <span class="ruby-ivar">@random_no</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_title</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot; &quot;</span>, <span class="ruby-string">&quot;_&quot;</span>)<span class="ruby-operator">+</span><span class="ruby-ivar">@timestamp</span>
+     <span class="ruby-ivar">@pur</span>[<span class="ruby-value">:random_no</span>] = <span class="ruby-ivar">@random_no</span>
+     <span class="ruby-ivar">@pur</span>.<span class="ruby-identifier">save</span>
+     <span class="ruby-identifier">generate_pdf</span>(<span class="ruby-ivar">@pur</span>, <span class="ruby-ivar">@event</span>)
+   <span class="ruby-keyword">end</span>
+   <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@random_no</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- rename_pdf-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- rename_pdf-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

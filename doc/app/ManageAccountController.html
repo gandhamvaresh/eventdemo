@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class ManageAccountController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/manage_account_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ApplicationController
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-add_user_form">#add_user_form</a>
+    
+    <li><a href="#method-i-affiliates">#affiliates</a>
+    
+    <li><a href="#method-i-apikey">#apikey</a>
+    
+    <li><a href="#method-i-charges">#charges</a>
+    
+    <li><a href="#method-i-close_account">#close_account</a>
+    
+    <li><a href="#method-i-close_page">#close_page</a>
+    
+    <li><a href="#method-i-confirm_user_account">#confirm_user_account</a>
+    
+    <li><a href="#method-i-credit_card">#credit_card</a>
+    
+    <li><a href="#method-i-delete_unused">#delete_unused</a>
+    
+    <li><a href="#method-i-delete_user">#delete_user</a>
+    
+    <li><a href="#method-i-edit_multi_user">#edit_multi_user</a>
+    
+    <li><a href="#method-i-emails">#emails</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-invoices">#invoices</a>
+    
+    <li><a href="#method-i-multi_users">#multi_users</a>
+    
+    <li><a href="#method-i-password">#password</a>
+    
+    <li><a href="#method-i-payaccounts">#payaccounts</a>
+    
+    <li><a href="#method-i-referral_program">#referral_program</a>
+    
+    <li><a href="#method-i-requestapi">#requestapi</a>
+    
+    <li><a href="#method-i-save_address">#save_address</a>
+    
+    <li><a href="#method-i-save_email">#save_email</a>
+    
+    <li><a href="#method-i-save_ref_pay_account">#save_ref_pay_account</a>
+    
+    <li><a href="#method-i-save_ref_unique_no">#save_ref_unique_no</a>
+    
+    <li><a href="#method-i-state_selection">#state_selection</a>
+    
+    <li><a href="#method-i-unuse_org">#unuse_org</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActiveAdmin.html">ActiveAdmin</a>
+  
+    <li><a href="./ActiveAdmin/Views.html">ActiveAdmin::Views</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages.html">ActiveAdmin::Views::Pages</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages/Base.html">ActiveAdmin::Views::Pages::Base</a>
+  
+    <li><a href="./AffiliatesController.html">AffiliatesController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./AuthController.html">AuthController</a>
+  
+    <li><a href="./CancelOrdersController.html">CancelOrdersController</a>
+  
+    <li><a href="./ContactListHelper.html">ContactListHelper</a>
+  
+    <li><a href="./ContactListsController.html">ContactListsController</a>
+  
+    <li><a href="./ContactListsHelper.html">ContactListsHelper</a>
+  
+    <li><a href="./ContactsController.html">ContactsController</a>
+  
+    <li><a href="./ContactsHelper.html">ContactsHelper</a>
+  
+    <li><a href="./CustomAdminHeader.html">CustomAdminHeader</a>
+  
+    <li><a href="./ErrorsController.html">ErrorsController</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./ExceptionsController.html">ExceptionsController</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./InvitesController.html">InvitesController</a>
+  
+    <li><a href="./ManageAccountController.html">ManageAccountController</a>
+  
+    <li><a href="./ManageAccountHelper.html">ManageAccountHelper</a>
+  
+    <li><a href="./ManageEventController.html">ManageEventController</a>
+  
+    <li><a href="./ManageEventHelper.html">ManageEventHelper</a>
+  
+    <li><a href="./MobileLoginsController.html">MobileLoginsController</a>
+  
+    <li><a href="./MyTicketsController.html">MyTicketsController</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./OrdersController.html">OrdersController</a>
+  
+    <li><a href="./OrganizersController.html">OrganizersController</a>
+  
+    <li><a href="./PagesController.html">PagesController</a>
+  
+    <li><a href="./ProductsHelper.html">ProductsHelper</a>
+  
+    <li><a href="./PurchasesController.html">PurchasesController</a>
+  
+    <li><a href="./ReferrersController.html">ReferrersController</a>
+  
+    <li><a href="./SearchController.html">SearchController</a>
+  
+    <li><a href="./TicketsController.html">TicketsController</a>
+  
+    <li><a href="./TipsController.html">TipsController</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WalletController.html">WalletController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ManageAccountController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-add_user_form" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_user_form</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_user_form-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 330</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_user_form</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:template</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'manage_account/_add_user_form'</span>, <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_user_form-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_user_form-method -->
+
+    
+      <div id="method-i-affiliates" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">affiliates</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Affiliate Program starts *******</p>
+          
+
+          
+          <div class="method-source-code" id="affiliates-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 380</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">affiliates</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.affiliate_programs'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@affiliates</span> = <span class="ruby-constant">UserJoin</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'user_id=? '</span>, <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- affiliates-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- affiliates-method -->
+
+    
+      <div id="method-i-apikey" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">apikey</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>API User Key ends **********</p>
+          
+
+          
+          <div class="method-source-code" id="apikey-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 397</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">apikey</span>
+     <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+     <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- apikey-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- apikey-method -->
+
+    
+      <div id="method-i-charges" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">charges</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Charges and Credits ******************</p>
+          
+
+          
+          <div class="method-source-code" id="charges-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">charges</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.charges_credits'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- charges-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- charges-method -->
+
+    
+      <div id="method-i-close_account" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">close_account</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>API User Key ends ********** CLose account ***********</p>
+          
+
+          
+          <div class="method-source-code" id="close_account-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 430</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close_account</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+          <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">authenticate_by_pass</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:password</span>], <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span> 
+              <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+              <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">destroy</span>
+              
+              <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]=<span class="ruby-keyword">nil</span>
+              <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>]=<span class="ruby-string">''</span>
+             
+              <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'close_page'</span>)
+          <span class="ruby-keyword">else</span>
+               <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.invalid_pwd_try_again'</span>)
+               <span class="ruby-identifier">render</span> <span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'close_account'</span>
+          <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- close_account-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- close_account-method -->
+
+    
+      <div id="method-i-close_page" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">close_page</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="close_page-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 451</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close_page</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- close_page-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- close_page-method -->
+
+    
+      <div id="method-i-confirm_user_account" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">confirm_user_account</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="confirm_user_account-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confirm_user_account</span>
+  <span class="ruby-ivar">@user</span> =  <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span>  [<span class="ruby-string">&quot;forgot_unique_code = ? &quot;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]])   
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>    
+       
+       <span class="ruby-identifier">email</span> = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]
+       <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:new_email</span>]
+       <span class="ruby-ivar">@user</span>[<span class="ruby-value">:new_email</span>] = <span class="ruby-string">''</span>
+       <span class="ruby-ivar">@user</span>[<span class="ruby-value">:forgot_unique_code</span>] = <span class="ruby-string">''</span>
+       <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">save</span>
+       
+       <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]
+       <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]
+         
+       <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">change_email_notification</span>(<span class="ruby-ivar">@user</span>, <span class="ruby-identifier">email</span>).<span class="ruby-identifier">deliver</span>
+       <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">change_email_notification</span>(<span class="ruby-ivar">@user</span>, <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]).<span class="ruby-identifier">deliver</span>
+       
+       <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]
+       <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.your_email_id_has_been_saved'</span>
+       <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index'</span> ) 
+        
+   <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.email_change_request_does_not_exists_try_again'</span>
+        <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index'</span> ) 
+   <span class="ruby-keyword">end</span>
+   
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- confirm_user_account-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- confirm_user_account-method -->
+
+    
+      <div id="method-i-credit_card" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">credit_card</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>credit card ******************</p>
+          
+
+          
+          <div class="method-source-code" id="credit_card-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">credit_card</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.credit_cards'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- credit_card-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- credit_card-method -->
+
+    
+      <div id="method-i-delete_unused" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_unused</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_unused-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 342</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_unused</span>
+  <span class="ruby-ivar">@org</span> = <span class="ruby-constant">Organizer</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@org</span>.<span class="ruby-identifier">destroy</span>
+  
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.org_account_deleted_successfully'</span>
+  <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'unuse_org'</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_unused-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_unused-method -->
+
+    
+      <div id="method-i-delete_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>CLose account ends ***********</p>
+          
+
+          
+          <div class="method-source-code" id="delete_user-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 455</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_user</span>
+  
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">destroy</span>
+  
+  <span class="ruby-ivar">@permission</span> = <span class="ruby-constant">Permission</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:per_id</span>])
+  <span class="ruby-ivar">@permission</span>.<span class="ruby-identifier">destroy</span>
+  
+   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.user_account_deleted_successfully'</span>)
+   <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'multi_users'</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_user-method -->
+
+    
+      <div id="method-i-edit_multi_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_multi_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit_multi_user-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 304</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_multi_user</span>
+  
+   <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+          <span class="ruby-ivar">@permission</span> = <span class="ruby-constant">Permission</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:id</span>])     
+           <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:event</span>]<span class="ruby-operator">==</span><span class="ruby-string">'select'</span>)
+              <span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:event</span>]= <span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+           <span class="ruby-keyword">end</span>
+           
+           <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:action</span>]<span class="ruby-operator">==</span><span class="ruby-string">'select'</span>)
+              <span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:action</span>]= <span class="ruby-identifier">params</span>[<span class="ruby-value">:action1</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+           <span class="ruby-keyword">end</span>
+           
+           <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:email</span>]<span class="ruby-operator">==</span><span class="ruby-string">'select'</span>)
+              <span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:email</span>]= <span class="ruby-identifier">params</span>[<span class="ruby-value">:email1</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+           <span class="ruby-keyword">end</span>
+            
+          <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+              <span class="ruby-constant">Permission</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;event = ? , action = ?, email=? &quot;</span>,  <span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:event</span>],  <span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:action</span>],  <span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:email</span>]], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:id</span>]])
+              <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.your_user_permission_have_saved'</span>
+              <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'multi_users'</span> ) }
+          
+              <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:created</span>, <span class="ruby-value">:location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span> }
+          <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit_multi_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit_multi_user-method -->
+
+    
+      <div id="method-i-emails" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">emails</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>email preferences ****************</p>
+          
+
+          
+          <div class="method-source-code" id="emails-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">emails</span>
+  <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_email_preferences'</span>
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+  <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+  <span class="ruby-ivar">@emails</span> = <span class="ruby-constant">EmailPreference</span>.<span class="ruby-identifier">user_email</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+   <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+          <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+               <span class="ruby-keyword">if</span> <span class="ruby-ivar">@emails</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:email_preference</span>])
+                                 
+                    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.your_email_preferences_update_successfully'</span>
+                    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'emails'</span> ) }
+                
+                    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:created</span>, <span class="ruby-value">:location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span> }
+              <span class="ruby-keyword">else</span>
+                
+                <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;emails&quot;</span> }
+                <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+              <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- emails-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- emails-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.manage_account'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@user_address</span> = <span class="ruby-constant">UserAddress</span>.<span class="ruby-identifier">user_address</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-invoices" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">invoices</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>invoices ****************</p>
+          
+
+          
+          <div class="method-source-code" id="invoices-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">invoices</span>
+  <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_invoices'</span>
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- invoices-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- invoices-method -->
+
+    
+      <div id="method-i-multi_users" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">multi_users</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Multi User Access ****************</p>
+          
+
+          
+          <div class="method-source-code" id="multi_users-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">multi_users</span>
+  <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.multi_user_access'</span>
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+  <span class="ruby-ivar">@permittted_users</span> = <span class="ruby-constant">Permission</span>.<span class="ruby-identifier">permitted_users</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+ 
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+          <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+                <span class="ruby-ivar">@num1</span> = <span class="ruby-string">'forgot_'</span><span class="ruby-operator">+</span><span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">10</span>)
+                <span class="ruby-identifier">date1</span> = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>
+                <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+                <span class="ruby-identifier">n</span> = <span class="ruby-ivar">@site</span>[<span class="ruby-value">:forgot_time_limit</span>]
+                <span class="ruby-identifier">date1</span> = (<span class="ruby-identifier">date1</span>.<span class="ruby-identifier">to_time</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">hours</span>).<span class="ruby-identifier">to_datetime</span>
+                
+                <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:forgot_unique_code</span>] = <span class="ruby-ivar">@num1</span>
+                <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:request_date</span>] = <span class="ruby-identifier">date1</span>
+                <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:user_api_key</span>] = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">15</span>)
+                <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:ref_id</span>] = <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
+                <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:user_ip</span>] = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">remote_ip</span>
+                 
+               <span class="ruby-ivar">@new_user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>])
+               <span class="ruby-keyword">if</span> <span class="ruby-ivar">@new_user</span>.<span class="ruby-identifier">save</span>
+                     <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">multi_user_access</span>(<span class="ruby-ivar">@new_user</span>, <span class="ruby-ivar">@user</span>).<span class="ruby-identifier">deliver</span>
+                     <span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:user_id</span>] = <span class="ruby-ivar">@new_user</span>[<span class="ruby-value">:id</span>]
+                                            
+                     <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:event</span>]<span class="ruby-operator">==</span><span class="ruby-string">'select'</span>)
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>]
+                          <span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:event</span>]= <span class="ruby-identifier">params</span>[<span class="ruby-value">:event</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+                        <span class="ruby-keyword">end</span>
+                     <span class="ruby-keyword">end</span>
+                     
+                     <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:action</span>]<span class="ruby-operator">==</span><span class="ruby-string">'select'</span>)
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:action1</span>]
+                          <span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:action</span>]= <span class="ruby-identifier">params</span>[<span class="ruby-value">:action1</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+                        <span class="ruby-keyword">end</span>  
+                     <span class="ruby-keyword">end</span>
+                     
+                     <span class="ruby-keyword">if</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:email</span>]<span class="ruby-operator">==</span><span class="ruby-string">'select'</span>)
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:email1</span>]
+                          <span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>][<span class="ruby-value">:email</span>]= <span class="ruby-identifier">params</span>[<span class="ruby-value">:email1</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+                        <span class="ruby-keyword">end</span>  
+                     <span class="ruby-keyword">end</span>
+                         
+                     <span class="ruby-ivar">@permission</span> = <span class="ruby-constant">Permission</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:permission</span>])
+                     <span class="ruby-ivar">@permission</span>.<span class="ruby-identifier">save</span>
+                                 
+                    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.new_multi_user_account_has_been_created_login_instructions_sent_address_provided'</span>
+                    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'multi_users'</span> ) }
+                
+                    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@new_user</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:created</span>, <span class="ruby-value">:location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@new_user</span> }
+              <span class="ruby-keyword">else</span>
+                
+                <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;multi_users&quot;</span> }
+                <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@new_user</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+              <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- multi_users-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- multi_users-method -->
+
+    
+      <div id="method-i-password" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">password</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>password *****************</p>
+          
+
+          
+          <div class="method-source-code" id="password-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">password</span>
+   <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.change_password'</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+            
+             <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+             
+             <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">authenticate_by_pass</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:old_password</span>], <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+           
+             <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>  
+                 <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+                 
+                       <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>])
+                                         
+                            <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.your_pwd_updated_successfully'</span>
+                            <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'password'</span> ) }
+                        
+                             <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:created</span>, <span class="ruby-value">:location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span> }
+                      <span class="ruby-keyword">else</span>
+                        
+                        <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;password&quot;</span> }
+                        <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+                      <span class="ruby-keyword">end</span>
+                  <span class="ruby-keyword">end</span>
+                   
+              <span class="ruby-keyword">else</span>
+                       <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.old_pwd_entered_wrong_pwd_not_changed'</span>
+                       <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'password'</span> )
+              <span class="ruby-keyword">end</span>
+                    
+      <span class="ruby-keyword">end</span> 
+       <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- password-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- password-method -->
+
+    
+      <div id="method-i-payaccounts" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">payaccounts</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Payment accounts ************</p>
+          
+
+          
+          <div class="method-source-code" id="payaccounts-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">payaccounts</span>
+  <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_payment_accounts'</span>
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find_all_events</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+  
+   <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+        <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+             <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:type</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'event'</span>
+                <span class="ruby-constant">User</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;event_pay_account = ? &quot;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:event_pay_account</span>]], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]])
+             <span class="ruby-keyword">end</span>  
+             
+             <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:type</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'ref'</span>
+                <span class="ruby-constant">User</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot; ref_pay_account = ? &quot;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:ref_pay_account</span>]], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]])
+             <span class="ruby-keyword">end</span>  
+             
+             <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.your_paypal_email_update_successfully'</span>         
+             <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'payaccounts'</span> ) }
+        
+             <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:created</span>, <span class="ruby-value">:location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span> }
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- payaccounts-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- payaccounts-method -->
+
+    
+      <div id="method-i-referral_program" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">referral_program</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Referral Program ***************</p>
+          
+
+          
+          <div class="method-source-code" id="referral_program-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 353</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">referral_program</span>
+    <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_referral_program'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@referrals</span> = <span class="ruby-constant">ReferralCode</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'user_id=? '</span>, <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- referral_program-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- referral_program-method -->
+
+    
+      <div id="method-i-requestapi" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">requestapi</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="requestapi-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 402</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">requestapi</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+    <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+    <span class="ruby-ivar">@apikeys</span> = <span class="ruby-constant">ApiKey</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'user_id=? '</span>, <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]])
+    <span class="ruby-ivar">@apikey</span> = <span class="ruby-constant">ApiKey</span>.<span class="ruby-identifier">new</span>
+    
+     <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+          <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+              
+              <span class="ruby-identifier">params</span>[<span class="ruby-value">:apikey</span>][<span class="ruby-value">:api_key</span>] =  <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">20</span>)
+              <span class="ruby-identifier">params</span>[<span class="ruby-value">:apikey</span>][<span class="ruby-value">:status</span>] =  (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.approved'</span>)
+              <span class="ruby-ivar">@apikey</span> = <span class="ruby-constant">ApiKey</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:apikey</span>])
+              
+              <span class="ruby-keyword">if</span> <span class="ruby-ivar">@apikey</span>.<span class="ruby-identifier">save</span>
+                  <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">api_key_generated</span>(<span class="ruby-ivar">@user</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:apikey</span>][<span class="ruby-value">:api_key</span>]).<span class="ruby-identifier">deliver</span>
+                  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.your_api_generated_successfully'</span>)
+                  <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'requestapi'</span> ) }
+              
+                  <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@apikey</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:created</span>, <span class="ruby-value">:location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@apikey</span> }
+              <span class="ruby-keyword">else</span>
+                 <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;requestapi&quot;</span> }
+                 <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@apikey</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+              <span class="ruby-keyword">end</span>      
+          <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- requestapi-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- requestapi-method -->
+
+    
+      <div id="method-i-save_address" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_address</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="save_address-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_address</span>
+   
+     <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+           
+            <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+            <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+            <span class="ruby-ivar">@user_address</span> = <span class="ruby-constant">UserAddress</span>.<span class="ruby-identifier">user_address</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]) 
+           
+                <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+                
+                    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user_address</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_address</span>]) 
+                                        
+                          <span class="ruby-constant">User</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot;prefix = ? , first_name = ?, last_name = ?, suffix = ?, home_phone = ?, cell_phone = ? &quot;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:prefix</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:first_name</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:last_name</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:suffix</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:home_phone</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:cell_phone</span>]], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]])
+                    
+                          
+                           <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.your_details_saved_successfully'</span>
+                           <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index'</span> ) }
+                       
+                            <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:created</span>, <span class="ruby-value">:location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span> }
+                     <span class="ruby-keyword">else</span>
+                       
+                       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;index&quot;</span> }
+                       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+                     <span class="ruby-keyword">end</span>
+                 <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- save_address-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- save_address-method -->
+
+    
+      <div id="method-i-save_email" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_email</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>contact info ****************</p>
+          
+
+          
+          <div class="method-source-code" id="save_email-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_email</span>
+     
+     <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+           
+            <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+            <span class="ruby-ivar">@site</span> = <span class="ruby-constant">SiteSetting</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>)
+            <span class="ruby-ivar">@user_address</span> = <span class="ruby-constant">UserAddress</span>.<span class="ruby-identifier">user_address</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]) 
+            <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">authenticate_by_pass</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:password</span>], <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+          
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>  
+                <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+                       <span class="ruby-identifier">email</span> = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]
+                       <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:email</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:new_email</span>] 
+                      
+                      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>])
+                           
+                           <span class="ruby-keyword">if</span> <span class="ruby-ivar">@site</span>[<span class="ruby-value">:verify_account</span>]<span class="ruby-operator">==</span><span class="ruby-value">1</span>
+                                
+                                <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>] = <span class="ruby-identifier">email</span>
+                                <span class="ruby-ivar">@num1</span> = <span class="ruby-string">'forgot_'</span><span class="ruby-operator">+</span><span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">hex</span>(<span class="ruby-value">10</span>)
+                                <span class="ruby-ivar">@user</span>[<span class="ruby-value">:forgot_unique_code</span>] = <span class="ruby-ivar">@num1</span>
+                                <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">save</span>
+                                 
+                                <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">verify_email_change</span>(<span class="ruby-ivar">@user</span>).<span class="ruby-identifier">deliver</span>
+                               
+                               <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-keyword">nil</span>
+                               <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-keyword">nil</span>
+                               <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.verification_email_sent_new_email_address'</span>
+                               <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'home'</span>, <span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index'</span> ) }
+                           <span class="ruby-keyword">else</span>
+                               <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">change_email_notification</span>(<span class="ruby-ivar">@user</span>, <span class="ruby-identifier">email</span>).<span class="ruby-identifier">deliver</span>
+                               <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">change_email_notification</span>(<span class="ruby-ivar">@user</span>, <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]).<span class="ruby-identifier">deliver</span>
+                               
+                               <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_email</span>] = <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>]
+                               <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice1</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.your_email_id_has_been_saved'</span>
+                               <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index'</span> ) }
+                           <span class="ruby-keyword">end</span>           
+                           
+                           <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:created</span>, <span class="ruby-value">:location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span> }
+                     <span class="ruby-keyword">else</span>
+                           <span class="ruby-ivar">@user</span>[<span class="ruby-value">:email</span>] = <span class="ruby-identifier">email</span>
+                           <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;index&quot;</span> }
+                           <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+                     <span class="ruby-keyword">end</span>
+                 <span class="ruby-keyword">end</span>
+                  
+             <span class="ruby-keyword">else</span>
+                      
+                      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.your_pwd_doesnot_match_records_email_changed'</span>
+                      <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'index'</span> )
+             <span class="ruby-keyword">end</span>
+                   
+     <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- save_email-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- save_email-method -->
+
+    
+      <div id="method-i-save_ref_pay_account" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_ref_pay_account</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="save_ref_pay_account-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 360</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_ref_pay_account</span>
+   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+   <span class="ruby-constant">User</span>.<span class="ruby-identifier">update_all</span>([<span class="ruby-string">&quot; ref_pay_account = ? &quot;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:ref_pay_account</span>]], [<span class="ruby-string">&quot;id = ?&quot;</span>, <span class="ruby-ivar">@user</span>[<span class="ruby-value">:id</span>]])
+   <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'manage_account_controller.user_account_updated_successfully'</span>)
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- save_ref_pay_account-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- save_ref_pay_account-method -->
+
+    
+      <div id="method-i-save_ref_unique_no" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_ref_unique_no</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="save_ref_unique_no-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 367</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_ref_unique_no</span>
+    <span class="ruby-ivar">@ref</span> = <span class="ruby-constant">ReferralCode</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-ivar">@ref</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
+    <span class="ruby-ivar">@ref</span>[<span class="ruby-value">:code</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:unique_no</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ref</span>.<span class="ruby-identifier">save</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'contact_controller.success'</span>)
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@ref</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>[<span class="ruby-value">0</span>]  
+    <span class="ruby-keyword">end</span>    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- save_ref_unique_no-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- save_ref_unique_no-method -->
+
+    
+      <div id="method-i-state_selection" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">state_selection</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="state_selection-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 467</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">state_selection</span>
+     <span class="ruby-ivar">@state</span> = <span class="ruby-constant">State</span>.<span class="ruby-identifier">find_state_by_country</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:country_id</span>])
+     <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span> }
+     <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- state_selection-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- state_selection-method -->
+
+    
+      <div id="method-i-unuse_org" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">unuse_org</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Unused Organizer ***********</p>
+          
+
+          
+          <div class="method-source-code" id="unuse_org-source">
+            <pre><span class="ruby-comment"># File app/controllers/manage_account_controller.rb, line 336</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unuse_org</span>
+  <span class="ruby-ivar">@meta_title</span> = <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span> <span class="ruby-string">'meta_title.m_unused_org'</span>
+  <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+  <span class="ruby-ivar">@organizers</span> = <span class="ruby-constant">Organizer</span>.<span class="ruby-identifier">unused_org</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- unuse_org-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- unuse_org-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

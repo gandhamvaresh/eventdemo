@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class MobileLoginsController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/mobile_logins_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ApplicationController
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-attendee">#attendee</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-mobile_logout">#mobile_logout</a>
+    
+    <li><a href="#method-i-myevent">#myevent</a>
+    
+    <li><a href="#method-i-myevent_details">#myevent_details</a>
+    
+    <li><a href="#method-i-post_login">#post_login</a>
+    
+    <li><a href="#method-i-ticket_check">#ticket_check</a>
+    
+    <li><a href="#method-i-update_attendee_pull">#update_attendee_pull</a>
+    
+    <li><a href="#method-i-update_attendee_single">#update_attendee_single</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActiveAdmin.html">ActiveAdmin</a>
+  
+    <li><a href="./ActiveAdmin/Views.html">ActiveAdmin::Views</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages.html">ActiveAdmin::Views::Pages</a>
+  
+    <li><a href="./ActiveAdmin/Views/Pages/Base.html">ActiveAdmin::Views::Pages::Base</a>
+  
+    <li><a href="./AffiliatesController.html">AffiliatesController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./AuthController.html">AuthController</a>
+  
+    <li><a href="./CancelOrdersController.html">CancelOrdersController</a>
+  
+    <li><a href="./ContactListHelper.html">ContactListHelper</a>
+  
+    <li><a href="./ContactListsController.html">ContactListsController</a>
+  
+    <li><a href="./ContactListsHelper.html">ContactListsHelper</a>
+  
+    <li><a href="./ContactsController.html">ContactsController</a>
+  
+    <li><a href="./ContactsHelper.html">ContactsHelper</a>
+  
+    <li><a href="./CustomAdminHeader.html">CustomAdminHeader</a>
+  
+    <li><a href="./ErrorsController.html">ErrorsController</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./ExceptionsController.html">ExceptionsController</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./InvitesController.html">InvitesController</a>
+  
+    <li><a href="./ManageAccountController.html">ManageAccountController</a>
+  
+    <li><a href="./ManageAccountHelper.html">ManageAccountHelper</a>
+  
+    <li><a href="./ManageEventController.html">ManageEventController</a>
+  
+    <li><a href="./ManageEventHelper.html">ManageEventHelper</a>
+  
+    <li><a href="./MobileLoginsController.html">MobileLoginsController</a>
+  
+    <li><a href="./MyTicketsController.html">MyTicketsController</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./OrdersController.html">OrdersController</a>
+  
+    <li><a href="./OrganizersController.html">OrganizersController</a>
+  
+    <li><a href="./PagesController.html">PagesController</a>
+  
+    <li><a href="./ProductsHelper.html">ProductsHelper</a>
+  
+    <li><a href="./PurchasesController.html">PurchasesController</a>
+  
+    <li><a href="./ReferrersController.html">ReferrersController</a>
+  
+    <li><a href="./SearchController.html">SearchController</a>
+  
+    <li><a href="./TicketsController.html">TicketsController</a>
+  
+    <li><a href="./TipsController.html">TipsController</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WalletController.html">WalletController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class MobileLoginsController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-attendee" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">attendee</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="attendee-source">
+            <pre><span class="ruby-comment"># File app/controllers/mobile_logins_controller.rb, line 59</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">attendee</span>
+   <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+     <span class="ruby-identifier">id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+     <span class="ruby-identifier">event_id</span>=<span class="ruby-identifier">params</span>[<span class="ruby-value">:event_id</span>]
+            
+        <span class="ruby-ivar">@all_attendee</span>= <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'event_id = ? AND ticket_id &gt; 0 '</span>,<span class="ruby-identifier">event_id</span>])
+        <span class="ruby-identifier">ticket_type</span> = []
+        <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">att</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@all_attendee</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">att</span>[<span class="ruby-value">:ticket_id</span>])
+              <span class="ruby-ivar">@tic</span> = <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">att</span>[<span class="ruby-value">:ticket_id</span>])
+              <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:free</span>]<span class="ruby-operator">==</span><span class="ruby-value">1</span>
+                <span class="ruby-identifier">ticket_type</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-string">'Free'</span>
+              <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@tic</span>[<span class="ruby-value">:paid</span>]
+                <span class="ruby-identifier">ticket_type</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-string">'Paid'</span>
+              <span class="ruby-keyword">else</span>
+                  <span class="ruby-identifier">ticket_type</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-string">'Donation'</span>  
+              <span class="ruby-keyword">end</span>
+           <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">ticket_type</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-string">'N/A'</span>  
+           <span class="ruby-keyword">end</span>   
+          <span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+        <span class="ruby-keyword">end</span>
+                        
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@all_attendee</span>, <span class="ruby-value">:ticket_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ticket_type</span>}            
+   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- attendee-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- attendee-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/mobile_logins_controller.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+     <span class="ruby-ivar">@meta_title</span> = <span class="ruby-string">'Login'</span>
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>()
+    <span class="ruby-ivar">@type</span> = <span class="ruby-string">'login'</span>
+   
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-mobile_logout" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mobile_logout</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="mobile_logout-source">
+            <pre><span class="ruby-comment"># File app/controllers/mobile_logins_controller.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mobile_logout</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+    <span class="ruby-identifier">id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+    
+    <span class="ruby-identifier">logout</span> = <span class="ruby-constant">MobileLogin</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>,<span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span>[<span class="ruby-string">'user_id = ?'</span>,<span class="ruby-identifier">id</span>])
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">logout</span>
+      <span class="ruby-identifier">logout</span>.<span class="ruby-identifier">destroy</span>
+      <span class="ruby-ivar">@logout</span> = <span class="ruby-string">&quot;You have logged out successfully..!!&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@logout</span> = <span class="ruby-string">&quot;You have logged out already..!!&quot;</span>
+    <span class="ruby-keyword">end</span>   
+    
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-value">:logout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@logout</span>}
+    
+  
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- mobile_logout-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- mobile_logout-method -->
+
+    
+      <div id="method-i-myevent" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">myevent</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="myevent-source">
+            <pre><span class="ruby-comment"># File app/controllers/mobile_logins_controller.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">myevent</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+      <span class="ruby-identifier">id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>] 
+      <span class="ruby-identifier">checkin_status</span>=<span class="ruby-identifier">params</span>[<span class="ruby-value">:checkin_status</span>]
+      
+          <span class="ruby-ivar">@all_events</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find_live_events</span>(<span class="ruby-identifier">id</span>)
+          <span class="ruby-ivar">@count_of_ticket</span> = []
+          <span class="ruby-ivar">@sold</span> = []
+          <span class="ruby-ivar">@count_attendee</span> = []
+          <span class="ruby-ivar">@count_checkin_attendee</span> = []
+          
+          <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span>
+          <span class="ruby-keyword">for</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@all_events</span>
+              
+              <span class="ruby-ivar">@sold</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">find_event_sold_count</span>(<span class="ruby-identifier">e</span>[<span class="ruby-value">:id</span>])
+              
+              <span class="ruby-ivar">@count_of_ticket</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">e</span>[<span class="ruby-value">:event_capacity</span>]
+             <span class="ruby-comment"># @sold[i] = @free1.to_i+@paid1.to_i+@don1.to_i</span>
+              <span class="ruby-ivar">@count_attendee</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&quot;event_id = ? and ticket_id &gt; 0&quot;</span>, <span class="ruby-identifier">e</span>[<span class="ruby-value">:id</span>]]).<span class="ruby-identifier">count</span> 
+              <span class="ruby-ivar">@count_checkin_attendee</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&quot;event_id = ? and ticket_id &gt; 0 and checkin_status=1&quot;</span>, <span class="ruby-identifier">e</span>[<span class="ruby-value">:id</span>]]).<span class="ruby-identifier">count</span> 
+             <span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span> 
+          <span class="ruby-keyword">end</span>
+          
+            
+          <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-value">:all_events</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@all_events</span>, <span class="ruby-value">:count_of_ticket</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@count_of_ticket</span>, <span class="ruby-value">:sold</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@sold</span>, <span class="ruby-value">:count_attendee</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@count_attendee</span>, <span class="ruby-value">:count_checkin_attendee</span> =<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@count_checkin_attendee</span> }     
+    <span class="ruby-keyword">end</span>   
+ <span class="ruby-keyword">end</span></pre>
+          </div><!-- myevent-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- myevent-method -->
+
+    
+      <div id="method-i-myevent_details" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">myevent_details</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="myevent_details-source">
+            <pre><span class="ruby-comment"># File app/controllers/mobile_logins_controller.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">myevent_details</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+    <span class="ruby-identifier">event_id</span>=<span class="ruby-identifier">params</span>[<span class="ruby-value">:event_id</span>]
+    
+    <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">event_id</span>)
+    
+    <span class="ruby-ivar">@sold</span> = <span class="ruby-constant">Ticket</span>.<span class="ruby-identifier">find_event_sold_count</span>(<span class="ruby-ivar">@event</span>[<span class="ruby-value">:id</span>])
+              
+    <span class="ruby-ivar">@count_of_ticket</span> = <span class="ruby-ivar">@event</span>[<span class="ruby-value">:event_capacity</span>]
+    
+    <span class="ruby-comment">#@count_attendee = Purchase.find(:all, :conditions =&gt; [&quot;event_id = ? and ticket_id &gt; 0&quot;, @event[:id]]).count</span>
+    <span class="ruby-comment">#@count_attendee = Ticket.find_event_sold_count(@event[:id])</span>
+    
+    <span class="ruby-comment">#@count_checkin_attendee = Purchase.find(:all, :conditions =&gt; [&quot;event_id = ? and ticket_id &gt; 0 and checkin_status=1&quot;, @event[:id]]).count</span>
+    <span class="ruby-ivar">@count_checkin_attendee</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">sum</span>(<span class="ruby-value">:ticket_qty</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;event_id = #{@event[:id]} and ticket_id &gt; 0 and checkin_status=1 and (payment=1 or attendee_id &gt; 0) &quot;</span>) 
+    
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-value">:event</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@event</span>, <span class="ruby-value">:count_of_ticket</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@count_of_ticket</span>, <span class="ruby-value">:sold</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@sold</span>, <span class="ruby-value">:count_attendee</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@sold</span>, <span class="ruby-value">:count_checkin_attendee</span> =<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@count_checkin_attendee</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- myevent_details-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- myevent_details-method -->
+
+    
+      <div id="method-i-post_login" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">post_login</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="post_login-source">
+            <pre><span class="ruby-comment"># File app/controllers/mobile_logins_controller.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">post_login</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+        <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">authenticate</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_email</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_password</span>])
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">active</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-constant">MobileLogin</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:user_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                <span class="ruby-ivar">@mobile</span> = <span class="ruby-constant">MobileLogin</span>.<span class="ruby-identifier">new</span>
+                <span class="ruby-ivar">@mobile</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+                <span class="ruby-ivar">@mobile</span>.<span class="ruby-identifier">save</span>
+              <span class="ruby-keyword">end</span>
+              <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span> }
+          <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Your account is inactive. Contact administrator to activate it..!!&quot;</span>  }
+          <span class="ruby-keyword">end</span>        
+        <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Invalid user/password combination&quot;</span> }
+        <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- post_login-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- post_login-method -->
+
+    
+      <div id="method-i-ticket_check" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ticket_check</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="ticket_check-source">
+            <pre><span class="ruby-comment"># File app/controllers/mobile_logins_controller.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ticket_check</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+    <span class="ruby-identifier">barcode_random</span> =<span class="ruby-identifier">params</span>[<span class="ruby-value">:ticket_number</span>]
+    <span class="ruby-identifier">event_id</span> =<span class="ruby-identifier">params</span>[<span class="ruby-value">:event_id</span>]
+    
+    <span class="ruby-ivar">@attendee</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&quot;barcode_random = ? AND event_id = ? AND ticket_id &gt; 0 &quot;</span>, <span class="ruby-identifier">barcode_random</span>, <span class="ruby-identifier">event_id</span>])
+    
+     <span class="ruby-identifier">ret</span>=[]
+     <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span>
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@attendee</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>  
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">a</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@attendee</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">a</span>[<span class="ruby-value">:checkin_status</span>]<span class="ruby-operator">==</span><span class="ruby-value">1</span>
+          <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-string">'This attendee already checked In.'</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">a</span>[<span class="ruby-value">:checkin_status</span>]=<span class="ruby-value">1</span>
+          <span class="ruby-identifier">a</span>.<span class="ruby-identifier">save</span>
+          <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">a</span>[<span class="ruby-value">:id</span>]
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">ret</span>[<span class="ruby-value">0</span>]=<span class="ruby-string">'Barcode does not exists.'</span>
+  <span class="ruby-keyword">end</span>    
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-value">:attendee_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ret</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- ticket_check-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ticket_check-method -->
+
+    
+      <div id="method-i-update_attendee_pull" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_attendee_pull</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update_attendee_pull-source">
+            <pre><span class="ruby-comment"># File app/controllers/mobile_logins_controller.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_attendee_pull</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+          
+          <span class="ruby-ivar">@attendee_id</span>=<span class="ruby-identifier">params</span>[<span class="ruby-value">:attendee_id</span>]
+          <span class="ruby-ivar">@checkin_status</span>=<span class="ruby-identifier">params</span>[<span class="ruby-value">:checkin_status</span>]
+          
+           
+       
+          
+          <span class="ruby-identifier">ret</span>=[]
+          <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span>
+          <span class="ruby-keyword">for</span> <span class="ruby-identifier">att</span> <span class="ruby-keyword">in</span> <span class="ruby-ivar">@attendee_id</span>
+                <span class="ruby-ivar">@att</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'id=?'</span>, <span class="ruby-identifier">att</span>.<span class="ruby-identifier">to_i</span>])
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@att</span>  
+                  <span class="ruby-ivar">@att</span>[<span class="ruby-value">:checkin_status</span>]=<span class="ruby-ivar">@checkin_status</span>[<span class="ruby-identifier">i</span>]
+                  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@att</span>.<span class="ruby-identifier">save</span>
+                  
+                    <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-value">1</span>
+                  <span class="ruby-keyword">else</span>
+                   
+                     <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-value">0</span>
+                  <span class="ruby-keyword">end</span> 
+               <span class="ruby-keyword">else</span>
+                 <span class="ruby-identifier">ret</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-value">0</span>
+               <span class="ruby-keyword">end</span>      
+             <span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+          <span class="ruby-keyword">end</span>
+       <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span>{<span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ret</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_attendee_pull-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_attendee_pull-method -->
+
+    
+      <div id="method-i-update_attendee_single" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_attendee_single</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update_attendee_single-source">
+            <pre><span class="ruby-comment"># File app/controllers/mobile_logins_controller.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_attendee_single</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>
+    <span class="ruby-ivar">@attendee_id</span>=<span class="ruby-identifier">params</span>[<span class="ruby-value">:attendee_id</span>]
+    <span class="ruby-ivar">@checkin_status</span>=<span class="ruby-identifier">params</span>[<span class="ruby-value">:checkin_status</span>]
+                   
+    <span class="ruby-ivar">@att</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:first</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">'id=?'</span>, <span class="ruby-ivar">@attendee_id</span>])
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@att</span>
+    <span class="ruby-ivar">@att</span>[<span class="ruby-value">:checkin_status</span>]=<span class="ruby-ivar">@checkin_status</span>        
+   
+     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@att</span>.<span class="ruby-identifier">save</span>
+       <span class="ruby-identifier">ret</span> = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">else</span>
+       <span class="ruby-identifier">ret</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">end</span>   
+   <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">ret</span> = <span class="ruby-value">0</span>
+   <span class="ruby-keyword">end</span>   
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span>{<span class="ruby-value">:success</span> =<span class="ruby-operator">&gt;</span><span class="ruby-keyword">true</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-value">:msg</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ret</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_attendee_single-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_attendee_single-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
